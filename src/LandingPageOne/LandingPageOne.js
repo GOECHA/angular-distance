@@ -1,9 +1,13 @@
 import React from 'react'
-import '../LandingPageOne.css'
+import './LandingPageOne.css'
+import ReservationButton from '../controls/ReservationButton/ReservationButton'
+
 
 const LandingPageOne = () => {
   return (
-    <div>LandingPageOne</div>
+    <div className="landing-page-container">
+        <p>LandingPageOne</p>
+    </div>
   )
 }
 

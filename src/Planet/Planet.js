@@ -1,14 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Utilities } from '../Utilities'
+import './Planet.css'
 
+const Planet = ({spaceData, id, key, name, moons}) => {
+const [planet, setPlanet] = useState('')
+//if spaceData.isPlanet === true planetArr.push(spaceData) &&  moonArr.push(spaceData.name)
+// spaceData.includes moons. moonArr.push(spaceData.name)
+//id a user selects a planet, displayDestinationArr.push(spaceData.EnglishName)
+// 
 
-const Planet = ({spaceData, id}) => {
 
 
 
   return (
     <div>
-        <Utilities spaceData={spaceData.map((planet) => planet.id)}/>
+        
+   <Utilities spaceData={spaceData} id={id}/>
     </div>
   )
 }

@@ -1,10 +1,13 @@
 import React from 'react'
-import '../LandingPageTwo.css'
+import './LandingPageTwo.css'
+import ReservationButton from '../controls/ReservationButton/ReservationButton'
 
 
 const LandingPageTwo = () => {
   return (
-    <div>LandingPageTwo</div>
+    <div>
+        <p>LandingPageTwo</p>
+    </div>
   )
 }
 

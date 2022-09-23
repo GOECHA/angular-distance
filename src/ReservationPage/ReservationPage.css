@@ -1,0 +1,10 @@
+.reservation-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vw;
+    /* width: 100vh; */
+    background-image: url('../assets/planet-alignment.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}

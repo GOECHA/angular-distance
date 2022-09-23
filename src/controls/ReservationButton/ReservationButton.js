@@ -1,10 +1,10 @@
 import React from 'react'
-import '../ReservationButton.css'
-
+import './ReservationButton.css'
+// import 
 
 const ReservationButton = () => {
   return (
-    <Button className="reservation-button" input='Reserve'/>
+    <button className="reservation-button" input='Reserve'/>
   )
 }
 

@@ -1,11 +1,11 @@
 import React from 'react'
-import '../AboutPage.css'
+import './AboutPage.css'
+
 
 const AboutPage = () => {
-  return 
-  (
+  return (
     <div>AboutPage</div>
   )
 }
 
-export default AboutPage;
+export default AboutPage
