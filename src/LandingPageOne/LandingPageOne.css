@@ -1,0 +1,50 @@
+.landing-page-one-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url('../assets/water-planet.png') no-repeat center center fixed; ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.galactic-quote{
+    font-family: 'Italiana';
+    font-style: normal;
+    font-weight: 400;
+    font-size:  2em;
+    line-height: 19px;
+}
+
+
+.landing-header{
+    display: flex;
+    align-items: flex-end;
+    justify-content:flex-end;
+    height: 10%;
+    width: auto;
+    padding:1.5em;
+    padding-bottom: 0%;
+}
+
+.quote-one-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    padding: 3em;
+    padding-bottom: 0%;
+    height: 55%;
+    width: auto;
+    font-family: 'Italiana';
+}
+
+.quote-one-wrapper{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;   
+   height: auto;
+   width: 50%;
+}

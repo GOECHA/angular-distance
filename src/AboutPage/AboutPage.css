@@ -1,0 +1,47 @@
+.about-container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(rgba(2, 0, 56, 0.2), rgba(2, 0, 56, 0.4)), url('../assets/interior-view.jpg') no-repeat center center fixed ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0%;
+}
+
+
+h2{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    font-size: 3em;
+    color: white;
+}
+
+.quote-about-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%; 
+}
+
+.quote-about-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.about-quote-p1,
+.about-quote-p2{
+ align-items: center;
+ font-size: 1.5em;
+ width: 55%;
+ margin-top: 2.7em;
+}
+
