@@ -13,9 +13,12 @@ const AboutPage = () => {
       </div>
       <section className="quote-about-container">
         <div className="quote-about-wrapper">
-          <p className="about-quote-p1">Angular distance \theta is the angle between the two sightlines, or between two point objects as viewed from an observer. Angular distance appears in mathematics and all natural sciences.
- </p>
-          <p className='about-quote-p2'>Making Space Travel accessible to all life forms in the Solar System. Where luxury space travel will make 100 years feel like a quick trip around the sun. </p>
+          <p className="about-quote-p1">
+            Angular distance \theta is the angle between the two sightlines, or between two point objects as viewed from an observer. Angular distance appears in mathematics and all natural sciences.
+          </p>
+          <p className='about-quote-p2'>
+            Making space travel accessible to all life forms in the Solar System. Where luxury space travel will make 100 years feel like a quick <br /> Earth trip around the sun. 
+          </p>
         </div>
       </section> 
       <div className="landing-footer">
