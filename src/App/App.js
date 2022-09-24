@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 // import { Utilities } from '../Utilities';
-import PlanetContainer from '../PlanetContainer/PlanetContainer';
+// import PlanetContainer from '../PlanetContainer/PlanetContainer';
 import ReservationPage from '../ReservationPage/ReservationPage';
-import LandingPageOne from '../LandingPageOne/LandingPageOne';
-import LandingPageTwo from '../LandingPageTwo/LandingPageTwo';
+// import LandingPageOne from '../LandingPageOne/LandingPageOne';
+// import LandingPageTwo from '../LandingPageTwo/LandingPageTwo';
 
 
 const App = () => {
@@ -26,7 +26,7 @@ const App = () => {
     <main className='app-container'>
       {/* <LandingPageOne />
       <LandingPageTwo/> */}
-      <ReservationPage className="reservation-page" />
+      <ReservationPage     />
     </main>
   )
 }
