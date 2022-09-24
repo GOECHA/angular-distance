@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Utilities } from '../Utilities'
 import './Planet.css'
 
-const Planet = ({spaceData, id, key, name, moons}) => {
-const [planet, setPlanet] = useState('')
+const Planet = ({findPlanet, spaceData, id, key, name, moons}) => {
+// const [planet, setPlanet] = useState('')
 //if spaceData.isPlanet === true planetArr.push(spaceData) &&  moonArr.push(spaceData.name)
 // spaceData.includes moons. moonArr.push(spaceData.name)
 //id a user selects a planet, displayDestinationArr.push(spaceData.EnglishName)
@@ -13,9 +13,9 @@ const [planet, setPlanet] = useState('')
 
 
   return (
-    <div>
-        
-   <Utilities spaceData={spaceData} id={id}/>
+    <div className="planet">
+        <ImageData onCLick={(()=>{findPlanet})} />
+        <Utilities spaceData={spaceData} id={id}/>
     </div>
   )
 }

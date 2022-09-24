@@ -15,7 +15,7 @@ import venus from "./assets/hd2-venus.png"
 
 
 
-const ImageData = () => {
+const ImageData = ({spaceData, id}) => {
 
 
     // const images = [
@@ -66,10 +66,10 @@ console.log(`find-planet`, findPlanet('earth'))
 
 
 
-const displayPlanets = () => {
+const displayPlanets = (e) => {
   const planetImages = planetImageData.map(planetImage => {
     console.log(`planetImage`,`"${planetImage}"`)
-  return <img className="planet-image" src={planetImage} alt="planetImage"/>
+  return <img onCLick={((e) => e.target.id)} className="planet-image" src={planetImage} alt="planetImage"/>
   })
   console.log(planetImages)
   return planetImages
@@ -85,11 +85,3 @@ console.log(`find-planet1111`, displayPlanets())
 
 export default ImageData;
 
-    //      "../../assets/hd2--earth.png",
-    //      "../../assets/hd2-jupiter.png",
-    //      "../../assets/hd2-mars.png",
-    //      "../../assets/hd2-mercury.png",
-    //      "../../assets/hd2-neptune.png",
-    //      "../../assets/hd2-saturn.png",
-    //      "../../assets/hd2-uranus.png",
-    //      "../../assets/hd2-venus.png"

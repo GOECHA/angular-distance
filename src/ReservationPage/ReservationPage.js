@@ -3,9 +3,8 @@ import React from 'react'
 import './ReservationPage.css'
 import Header from '../Header/Header'
 // import PlanetContainer from '../PlanetContainer/PlanetContainer'
-import  ImageData  from '../ImageData'
+// import  ImageData  from '../ImageData'
 // import venus from "../assets/hd2-venus.png"
-
 const ReservationPage = ({ findPlanet, displayPlanets }) => {
 
 // const planetSelections = () => {
@@ -22,11 +21,13 @@ const ReservationPage = ({ findPlanet, displayPlanets }) => {
 
   return (
     <div className="reservation-container">
-      <Header/>
+      <div className="reservation-header">
+         <Header/>
+      </div>
       {/* <PlanetContainer/> */}
          <div >
           {/* <img src={venus}/> */}
-          <ImageData onCLick={(()=>{findPlanet()})} ></ImageData>
+         {displayPlanets}
             
          </div>
       </div>

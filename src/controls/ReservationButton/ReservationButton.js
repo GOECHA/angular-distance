@@ -4,7 +4,7 @@ import './ReservationButton.css'
 
 const ReservationButton = () => {
   return (
-    <button className="reservation-button" input='Reserve'/>
+    <button className="reservation-button" input='Reserve'>Reserve</button>
   )
 }
 

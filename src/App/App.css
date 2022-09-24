@@ -1,6 +1,13 @@
-.App {
-  /* height: 100vh;
-  width: 100vw; */
+.app-container{
+  display: flex;
+  flex-direction: column;
+  /* height: 100vw;  */
+  /* width: 100vh;
+  /* background: url('../assets/planet-alignment.png') no-repeat center center fixed; ;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; */
   background-color:  #020038;
 }
 /* 
