@@ -31,7 +31,7 @@ const ReservationPage = ({ findPlanet, displayPlanets, id, planetMoons }) => {
          <Header/>
       </div>
          <h2 className="choose-destination">Choose your Destination</h2>
-        <PlanetContainer/>
+        <PlanetContainer onClick={() =>{console.log(`I'm a planet`)}}/>
          <div >
           {/* <img src={venus}/> */}
          {displayPlanets}
@@ -53,6 +53,7 @@ const ReservationPage = ({ findPlanet, displayPlanets, id, planetMoons }) => {
           selected={startDate}
           selectsStart
           startDate={startDate}
+          minDate={moment().toDate()}
           // endDate={endDate}
           onChange={date => setStartDate(date)}
         />
@@ -70,19 +71,21 @@ const ReservationPage = ({ findPlanet, displayPlanets, id, planetMoons }) => {
         </div>
         </div>
         <section className="destination-container">
-          <div className="destination-wrapper">
-            <h3 className="destination-title"> DESTINATION</h3>
-            <div className="current-selection"></div>
-          </div>
-          <div className="moon-selection-wrapper">
+        <div className="moon-selection-wrapper">
             <form>
-              <select className="moon-selections" id={id} name="moon-selections">
-              <option value="" disabled selected>MOON</option>
+              <select className="moon-selections" defaultValue="" id={id} name="moon-selections">
+              <option value="" disabled >MOON</option>
                 <option value="">{planetMoons}</option>
               </select>
              <button className="select-moon-btn">SELECT</button>
            </form>
+          {/* <div className="destination-wrapper"> */}
+           
+          
           </div>
+          <div className="current-selection"></div>
+          {/* </div> */}
+          <h3 className="destination-title"> DESTINATION</h3>
         </section>
         </div>
          </section>
