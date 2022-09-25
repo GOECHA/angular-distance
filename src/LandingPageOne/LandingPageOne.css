@@ -16,6 +16,7 @@
     font-weight: 400;
     font-size:  2em;
     line-height: 19px;
+    
 }
 
 
@@ -38,6 +39,7 @@
     height: 55%;
     width: auto;
     font-family: 'Italiana';
+    margin-bottom: 3em;
 }
 
 .quote-one-wrapper{
