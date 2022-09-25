@@ -2,12 +2,16 @@ import React from 'react'
 import './LandingPageTwo.css'
 import ReservationButton from '../controls/ReservationButton/ReservationButton'
 import Footer from '../Footer/Footer'
+import { Link } from 'react-router-dom'
 
-const LandingPageTwo = ({input}) => {
+
+const LandingPageTwo = ({setGoToReservation}) => {
   return (
     <div className="landing-page-two-container">
         <div className="reservation-button-container">
-           <ReservationButton input='Reserve'/>
+          <Link to={"/reservations"}>
+           <ReservationButton input='Reserve' onClick={(() => {setGoToReservation(1)})}/>
+           </Link>
          </div>
       <section className="quote-container">
         <div className="quote-wrapper">

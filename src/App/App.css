@@ -49,7 +49,11 @@
 .swiper {
   width: 100%;
   height: 100%;
+  --swiper-theme-color: #A2C4D7;
+  --swiper-navigation-size: 44px;
+  --swiper-navigation-color: #A2C4D7;
 }
+
 
 .swiper-slide {
   text-align: center;
@@ -77,4 +81,8 @@
 
 /* .swiper-slide {
 
+} */
+/* 
+.swiper-button-next{ 
+  color: #A2C4D7; 
 } */
