@@ -8,7 +8,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
+  
 }
 
 
@@ -23,4 +23,38 @@
     height: 10%;
     width: auto;
     padding: 1.5em;
+}
+
+.choose-destination{
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    margin-bottom: -2em;
+    padding: 2em;
+    height: 10%;
+}
+
+
+.calendar-container{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 90%;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1.5em;
+}
+
+.calendar-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: .5em;
+    width: 90%;
+    height: 65%;
+    background: rgba(1, 38, 54, 0.73);
+    box-shadow: -3px 4px 13px -3px rgba(250, 248, 248, 0.25);
+    border-radius: 22px;
+    margin-left: 2em;
+    margin-bottom: -.5em;
 }

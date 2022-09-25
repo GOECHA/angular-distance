@@ -7,6 +7,7 @@ import ReservationPage from '../ReservationPage/ReservationPage';
 import LandingPageOne from '../LandingPageOne/LandingPageOne';
 import LandingPageTwo from '../LandingPageTwo/LandingPageTwo';
 import AboutPage from '../AboutPage/AboutPage';
+import ReservationDetails from '../ReservationDetails/ReservationDetails';
 
 import {
   BrowserRouter,
@@ -15,7 +16,7 @@ import {
   Nav
 } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Parallax, } from "swiper";
+import { Navigation, Parallax, Mousewheel, Keyboard } from "swiper";
 
 // Now you can use all slider methods like
 
@@ -41,7 +42,7 @@ const App = () => {
        <>
     <Swiper 
       navigation={true} 
-      modules={[Parallax, Navigation]} 
+      modules={[Parallax, Navigation, Mousewheel, Keyboard]} 
       className="mySwiper"
       // loop={true}
       speed={600}
@@ -57,13 +58,11 @@ const App = () => {
         <ReservationPage />
       </SwiperSlide>
       <SwiperSlide>
+        <ReservationDetails />
+      </SwiperSlide>
+      <SwiperSlide>
         <AboutPage/>
       </SwiperSlide>
-       {/* <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide> */}
     </Swiper>
   </>
     {/* <Switch> */}

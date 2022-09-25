@@ -1,8 +1,8 @@
-.landing-page-one-container{
+.reservation-details-container{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: url('../assets/water-planet.png') no-repeat center center fixed; 
+    background: url('../assets/horizon.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -10,27 +10,26 @@
     overflow: hidden;
 }
 
-.galactic-quote{
+.reservation-quote{
     font-family: 'Italiana';
     font-style: normal;
     font-weight: 400;
     font-size:  2em;
     line-height: 19px;
-    
 }
 
 
-.landing-header{
+.reservation-header{
     display: flex;
     align-items: flex-end;
     justify-content:flex-end;
     height: 10%;
     width: auto;
-    padding:1.5em;
+    padding: 1.5em;
     padding-bottom: 0%;
 }
 
-.quote-one-container{
+.quote-reservation-container{
     display: flex;
     flex-direction: column;
     justify-content:flex-end;
@@ -39,14 +38,17 @@
     height: 55%;
     width: auto;
     font-family: 'Italiana';
-    margin-bottom: 3em;
 }
 
-.quote-one-wrapper{
+.quote-reservation-wrapper{
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;   
    height: auto;
-   width: 50%;
+   width: 55%;
+}
+
+.itineraries-title{
+    width: 60%;
 }
