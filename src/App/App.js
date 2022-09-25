@@ -45,7 +45,7 @@ const App = () => {
       modules={[Parallax, Navigation, Mousewheel, Keyboard]} 
       className="mySwiper"
       // loop={true}
-      speed={600}
+      speed={800}
       parallax={true}
     >
       <SwiperSlide>

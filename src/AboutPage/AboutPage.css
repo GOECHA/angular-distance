@@ -15,7 +15,8 @@
 h2{
     display: flex;
     align-items: center;
-    width: 60%;
+    justify-content: center;
+    width: 100%;
     font-size: 3em;
     color: white;
 }
@@ -45,3 +46,8 @@ h2{
  margin-top: 2.7em;
 }
 
+.starting-letter{
+  font-size: 2em;
+  font-weight:  400;
+  color: white;
+}

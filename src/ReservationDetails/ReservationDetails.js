@@ -1,5 +1,6 @@
 import React from 'react'
 import ReservationButton from '../controls/ReservationButton/ReservationButton'
+import ReservationCard from '../ReservationCard/ReservationCard'
 import "./ReservationDetails.css"
 
 const ReservationDetails = () => {
@@ -14,7 +15,7 @@ const ReservationDetails = () => {
           
         </div> */}
       {/* </section>    */}
-   
+   <ReservationCard />
         
     </div>
   )
