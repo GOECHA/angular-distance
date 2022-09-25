@@ -7,6 +7,7 @@ import ReservationPage from '../ReservationPage/ReservationPage';
 import LandingPageOne from '../LandingPageOne/LandingPageOne';
 import LandingPageTwo from '../LandingPageTwo/LandingPageTwo';
 import AboutPage from '../AboutPage/AboutPage';
+import ReservationDetails from '../ReservationDetails/ReservationDetails';
 
 import {
   BrowserRouter,
@@ -59,8 +60,10 @@ const App = () => {
       <SwiperSlide>
         <AboutPage/>
       </SwiperSlide>
-       {/* <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
+       <SwiperSlide>
+        <ReservationDetails />
+       </SwiperSlide>
+       {/*<SwiperSlide>Slide 6</SwiperSlide>
       <SwiperSlide>Slide 7</SwiperSlide>
       <SwiperSlide>Slide 8</SwiperSlide>
       <SwiperSlide>Slide 9</SwiperSlide> */}
