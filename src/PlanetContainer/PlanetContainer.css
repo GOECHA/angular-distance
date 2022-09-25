@@ -11,7 +11,7 @@
 
 .planet-wrapper{
     display:  grid;
-    grid-template-columns: 1.4fr 1.4fr 1.5fr 1.6fr 3.1fr 2.2fr 1.5fr 1.4fr;
+    grid-template-columns: 1.4fr 1.3fr 1.5fr 1.6fr 3.1fr 2.2fr 1.5fr 1.4fr;
     grid-template-rows: none;
     /* border: 1px solid blueviolet; */
     height: 40%;
@@ -29,9 +29,15 @@
 
   .planet-image{
     width: 90%;
-   
+    margin-left: 2em;
   }
 
+  .mars,
+  .earth,
+  .venus,
+  .mercury{
+    margin-left: -1em;
+  }
 
   .planet-button{
     background: transparent;
@@ -43,9 +49,10 @@
   }
 
  
-    
+  /* @media (prefers-reduced-motion: no-preference) { */
     .planet-button:hover{ 
       transform: scale(1.1); 
       cursor: pointer;
+      /* animation: App-logo-spin infinite 20s linear; */
     }
-
+  /* } */

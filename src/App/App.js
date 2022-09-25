@@ -1,5 +1,5 @@
-import React from 'react';
-// import React, { useRef,useState } from 'react';
+// import React from 'react';
+import React, { useRef, useState } from 'react';
 import './App.css';
 // import { Utilities } from '../Utilities';
 // import PlanetContainer from '../PlanetContainer/PlanetContainer';
@@ -11,7 +11,7 @@ import ReservationDetails from '../ReservationDetails/ReservationDetails';
 
 import {
   BrowserRouter,
-  Router,
+  Route,
   Switch, 
   Nav
 } from "react-router-dom";
@@ -23,6 +23,14 @@ import { Navigation, Parallax, Mousewheel, Keyboard } from "swiper";
 
 
 const App = () => {
+  const [allPlanets, setAllPlanets] = useState()
+  const [goToReservation, setGoToReservation] = useState(0)
+  const [gotToHome, setGoToHome] = useState(0)
+  const nav = useRef(null);
+  const onButtonClick = () => {
+    // `current` points to the mounted text input element
+    nav.current.focus();
+  };
   // const [bookRoom, setBookRoom] = useState([]);
   // const [spaceData, setSpaceData] = useState([])
  
@@ -35,20 +43,25 @@ const App = () => {
 //  }
 
 
+
+
    // run our useEffect 
  
    return(
     <main className='app-container'>
        <>
-    <Swiper 
-      navigation={true} 
+    {/* <Swiper 
+      navigation={{
+        ref:{nav},
+        onClick:{onButtonClick}
+      }}
       modules={[Parallax, Navigation, Mousewheel, Keyboard]} 
       className="mySwiper"
       // loop={true}
       speed={800}
       parallax={true}
     >
-      <SwiperSlide>
+      <SwiperSlide >
         <LandingPageOne />
       </SwiperSlide>
       <SwiperSlide>
@@ -61,15 +74,45 @@ const App = () => {
         <ReservationDetails />
       </SwiperSlide>
       <SwiperSlide>
-        <AboutPage/>
+        <AboutPage setGoToReservation={setGoToReservation}/>
       </SwiperSlide>
-    </Swiper>
+    </Swiper> */}
   </>
-    {/* <Switch> */}
-    {/* <Route exact path='/' render={ () => < LandingPageOne />} /> */}
+   <Switch>
+      <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome}/>} />
+      <Route exact path='/' render={ () =>
+          <Swiper 
+          navigation={{
+            ref:{nav},
+            onClick:{onButtonClick}
+          }}
+          modules={[Parallax, Navigation, Mousewheel, Keyboard]} 
+          className="mySwiper"
+          // loop={true}
+          speed={800}
+          parallax={true}
+        >
+          <SwiperSlide >
+            <LandingPageOne setGoToReservation={setGoToReservation}/>
+          </SwiperSlide>
+          <SwiperSlide>
+            <LandingPageTwo setGoToReservation={setGoToReservation}/>
+          </SwiperSlide>
+          {/* <SwiperSlide>
+            <ReservationPage />
+          </SwiperSlide> */}
+          <SwiperSlide>
+            <ReservationDetails setGoToReservation={setGoToReservation} />
+          </SwiperSlide>
+          <SwiperSlide>
+            <AboutPage setGoToReservation={setGoToReservation}/>
+          </SwiperSlide>
+        </Swiper>
+      } />
+    </Switch>
       {/* <LandingPageTwo/> */}
       {/* <ReservationPage/> */}
-    {/* </Switch> */}
+  
     </main>
   )
 }
