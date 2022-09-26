@@ -20,15 +20,15 @@
 }
 
 
-.landing-header{
+/* .landing-header{
     display: flex;
-    align-items: flex-end;
-    justify-content:flex-end;
-    height: 10%;
-    width: auto;
-    padding:1.5em;
-    padding-bottom: 0%;
-}
+    /* align-items: flex-end;
+    justify-content:flex-end; */
+    /* height: 30%; */
+    /* width: 100%; */
+    /* padding:1.5em;
+    padding-bottom: 0%;*/
+/* }   */
 
 .quote-one-container{
     display: flex;
@@ -50,12 +50,12 @@
    height: auto;
    width: 50%;
 }
-/* .reservation-button-container{
+.reservation-button-container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 10%;
-    width: 100%;
+    /* width: 100%; */
     padding: 1.5em;
 
-} */
+}
