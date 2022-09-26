@@ -33,6 +33,6 @@ const LandingPageTwo = ({setGoToReservation}) => {
 
 export default  LandingPageTwo;
 
-LandingPageTwo.propTypes = {
-  setGoToReservation: PropTypes.func
-}
+// LandingPageTwo.propTypes = {
+//   setGoToReservation: PropTypes.func
+// }

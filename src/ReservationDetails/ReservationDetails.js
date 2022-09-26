@@ -14,6 +14,7 @@ const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}
             planet={reservation.planet}
             moon= {reservation.moon}
             deletePost= {deletePost}
+            key={reservation.id}
             />
 })
 :
@@ -48,12 +49,6 @@ export default ReservationDetails
 
 ReservationDetails.propTypes = {
   deletePost: PropTypes.func,
-  reservationDetails: PropTypes.shape({
-    id: PropTypes.number,
-    date: PropTypes.number,
-    planet: PropTypes.string,
-    moon: PropTypes.string,
-    deletePost: PropTypes.func,
-  }),
+  reservationDetails: PropTypes.array,
   setGoToReservation: PropTypes.func
 }

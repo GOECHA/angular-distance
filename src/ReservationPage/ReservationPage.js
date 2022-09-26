@@ -151,9 +151,7 @@ export default ReservationPage;
 
 
 ReservationPage.propTypes = {
-  allPlanets: PropTypes.shape({
-    find: PropTypes.func
-  }),
+  allPlanets: PropTypes.array,
   id: PropTypes.number,
   reserveFlight: PropTypes.func,
   setGoToHome: PropTypes.func

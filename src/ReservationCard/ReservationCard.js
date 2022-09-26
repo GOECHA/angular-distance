@@ -26,9 +26,9 @@ const ReservationCard = ({id, date, planet, moon, deletePost}) => {
 export default ReservationCard
 
 ReservationCard.propTypes = {
-  date: PropTypes.number,
+  date: PropTypes.string,
   deletePost: PropTypes.func,
   id: PropTypes.number,
-  moon: PropTypes.array,
+  moon: PropTypes.string,
   planet: PropTypes.string
 }
