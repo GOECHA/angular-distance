@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React from 'react'
 import ReservationButton from '../controls/ReservationButton/ReservationButton'
 import ReservationCard from '../ReservationCard/ReservationCard'
@@ -13,6 +14,7 @@ const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}
             planet={reservation.planet}
             moon= {reservation.moon}
             deletePost= {deletePost}
+            key={reservation.id}
             />
 })
 :
@@ -41,4 +43,12 @@ const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}
   )
 }
 
+
 export default ReservationDetails
+
+
+ReservationDetails.propTypes = {
+  deletePost: PropTypes.func,
+  reservationDetails: PropTypes.array,
+  setGoToReservation: PropTypes.func
+}

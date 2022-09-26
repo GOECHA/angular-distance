@@ -1,3 +1,4 @@
+// import PropTypes from "prop-types"
 import React from 'react'
 import './LandingPageOne.css'
 import ReservationButton from '../controls/ReservationButton/ReservationButton'
@@ -18,11 +19,17 @@ const LandingPageOne = ({setGoToReservation}) => {
       </section> 
       <div className="reservation-p1-button-container">
          <Link to={"/reservations"}>
-           <ReservationButton input='Reserve' onClick={(() => {setGoToReservation(1)})}/>
+           <ReservationButton className="reservation-button" input='Reserve' onClick={(() => {setGoToReservation(1)})}/>
+            {/* <ReservationButton className="reservation-button" input='Reserve' /> */}
          </Link>
       </div>
     </div>
   )
 }
 
+
 export default  LandingPageOne;
+
+// LandingPageOne.propTypes = {
+//   setGoToReservation: PropTypes.func
+// }

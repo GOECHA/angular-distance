@@ -1,14 +1,14 @@
 import React from 'react'
+// import PropTypes from "prop-types"
 import './ReservationButton.css'
 import { Link } from 'react-router-dom';
 // import 
 
-const ReservationButton = ({setGoToReservation}) => {
+const ReservationButton = () => {
   return (
-    <Link to="/reservations" >
-       <button className="reservation-button" input='Reserve' onClick={(() => {setGoToReservation(1)})}>Reserve</button>
-    </Link>
+       <button className="reservation-button" input='Reserve' >Reserve</button>
   )
 }
 
 export default  ReservationButton;
+

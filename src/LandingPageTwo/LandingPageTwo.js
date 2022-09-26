@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React from 'react'
 import './LandingPageTwo.css'
 import ReservationButton from '../controls/ReservationButton/ReservationButton'
@@ -29,4 +30,9 @@ const LandingPageTwo = ({setGoToReservation}) => {
   )
 }
 
+
 export default  LandingPageTwo;
+
+// LandingPageTwo.propTypes = {
+//   setGoToReservation: PropTypes.func
+// }

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React, { useState } from "react";
 import Header from "../Header/Header";
 import PlanetContainer from "../PlanetContainer/PlanetContainer";
@@ -6,11 +7,7 @@ import { Link } from "react-router-dom";
 
 const ReservationPage = ({
   reserveFlight,
-  findPlanet,
-  displayPlanets,
   id,
-  planetMoons,
-  calendar,
   setGoToHome,
   allPlanets,
 }) => {
@@ -147,4 +144,15 @@ const ReservationPage = ({
   );
 };
 
+
+
+
 export default ReservationPage;
+
+
+ReservationPage.propTypes = {
+  allPlanets: PropTypes.array,
+  id: PropTypes.number,
+  reserveFlight: PropTypes.func,
+  setGoToHome: PropTypes.func
+}

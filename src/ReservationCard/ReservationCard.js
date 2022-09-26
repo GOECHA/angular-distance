@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React from 'react';
 import "./ReservationCard.css";
 
@@ -20,6 +21,14 @@ const ReservationCard = ({id, date, planet, moon, deletePost}) => {
     </div>
   )
 }
-     
+
 
 export default ReservationCard
+
+ReservationCard.propTypes = {
+  date: PropTypes.string,
+  deletePost: PropTypes.func,
+  id: PropTypes.number,
+  moon: PropTypes.string,
+  planet: PropTypes.string
+}
