@@ -1,6 +1,5 @@
 # Angular Distance 
-> Outline a brief description of your project.
-> Live demo [_here_](https://goecha-angular-distance.vercel.app/). <!-- If you have the project hosted somewhere, include the link here. -->
+> Deployed [_here_](https://goecha-angular-distance.vercel.app/). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 * [General Info](#general-information)
