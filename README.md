@@ -18,8 +18,13 @@
 
 
 ## General Information
+<span className="starting-letter">A</span>ngular distance \theta is the angle between the two sightlines, or between two point objects as viewed from an observer. Angular distance appears in mathematics and all natural sciences.
+          </p>
+          <p className='about-quote-p2'>
+          <span className="starting-letter">M</span>aking space travel accessible to all life forms in the Solar System. Where luxury space travel will make 100 years feel like a quick <br /> Earth trip around the sun. 
+          </p>
 
-- 
+
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 ## Contributors
 - [Chantal Goethals](https://github.com/goecha) | [LinkedIn](https://www.linkedin.com/in/chantalgoethalsgoecha/)
@@ -109,16 +114,5 @@ Give credit here.
 - This project was based on [this website](https://www.virgingalactic.com/#horizontal-scroll).
 - This project was based on [this website](https://spaceperspective.com/experience)
 - Many thanks to...
-
-
-## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
-
-
-<!-- Optional -->
-<!-- ## License -->
-<!-- This project is open source and available under the [... License](). -->
-
-<!-- You don't have to include all sections - just the one's relevant to your project -->
 
 
