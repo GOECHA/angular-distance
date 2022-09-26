@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React from 'react';
 import './PlanetContainer.css';
 import earth  from "../assets/hd2--earth.png"
@@ -11,7 +12,7 @@ import venus from "../assets/hd2-venus.png"
 
 
 
-const PlanetContainer = ({spaceData, data, id, setCurrentPlanet, handleClick} ) => {
+const PlanetContainer = ({handleClick} ) => {
 
 
   return (
@@ -63,4 +64,9 @@ const PlanetContainer = ({spaceData, data, id, setCurrentPlanet, handleClick} ) 
   )
 }
 
+
 export default PlanetContainer
+
+PlanetContainer.propTypes = {
+  handleClick: PropTypes.func
+}

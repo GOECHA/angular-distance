@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 import React from 'react'
 import ReservationButton from '../controls/ReservationButton/ReservationButton'
 import ReservationCard from '../ReservationCard/ReservationCard'
@@ -41,4 +42,18 @@ const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}
   )
 }
 
+
 export default ReservationDetails
+
+
+ReservationDetails.propTypes = {
+  deletePost: PropTypes.func,
+  reservationDetails: PropTypes.shape({
+    id: PropTypes.number,
+    date: PropTypes.number,
+    planet: PropTypes.string,
+    moon: PropTypes.string,
+    deletePost: PropTypes.func,
+  }),
+  setGoToReservation: PropTypes.func
+}

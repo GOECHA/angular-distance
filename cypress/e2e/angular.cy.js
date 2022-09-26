@@ -1,4 +1,4 @@
-describe('Movie Container user flows', () => {
+describe('Planet flight reservation user flows', () => {
 
   beforeEach(() => {
     cy.visit('http://localhost:3000/')
@@ -6,7 +6,6 @@ describe('Movie Container user flows', () => {
 
   it('should make a call to the API to retrieve the data for all space data', () => {
     cy.intercept('GET', 'https://api.le-systeme-solaire.net/rest/bodies/', {
-      {
         "bodies": [
           {
             "id": "lune",
@@ -3498,8 +3497,10 @@ describe('Movie Container user flows', () => {
             "longAscNode": 0,
             "bodyType": "Moon",
             "rel": "https://api.le-systeme-solaire.net/rest/bodies/paaliaq"
-          }
-      ]  
+          },
+        
+      ] 
+     
   })
 
   it('should be able to visit the page and find the header', () => {
@@ -3507,7 +3508,7 @@ describe('Movie Container user flows', () => {
     .contains('Angular Distance')
   })
 
-  it('should be able to see a backdrop image for a random movie, and a title that links to that movie\'s details', () => {
+  it('should be able to see a background image for the landingPage, and a button that links to make reservation page', () => {
     cy.get('[class*=planet-selection-button]')
     .should('be.visible')
     .get('[class*=planet-container]')
@@ -3519,7 +3520,7 @@ describe('Movie Container user flows', () => {
     .should('be.visible')
   })
 
-  it('should see the top and bottom carousel of movies', () => {
+  it('should have carousel to navigate between landing pages', () => {
     cy.get('[class*=top-swiper-container]')
     .children()
     .should('be.visible')
@@ -3528,7 +3529,7 @@ describe('Movie Container user flows', () => {
     .should('be.visible')
   })
 
-  it('should be able to click on the swiper buttons to scan through the carousel of movies', () => {
+  it('should be able to click on the swiper buttons to scan through the landing pages', () => {
     cy.get('[class^=swiper-button-next]')
     .click( {multiple: true} )
   })
