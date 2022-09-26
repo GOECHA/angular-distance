@@ -16,19 +16,25 @@ const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}
             />
 })
 :
-<h3> Please make a reservation to view itineraries. . . </h3>
+<h3 className='error-res-mes'> Please make a reservation to view itineraries. . . </h3>
 
 
   return (
     <div className="reservation-details-container">
-      <Link to={'/'}>
-      <button className="back-to-home">Landing Page</button>
-      </Link>
-        <div className="reservation-button-container">
+       <div className="itineraries-title-wrapper">
+           <h2 className="itineraries-title">Itineraries</h2>
+      
+        <div className="reservation-button-r-con-container">
+          <Link to={'/'}>
+          <button className="back-to-home-r-p">Landing Page</button>
+          </Link>
+           </div>
+          <div className="reservation-button-r-con-right-container">
           <Link to={"/reservations"}>
               <ReservationButton input='Reserve' onClick={(() => {setGoToReservation(1)})}/>
            </Link>
-           <h2 className="itineraries-title">Itineraries</h2>
+          
+           </div>
          </div>
          {handleError}
     </div>

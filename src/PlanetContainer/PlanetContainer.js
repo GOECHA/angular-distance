@@ -1,5 +1,4 @@
 import React from 'react';
-// import Planet from '../Planet/Planet';
 import './PlanetContainer.css';
 import earth  from "../assets/hd2--earth.png"
 import jupiter from "../assets/hd2-jupiter.png"
@@ -13,38 +12,6 @@ import venus from "../assets/hd2-venus.png"
 
 
 const PlanetContainer = ({spaceData, data, id, setCurrentPlanet, handleClick} ) => {
-//   const planetImageData = [
-//     earth,
-//     jupiter,
-//     mars ,
-//     mercury,
-//     neptune,
-//     saturn ,
-//     uranus ,
-//     venus ,
-
-//  ]
-
-    // const [destinationText, setDestinationText] = useState([])
-// console.log(`spaceData planetcontainer`, spaceData)
-    // let info = data.map((data, index) => 
-    // // console.log(`line 48`, data)
-    //   <Planet key={index} id={data.id} />
-    // )
-    // console.log(`dataplantercontainer`, data)
-
-    // I need to map over utilities spaceData and return the name of 
-
-// const planetLinks = spaceData.map((planet) => {
-//     return(
-//         <Planet
-//         key={planet.id}
-//         id={planet.id}
-//         name={planet.englishName}
-//         moons={planet.moons}
-//         />
-//     )
-// })
 
 
   return (

@@ -1,8 +1,6 @@
 // import React from 'react';
 import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
-// import { Utilities } from '../Utilities';
-// import PlanetContainer from '../PlanetContainer/PlanetContainer';
 import ReservationPage from '../ReservationPage/ReservationPage';
 import LandingPageOne from '../LandingPageOne/LandingPageOne';
 import LandingPageTwo from '../LandingPageTwo/LandingPageTwo';
@@ -11,15 +9,11 @@ import ReservationDetails from '../ReservationDetails/ReservationDetails';
 import axios from 'axios'
 
 import {
-  BrowserRouter,
   Route,
   Switch, 
-  Nav
 } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Parallax, Mousewheel, Keyboard } from "swiper";
-
-// Now you can use all slider methods like
 
 
 

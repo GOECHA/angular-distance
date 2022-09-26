@@ -16,19 +16,19 @@
     font-weight: 400;
     font-size:  2em;
     line-height: 19px;
+    width: 110%;
     
 }
 
-
-/* .landing-header{
+.landing-one-header{
     display: flex;
-    /* align-items: flex-end;
-    justify-content:flex-end; */
-    /* height: 30%; */
-    /* width: 100%; */
-    /* padding:1.5em;
-    padding-bottom: 0%;*/
-/* }   */
+    align-items: flex-end;
+    justify-content:flex-end;
+    height: 10%;
+    width: 100%;
+    padding:3em;
+    padding-bottom: 0%;
+}
 
 .quote-one-container{
     display: flex;
@@ -52,10 +52,18 @@
 }
 .reservation-button-container{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
-    height: 10%;
+    /* height: 10%; */
     /* width: 100%; */
-    padding: 1.5em;
+    /* padding: 1.5em; */
 
+}
+.reservation-p1-button-container{
+    display: flex;
+    align-items: center;
+    padding-right: 3em;
+    height: 10%;
+    width: 100%;
+    padding: 1.5em;
 }
