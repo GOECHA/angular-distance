@@ -3,30 +3,27 @@ import React, { useState } from "react";
 import Header from '../Header/Header'
 import PlanetContainer from "../PlanetContainer/PlanetContainer";
 import './ReservationPage.css'
-// import "react-datepicker/dist/react-datepicker.css";
-// import dayjs from "dayjs";
 
-// const dayjs = require('dayjs')
-//import dayjs from 'dayjs' // ES 2015
-// dayjs().format('ll')
-// import PlanetContainer from '../PlanetContainer/PlanetContainer'
-// import  ImageData  from '../ImageData'
-// import venus from "../assets/hd2-venus.png"
-const ReservationPage = ({ findPlanet, displayPlanets, id, planetMoons, calendar, date, setGoToHome }) => {
-  const [startDate, setStartDate] = useState(new Date());
+
+const ReservationPage = ({ findPlanet, displayPlanets, id, planetMoons, calendar,  setGoToHome, allPlanets }) => {
   const [currentPlanet, setCurrentPlanet] = useState('')
-  // const [endDate, setEndDate] = useState(new Date());
-// const planetSelections = () => {
-// return displayPlanets.map((planet, index) => {
-//   console.log(`planet`, planet)
-//   return <ImageData 
-//           key={index}
-//           displayPlanets = {displayPlanets}
-//          />
-//  })
-// }
-// const planetImages = 
-// console.log(`planetSelections`, planetSelections)=
+  const [currentMoons, setCurrentMoons] = useState([])
+  const [selectedMoon, setSelectedMoon] = useState('')
+  const [date, setDate] = useState('')
+
+  const handleClick = (event) => {
+     setCurrentPlanet(event.target.id)
+     const somePlanetInfo = allPlanets.find(planet => {
+    return planet.englishName === event.target.id      
+     })
+     setCurrentMoons(somePlanetInfo.moons)
+     console.log( `######`, somePlanetInfo)
+  }
+
+const moonOptions = currentMoons !== null ?  currentMoons.map(moon => {
+   return <option key={moon.moon} value={moon.moon}  onChange={((e)=> console.log(`$$$$`, e.target.value)  )}>{moon.moon}</option>
+    }) 
+    :  <option key='none' disabled value='' >No Moons</option>
 
 
 
@@ -37,10 +34,8 @@ const ReservationPage = ({ findPlanet, displayPlanets, id, planetMoons, calendar
          <Header onClick={(e) =>{setGoToHome(e.target.id)}}/>
       </div>
          <h2 className="choose-destination">Choose your Destination</h2>
-        <PlanetContainer setCurrentPlanet={setCurrentPlanet}/>
+        <PlanetContainer setCurrentPlanet={setCurrentPlanet} handleClick={handleClick}/>
          <div >
-          {/* <img src={venus}/> */}
-         {/* {displayPlanets} */}
             
          </div>
          <section className="lower-container">
@@ -49,34 +44,10 @@ const ReservationPage = ({ findPlanet, displayPlanets, id, planetMoons, calendar
          <div className="calendar-container">
         
          <div className="calendar-wrapper">
-         <input name='calendar' className='calendar' type='date' min='25/09/2022'/>
+         <input name='calendar' className='calendar' type='date' min='2145-09-25' value={date}  onChange={((event)=> setDate(event.target.value))}/>
            <p className="reservation-logo">AD</p>
            <p className="calendar-title">DEPARTURE</p>
-          
-         
-         {/* <DatePicker
-         editableDateInputs={true}
-         isClearable
-         filterDate={d => {
-           return new Date() > d;
-         }}
-         placeholderText="Departure Selection"
-          selected={startDate}
-          selectsStart="09/25/2022"
-          startDate={startDate}
-          // endDate={endDate}
-          onChange={date => setStartDate(date)}
-          min="09/25/2022"
-        /> */}
-       
-        {/* <DatePicker
-          selected={endDate}
-          selectsEnd
-          startDate={startDate}
-          endDate={endDate}
-          minDate={startDate}
-          onChange={date => setEndDate(date)}
-        /> */}
+    
         </div>
         <div className="reservation-image-container">
         </div>
@@ -84,17 +55,26 @@ const ReservationPage = ({ findPlanet, displayPlanets, id, planetMoons, calendar
         <section className="destination-container">
         <div className="moon-selection-wrapper">
             <form>
-              <select className="moon-selections" defaultValue="" id={id} name="moon-selections">
+              <select className="moon-selections" id={id} value={selectedMoon} name="moon-selections" onChange={((event) => setSelectedMoon(event.target.value))}>
               <option value="" disabled >MOON</option>
-                <option value="">{planetMoons}</option>
+              {moonOptions}
               </select>
-             <button className="select-moon-btn">SELECT</button>
+             <button className="select-moon-btn" onClick={(()=> console.log(`book-reservation`))}>Reserve!</button>
            </form>
-          {/* <div className="destination-wrapper"> */}
+         
            
           
           </div>
-          <div className="current-selection"></div>
+          <div className="current-selection">
+            <div className="current-planet-selection">
+              <p>Planet</p>
+              <p className="displayed-name">{currentPlanet}</p>
+            </div>
+            <div className="current-moon-selection">
+              <p>Moon</p>
+              <p className="displayed-name">{selectedMoon}</p>
+            </div>
+          </div>
           {/* </div> */}
           <h3 className="destination-title"> DESTINATION</h3>
         </section>

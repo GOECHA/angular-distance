@@ -169,7 +169,7 @@ width: 80%;
 
 .current-selection{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 2em;
@@ -177,6 +177,18 @@ width: 80%;
     height: 80%;
     width: 90%;
     /* padding: .5em; */
+}
+
+.current-planet-selection,
+.current-moon-selection{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.5em;
+    color: white;
+    height: 100%;
+    width: 50%;
 }
 
 .moon-selection-wrapper{
