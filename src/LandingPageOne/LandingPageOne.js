@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 const LandingPageOne = ({setGoToReservation}) => {
   return (
     <div className="landing-page-one-container">
-      <div className="landing-header">
+      <div className="landing-one-header">
         <Header />
       </div>
       <section className="quote-one-container">
@@ -16,7 +16,7 @@ const LandingPageOne = ({setGoToReservation}) => {
           <p className="galactic-quote">Your galactic journey awaits. . . </p>
         </div>
       </section> 
-      <div className="reservation-button-container">
+      <div className="reservation-p1-button-container">
          <Link to={"/reservations"}>
            <ReservationButton input='Reserve' onClick={(() => {setGoToReservation(1)})}/>
          </Link>

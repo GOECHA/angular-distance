@@ -46,8 +46,21 @@ This project was bootstrapped with [Create ReactNative App](https://github.com/f
 
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+https://user-images.githubusercontent.com/102189342/192310408-d24ae41a-ca62-4ae1-81ef-8f74de2503ab.mp4
+
+
+https://user-images.githubusercontent.com/102189342/192310422-dabf5df3-259a-4521-a8ab-5be6fe769fc0.mp4
+
+
 <!-- If you have screenshots you'd like to share, include them here. -->
+<img width="400" alt="Screen Shot 2022-09-26 at 8 46 24 AM" src="https://user-images.githubusercontent.com/102189342/192307763-5037e811-d3b7-40c4-9218-1fe02cf0733a.png">
+<img width="400" alt="Screen Shot 2022-09-26 at 8 47 58 AM" src="https://user-images.githubusercontent.com/102189342/192308452-dbe7fb89-62bd-4d17-bb7d-58f42308ed36.png">
+<img width="400" alt="Screen Shot 2022-09-26 at 8 48 05 AM" src="https://user-images.githubusercontent.com/102189342/192308467-e2841794-995e-4538-9fb0-7be7f54f7ba2.png">
+<img width="400" alt="Screen Shot 2022-09-26 at 8 48 13 AM" src="https://user-images.githubusercontent.com/102189342/192308483-644ee688-4a99-4e09-ad6d-82b77c9d98c8.png">
+<img width="400" alt="Screen Shot 2022-09-26 at 8 48 29 AM" src="https://user-images.githubusercontent.com/102189342/192308503-72390dc1-2c85-4ac6-9f23-471afc6657c9.png">
+<img width="400" alt="Screen Shot 2022-09-26 at 8 48 51 AM" src="https://user-images.githubusercontent.com/102189342/192308514-aab2da75-e87b-4bfd-aa45-39d3eaa64dcc.png">
+
+
 
 
 ## Setup
