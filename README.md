@@ -54,7 +54,7 @@ This project was bootstrapped with [Create ReactNative App](https://github.com/f
 https://user-images.githubusercontent.com/102189342/192310408-d24ae41a-ca62-4ae1-81ef-8f74de2503ab.mp4
 
 
-https://user-images.githubusercontent.com/102189342/192310422-dabf5df3-259a-4521-a8ab-5be6fe769fc0.mp4
+https://user-images.githubusercontent.com/102189342/192313918-668404f5-5af1-4591-9b22-21e4969ccb3e.mp4
 
 
 <!-- If you have screenshots you'd like to share, include them here. -->
