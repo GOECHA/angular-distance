@@ -1,5 +1,5 @@
 // import React from 'react';
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
 // import { Utilities } from '../Utilities';
 // import PlanetContainer from '../PlanetContainer/PlanetContainer';
@@ -8,6 +8,7 @@ import LandingPageOne from '../LandingPageOne/LandingPageOne';
 import LandingPageTwo from '../LandingPageTwo/LandingPageTwo';
 import AboutPage from '../AboutPage/AboutPage';
 import ReservationDetails from '../ReservationDetails/ReservationDetails';
+import axios from 'axios'
 
 import {
   BrowserRouter,
@@ -26,60 +27,49 @@ const App = () => {
   const [allPlanets, setAllPlanets] = useState()
   const [goToReservation, setGoToReservation] = useState(0)
   const [gotToHome, setGoToHome] = useState(0)
+  const [reservation, setReservation] = useState([])
+
   const nav = useRef(null);
   const onButtonClick = () => {
-    // `current` points to the mounted text input element
     nav.current.focus();
   };
-  // const [bookRoom, setBookRoom] = useState([]);
-  // const [spaceData, setSpaceData] = useState([])
+
+
+  
+  
+  useEffect(() => {
+    axios({
+      method: 'get',
+      url:'https://api.le-systeme-solaire.net/rest/bodies/',
+      data: 'data',
+      key: 'data.id'
+    })
+    .then(res =>{
+      setAllPlanets(res.data.bodies)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+  }, [])
+  
+  
+  const deletePost = (e) => {
+    const filteredReservations = reservation.filter(
+      (reservation) => reservation.id !== parseInt(e.target.id)
+    );
+    setReservation(filteredReservations);
+  };
+  
+  const reserveFlight = (res) => {
+    setReservation([...reservation, res])
+    console.log(`res`,[res])
+  }
  
-//  const planetWrapper = () => {
-//   return (
-//     <div>
-//       <PlanetContainer/>
-//     </div>
-//   )
-//  }
-
-
-
-
-   // run our useEffect 
- 
-   return(
+ return(
     <main className='app-container'>
-       <>
-    {/* <Swiper 
-      navigation={{
-        ref:{nav},
-        onClick:{onButtonClick}
-      }}
-      modules={[Parallax, Navigation, Mousewheel, Keyboard]} 
-      className="mySwiper"
-      // loop={true}
-      speed={800}
-      parallax={true}
-    >
-      <SwiperSlide >
-        <LandingPageOne />
-      </SwiperSlide>
-      <SwiperSlide>
-        <LandingPageTwo/>
-      </SwiperSlide>
-      <SwiperSlide>
-        <ReservationPage />
-      </SwiperSlide>
-      <SwiperSlide>
-        <ReservationDetails />
-      </SwiperSlide>
-      <SwiperSlide>
-        <AboutPage setGoToReservation={setGoToReservation}/>
-      </SwiperSlide>
-    </Swiper> */}
-  </>
    <Switch>
-      <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome}/>} />
+      <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome} allPlanets={allPlanets} reserveFlight={reserveFlight}/>} />
+      <Route exact path='/reservation-details' render={ () =><ReservationDetails  reservationDetails={reservation} deletePost={deletePost}  /> } />
       <Route exact path='/' render={ () =>
           <Swiper 
           navigation={{
@@ -98,24 +88,18 @@ const App = () => {
           <SwiperSlide>
             <LandingPageTwo setGoToReservation={setGoToReservation}/>
           </SwiperSlide>
-          {/* <SwiperSlide>
-            <ReservationPage />
-          </SwiperSlide> */}
-          <SwiperSlide>
-            <ReservationDetails setGoToReservation={setGoToReservation} />
-          </SwiperSlide>
           <SwiperSlide>
             <AboutPage setGoToReservation={setGoToReservation}/>
           </SwiperSlide>
         </Swiper>
       } />
     </Switch>
-      {/* <LandingPageTwo/> */}
-      {/* <ReservationPage/> */}
   
     </main>
   )
 }
+
+
 
 
 

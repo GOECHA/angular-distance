@@ -1,46 +1,67 @@
 import React, { useState } from "react";
-// import DatePicker from "react-datepicker";
 import Header from '../Header/Header'
 import PlanetContainer from "../PlanetContainer/PlanetContainer";
 import './ReservationPage.css'
-// import "react-datepicker/dist/react-datepicker.css";
-// import dayjs from "dayjs";
+import {Link} from 'react-router-dom'
 
-// const dayjs = require('dayjs')
-//import dayjs from 'dayjs' // ES 2015
-// dayjs().format('ll')
-// import PlanetContainer from '../PlanetContainer/PlanetContainer'
-// import  ImageData  from '../ImageData'
-// import venus from "../assets/hd2-venus.png"
-const ReservationPage = ({ findPlanet, displayPlanets, id, planetMoons, calendar, date, setGoToHome }) => {
-  const [startDate, setStartDate] = useState(new Date());
-  const [currentPlanet, setCurrentPlanet] = useState('')
-  // const [endDate, setEndDate] = useState(new Date());
-// const planetSelections = () => {
-// return displayPlanets.map((planet, index) => {
-//   console.log(`planet`, planet)
-//   return <ImageData 
-//           key={index}
-//           displayPlanets = {displayPlanets}
-//          />
-//  })
-// }
-// const planetImages = 
-// console.log(`planetSelections`, planetSelections)=
+const ReservationPage = ({ reserveFlight, findPlanet, displayPlanets, id, planetMoons, calendar,  setGoToHome, allPlanets }) => {
+  const [currentMoons, setCurrentMoons] = useState([])
+  // const [currentPlanet, setCurrentPlanet] = useState('')
+  // const [selectedMoon, setSelectedMoon] = useState('')
+  // const [date, setDate] = useState('')
+  const [message, setMessage] = useState('Choose your Destination')
+  const [showReserveButton, setShowReserveButton] = useState(false)
+  const [currentSelections, setCurrentSelections] = useState({ id:'', date:'', moon:'', planet:''})
 
+  
+  const handleClick = (event) => {
+    setCurrentSelections({...currentSelections, planet: event.target.id})
+     const somePlanetInfo = allPlanets.find(planet => {
+    return planet.englishName === event.target.id      
+     })
+     setCurrentMoons(somePlanetInfo.moons)
+     console.log( `######`, somePlanetInfo)
+  }
 
+  const handleChange = (event) => {
+   const {name, value} = event.target
+   setCurrentSelections({...currentSelections, [name]: value})
+   currentSelections.date && currentSelections.moon && currentSelections.planet ? setShowReserveButton(true) :  setMessage(`Please, finish choosing selections`)
+  }
 
+const moonOptions = currentMoons !== null ?  currentMoons.map(moon => {
+   return <option key={moon.moon} value={moon.moon}  onChange={((e)=> console.log(`$$$$`, e.target.value)  )}>{moon.moon}</option>
+    }) 
+    :  <option key='none' disabled value='' >No Moons</option>
+
+    const handleReservation = (e) => {
+      currentSelections.planet && currentSelections.moon && currentSelections.date ? 
+        reserveFlight({...currentSelections, id: Date.now()})
+       :
+      //  null
+       setMessage(`Please, finish choosing selections`)
+      //  setMessage(`Please, finish selecting  ${!date && 'date,'} ${!selectedMoon && 'moon,'} ${!currentPlanet && ' planet'}`)
+    }
+
+  const reservationButton = showReserveButton &&   
+    <Link to={'/reservation-details'}  >
+      <button className="select-moon-btn" onClick={((e)=> handleReservation(e))}>Reserve!</button>
+    </Link>
+   
+   
+ 
 
   return (
     <div className="reservation-container">
       <div className="reservation-header">
+      <Link to={'/'}>
+      <button className="back-to-home">Landing Page</button>
+      </Link>
          <Header onClick={(e) =>{setGoToHome(e.target.id)}}/>
       </div>
-         <h2 className="choose-destination">Choose your Destination</h2>
-        <PlanetContainer setCurrentPlanet={setCurrentPlanet}/>
+         <h2 className="choose-destination">{message}</h2>
+        <PlanetContainer  handleClick={handleClick}/>
          <div >
-          {/* <img src={venus}/> */}
-         {/* {displayPlanets} */}
             
          </div>
          <section className="lower-container">
@@ -49,34 +70,9 @@ const ReservationPage = ({ findPlanet, displayPlanets, id, planetMoons, calendar
          <div className="calendar-container">
         
          <div className="calendar-wrapper">
-         <input name='calendar' className='calendar' type='date' min='25/09/2022'/>
+         <input name='date' className='calendar' type='date' min='2145-09-25' value={currentSelections.date}  onChange={((e) => handleChange(e))}/>
            <p className="reservation-logo">AD</p>
            <p className="calendar-title">DEPARTURE</p>
-          
-         
-         {/* <DatePicker
-         editableDateInputs={true}
-         isClearable
-         filterDate={d => {
-           return new Date() > d;
-         }}
-         placeholderText="Departure Selection"
-          selected={startDate}
-          selectsStart="09/25/2022"
-          startDate={startDate}
-          // endDate={endDate}
-          onChange={date => setStartDate(date)}
-          min="09/25/2022"
-        /> */}
-       
-        {/* <DatePicker
-          selected={endDate}
-          selectsEnd
-          startDate={startDate}
-          endDate={endDate}
-          minDate={startDate}
-          onChange={date => setEndDate(date)}
-        /> */}
         </div>
         <div className="reservation-image-container">
         </div>
@@ -84,17 +80,26 @@ const ReservationPage = ({ findPlanet, displayPlanets, id, planetMoons, calendar
         <section className="destination-container">
         <div className="moon-selection-wrapper">
             <form>
-              <select className="moon-selections" defaultValue="" id={id} name="moon-selections">
-              <option value="" disabled >MOON</option>
-                <option value="">{planetMoons}</option>
+              <select className="moon-selections" id={id} value={currentSelections.moon} name="moon" onChange={((e) => handleChange(e))}>
+                <option value="" disabled >MOON</option>
+                {moonOptions}
               </select>
-             <button className="select-moon-btn">SELECT</button>
+                {reservationButton}
            </form>
-          {/* <div className="destination-wrapper"> */}
+         
            
           
           </div>
-          <div className="current-selection"></div>
+          <div className="current-selection">
+            <div className="current-planet-selection">
+              <p>Planet</p>
+              <p className="displayed-name">{currentSelections.planet}</p>
+            </div>
+            <div className="current-moon-selection">
+              <p>Moon</p>
+              <p className="displayed-name">{currentSelections.moon}</p>
+            </div>
+          </div>
           {/* </div> */}
           <h3 className="destination-title"> DESTINATION</h3>
         </section>
