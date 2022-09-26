@@ -27,60 +27,49 @@ const App = () => {
   const [allPlanets, setAllPlanets] = useState()
   const [goToReservation, setGoToReservation] = useState(0)
   const [gotToHome, setGoToHome] = useState(0)
+  const [reservation, setReservation] = useState([])
+
   const nav = useRef(null);
   const onButtonClick = () => {
-    // `current` points to the mounted text input element
     nav.current.focus();
   };
-  // const [bookRoom, setBookRoom] = useState([]);
-  // const [spaceData, setSpaceData] = useState([])
- 
-//  const planetWrapper = () => {
-//   return (
-//     <div>
-//       <PlanetContainer/>
-//     </div>
-//   )
-//  }
-// const [spaceData, setSpaceData] = useState([])
 
 
+  
+  
   useEffect(() => {
     axios({
-    method: 'get',
-    url:'https://api.le-systeme-solaire.net/rest/bodies/',
-    data: 'data',
-    key: 'data.id'
-  })
-     .then(res =>{
+      method: 'get',
+      url:'https://api.le-systeme-solaire.net/rest/bodies/',
+      data: 'data',
+      key: 'data.id'
+    })
+    .then(res =>{
       setAllPlanets(res.data.bodies)
-      // console.log(`res`, res.data.bodies)
-     })
-     .catch(err => {
+    })
+    .catch(err => {
       console.log(err)
-     })
-    //  console.log(112234, allPlanets)
+    })
   }, [])
-
-//   const displayData = () => {
-//   //   console.log(`--------------------------------------------------`)
-//  console.log(`spaceData1234`,spaceData)
-//   let info = spaceData.map((data, index) => 
-//     // console.log(`line 48`, data)
-//       <p key={index}>{data.id}</p> //needs to be <Planet />
-//     )
-//     console.log(`info`, info)
-//     return info
-//   }
-
-const reserveFlight = () => {
   
-} 
+  
+  const deletePost = (e) => {
+    const filteredReservations = reservation.filter(
+      (reservation) => reservation.id !== parseInt(e.target.id)
+    );
+    setReservation(filteredReservations);
+  };
+  
+  const reserveFlight = (res) => {
+    setReservation([...reservation, res])
+    console.log(`res`,[res])
+  }
  
-   return(
+ return(
     <main className='app-container'>
    <Switch>
-      <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome} allPlanets={allPlanets}/>} />
+      <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome} allPlanets={allPlanets} reserveFlight={reserveFlight}/>} />
+      <Route exact path='/reservation-details' render={ () =><ReservationDetails  reservationDetails={reservation} deletePost={deletePost}  /> } />
       <Route exact path='/' render={ () =>
           <Swiper 
           navigation={{
@@ -99,24 +88,18 @@ const reserveFlight = () => {
           <SwiperSlide>
             <LandingPageTwo setGoToReservation={setGoToReservation}/>
           </SwiperSlide>
-          {/* <SwiperSlide>
-            <ReservationPage />
-          </SwiperSlide> */}
-          <SwiperSlide>
-            <ReservationDetails setGoToReservation={setGoToReservation} />
-          </SwiperSlide>
           <SwiperSlide>
             <AboutPage setGoToReservation={setGoToReservation}/>
           </SwiperSlide>
         </Swiper>
       } />
     </Switch>
-      {/* <LandingPageTwo/> */}
-      {/* <ReservationPage/> */}
   
     </main>
   )
 }
+
+
 
 
 
