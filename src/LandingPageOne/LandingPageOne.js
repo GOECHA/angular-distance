@@ -19,7 +19,8 @@ const LandingPageOne = ({setGoToReservation}) => {
       </section> 
       <div className="reservation-p1-button-container">
          <Link to={"/reservations"}>
-           <ReservationButton input='Reserve' onClick={(() => {setGoToReservation(1)})}/>
+           {/* <ReservationButton className="reservation-button" input='Reserve' onClick={(() => {setGoToReservation(1)})}/> */}
+            <ReservationButton className="reservation-button" input='Reserve' />
          </Link>
       </div>
     </div>

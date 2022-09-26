@@ -6,9 +6,11 @@ import { Link } from 'react-router-dom';
 const ReservationButton = ({setGoToReservation}) => {
   return (
     <Link to="/reservations" >
-       <button className="reservation-button" input='Reserve' onClick={(() => {setGoToReservation(1)})}>Reserve</button>
+       <button className="reservation-button" input='Reserve' onClick={setGoToReservation(1)} >Reserve</button>
     </Link>
   )
 }
 
 export default  ReservationButton;
+
+// onClick={setGoToReservation(1)}
