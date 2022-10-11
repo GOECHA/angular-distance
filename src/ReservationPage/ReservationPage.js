@@ -73,15 +73,15 @@ const ReservationPage = ({
 
   return (
     <div className="reservation-container">
-        <Link to={"/"}>
-          <button className="back-to-home-res-pg">Landing Page</button>
-        </Link>
-      <div className="reservation-header">
-        <Header
-          onClick={(e) => {
-            setGoToHome(e.target.id);
-          }}
-        />
+        <div className="reservation-header">
+        <div className="reservation-btn-wrapper">  
+          <Link to={"/"}>
+            <button className="back-to-home-res-pg" onClick={(e) => {
+              setGoToHome(e.target.id);
+            }}>Landing Page</button>
+          </Link>
+        </div>
+        <Header />
       </div>
       <div className="choose-dest-container">
       <h2 className="choose-destination">{message}</h2>
