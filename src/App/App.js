@@ -6,6 +6,7 @@ import LandingPageOne from '../LandingPageOne/LandingPageOne';
 import LandingPageTwo from '../LandingPageTwo/LandingPageTwo';
 import AboutPage from '../AboutPage/AboutPage';
 import ReservationDetails from '../ReservationDetails/ReservationDetails';
+import CircularIndeterminate from '../CircularIndeterminate/CircularIndeterminate';
 import axios from 'axios'
 
 import {
@@ -28,10 +29,13 @@ const App = () => {
     nav.current.focus();
   };
 
-
+ const authenticate = () => {
+    return new Promise(resolve => setTimeout(resolve, 2000)) // 2 seconds
+  }
   
   
   useEffect(() => {
+    <CircularIndeterminate authenticate={authenticate}/>
     axios({
       method: 'get',
       url:'https://api.le-systeme-solaire.net/rest/bodies/',
@@ -62,6 +66,7 @@ const App = () => {
  return(
     <main className='app-container'>
    <Switch>
+   {/* <CircularIndeterminate /> */}
       <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome} allPlanets={allPlanets} reserveFlight={reserveFlight}/>} />
       <Route exact path='/reservation-details' render={ () =><ReservationDetails  reservationDetails={reservation} deletePost={deletePost}  /> } />
       <Route exact path='/' render={ () =>
@@ -87,6 +92,7 @@ const App = () => {
           </SwiperSlide>
         </Swiper>
       } />
+     
     </Switch>
   
     </main>
