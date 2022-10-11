@@ -1,11 +1,10 @@
 .headerContainer{
     height: 15%;
-    width: 50%;
+    width: 20%;
 }
 
 .angular-distance-header{
     font-size: 2.5em;
     color: white;
     margin-right: 2em;
-    width: 100%;
 }
