@@ -8,6 +8,8 @@ import AboutPage from '../AboutPage/AboutPage';
 import ReservationDetails from '../ReservationDetails/ReservationDetails';
 import CircularIndeterminate from '../CircularIndeterminate/CircularIndeterminate';
 import axios from 'axios'
+import InternalServerError from '../errorHandling/InternalServerError'
+import Status404 from '../errorHandling/Status404'
 
 import {
   Route,
@@ -94,7 +96,8 @@ const App = () => {
           </SwiperSlide>
         </Swiper>
       } />
-     
+        <Route component={Status404} />
+        <Route component={InternalServerError} />
     </Switch>
   
     </main>
