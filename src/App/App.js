@@ -23,7 +23,7 @@ const App = () => {
   const [goToReservation, setGoToReservation] = useState(0)
   const [gotToHome, setGoToHome] = useState(0)
   const [reservation, setReservation] = useState([])
-  const [isLoading, setIsLoading] = useState(false)
+  const [loading, setLoading] = useState(false)
 
   const nav = useRef(null);
   const onButtonClick = () => {
@@ -68,7 +68,7 @@ const App = () => {
  return(
     <main className='app-container'>
    <Switch>
-   <CircularIndeterminate authenticate={authenticate} isLoading={true} />
+   {loading && <CircularIndeterminate authenticate={authenticate} isLoading={true} />}
       <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome} allPlanets={allPlanets} reserveFlight={reserveFlight}/>} />
       <Route exact path='/reservation-details' render={ () =><ReservationDetails  reservationDetails={reservation} deletePost={deletePost}  /> } />
       <Route exact path='/' render={ () =>
