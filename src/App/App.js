@@ -8,6 +8,8 @@ import AboutPage from '../AboutPage/AboutPage';
 import ReservationDetails from '../ReservationDetails/ReservationDetails';
 import CircularIndeterminate from '../CircularIndeterminate/CircularIndeterminate';
 import axios from 'axios'
+import InternalServerError from '../errorHandling/InternalServerError'
+import Status404 from '../errorHandling/Status404'
 
 import {
   Route,
@@ -23,6 +25,7 @@ const App = () => {
   const [goToReservation, setGoToReservation] = useState(0)
   const [gotToHome, setGoToHome] = useState(0)
   const [reservation, setReservation] = useState([])
+  const [loading, setLoading] = useState(false)
 
   const nav = useRef(null);
   const onButtonClick = () => {
@@ -35,7 +38,7 @@ const App = () => {
   
   
   useEffect(() => {
-    <CircularIndeterminate authenticate={authenticate}/>
+    setLoading(true)
     axios({
       method: 'get',
       url:'https://api.le-systeme-solaire.net/rest/bodies/',
@@ -48,6 +51,7 @@ const App = () => {
     .catch(err => {
       console.log(err)
     })
+    setLoading(false)
   }, [])
   
   
@@ -66,7 +70,7 @@ const App = () => {
  return(
     <main className='app-container'>
    <Switch>
-   {/* <CircularIndeterminate /> */}
+   {loading && <CircularIndeterminate authenticate={authenticate} isLoading={true} />}
       <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome} allPlanets={allPlanets} reserveFlight={reserveFlight}/>} />
       <Route exact path='/reservation-details' render={ () =><ReservationDetails  reservationDetails={reservation} deletePost={deletePost}  /> } />
       <Route exact path='/' render={ () =>
@@ -92,7 +96,8 @@ const App = () => {
           </SwiperSlide>
         </Swiper>
       } />
-     
+        <Route component={Status404} />
+        <Route component={InternalServerError} />
     </Switch>
   
     </main>
