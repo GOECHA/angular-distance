@@ -4,12 +4,14 @@ import Header from "../Header/Header";
 import PlanetContainer from "../PlanetContainer/PlanetContainer";
 import "./ReservationPage.css";
 import { Link } from "react-router-dom";
+import CircularIndeterminate from "../CircularIndeterminate/CircularIndeterminate";
 
 const ReservationPage = ({
   reserveFlight,
   id,
   setGoToHome,
   allPlanets,
+  loading,
 }) => {
   const [currentMoons, setCurrentMoons] = useState([]);
   const [message, setMessage] = useState("Choose your Destination");
@@ -73,6 +75,7 @@ const ReservationPage = ({
 
   return (
     <div className="reservation-container">
+      {loading && CircularIndeterminate}
         <div className="reservation-header">
         <div className="reservation-btn-wrapper">  
           <Link to={"/"}>

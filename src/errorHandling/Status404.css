@@ -8,12 +8,30 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100%;
+        background-image: url('../../src/assets/3-stars.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
         width: 100%;
-        padding: 4rem;
+        padding: 2rem;
+        padding-top: 4rem;
+        overflow: hidden;
+        scroll-behavior: none;
+        position: fixed;
     }
     
 
+.st404logo-wrapper{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    height: auto;
+    padding-top: 4rem;
+    /* position: absolute; */
+    margin-left: 20px;
+    margin-bottom: -200px;
+}
 
     
     .st404-title,
@@ -24,11 +42,18 @@
         align-items: center;
         justify-content: center;
         height: 100px;
-        width: 100%;  
+        width: 60%;  
+        margin-left: 7rem;
+    }
+
+    .st404-title{
+       margin-bottom: -100px;
+
     }
 
     .st404title-4{
-      width:100px;
+      width:100%;
+      margin-bottom: 200px;
     }
 
 
@@ -81,7 +106,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-         height: 50px;
+         height: 300px;
          width: auto;
          cursor: pointer; 
          margin-right: 0 !important;
@@ -89,7 +114,18 @@
     }
 
  @media screen and ( max-width:640px){
-   
+    .st404logo-wrapper{
+        /* position: fixed !important; */
+        margin-left: 20px;
+        margin-right: 0%;
+        height: 200px;
+    }
+    
+    .stat-4040-logo{
+         height: 100px;
+    }
+
+
     .st404-title,
     .st404title-2,
     .st404title-3,
@@ -99,7 +135,9 @@
         justify-content: center;
         height: 60px;
         width: 100%;  
+     
     }
+
     .st404title-4{
         width: 60%;
         height: 80px;
@@ -138,8 +176,24 @@
 } 
 
 @media screen and ( max-width:1333px){
+     
+    .error-wrapper{
+        padding: 1rem;
+    }
+    .stat-4040-logo{
+        margin-bottom: 5rem;
+        margin-right: 4rem;
+    }
+
     .st404title-4{
         width: 60%;
     }
-
+    .st404logo-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        height: 60%;
+        margin-right: 100px;
+    }
 }

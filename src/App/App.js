@@ -71,7 +71,7 @@ const App = () => {
     <main className='app-container'>
    <Switch>
    {loading && <CircularIndeterminate authenticate={authenticate} isLoading={true} />}
-      <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome} allPlanets={allPlanets} reserveFlight={reserveFlight}/>} />
+      <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome} allPlanets={allPlanets} reserveFlight={reserveFlight} loading={loading}/>} />
       <Route exact path='/reservation-details' render={ () =><ReservationDetails  reservationDetails={reservation} deletePost={deletePost}  /> } />
       <Route exact path='/' render={ () =>
           <Swiper 
