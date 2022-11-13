@@ -17,6 +17,7 @@
     justify-content: center;
     align-items: center; 
     padding: 2em;
+    margin-top: -100px;
    
   } 
 
@@ -51,6 +52,6 @@
     .planet-button:hover{ 
       transform: scale(1.1); 
       cursor: pointer;
-      /* animation: App-logo-spin infinite 20s linear; */
+      animation: App-logo-spin infinite 20s linear;
     }
   /* } */
