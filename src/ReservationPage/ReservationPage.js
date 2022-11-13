@@ -35,7 +35,7 @@ const ReservationPage = ({
   const handleChange = (event) => {
     const { name, value } = event.target;
     setCurrentSelections({ ...currentSelections, [name]: value });
-    currentSelections.date && currentSelections.moon && currentSelections.planet
+    (currentSelections.planet || currentSelections.moon) && currentSelections.date 
       ? setShowReserveButton(true)
       : setMessage(`Please, finish choosing selections`);
   };
