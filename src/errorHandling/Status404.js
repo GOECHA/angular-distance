@@ -10,7 +10,12 @@ const Status404 = () => {
       <Status code={404}>
         <div className='error-wrapper'>
           <div className="st404-title">
-          <h4 >404</h4>
+          <h2 >404</h2>
+          </div>
+          <div className='st404logo-wrapper'>
+          <Link to="/" >
+           <img className="stat-4040-logo" src={jupiter} alt='Not Found logo'/>
+          </Link>
           </div>
           <div className="st404title-2">
           <h2>The planets are </h2>
@@ -19,10 +24,7 @@ const Status404 = () => {
           <h2>out of line</h2>
           </div>
           <div className="st404title-4">
-          <Link to="/" className='link-404-con'>
             <h5>Let's find another <br/> route . . .</h5>
-           <img className="stat-4040-logo" src={jupiter} alt='Not Found logo'/>
-          </Link>
           </div>
         </div>
       </Status>
