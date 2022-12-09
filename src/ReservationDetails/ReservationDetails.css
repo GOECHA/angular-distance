@@ -1,13 +1,13 @@
 .reservation-details-container{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background: url('../assets/horizon.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    overflow: hidden;
 }
 
 .reservation-quote{
@@ -40,9 +40,10 @@
     font-family: 'Italiana';
 }
 .error-res-mes{
+    width: 600px;
     margin-top: 2em;
-   margin-left: 10%;
-   font-size: 3em;
+    margin-left: 10%;
+    font-size: 3em;
 }
 
 .quote-reservation-wrapper{
@@ -56,14 +57,19 @@
 
 .itineraries-title-wrapper{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-left: 2rem;
     width: 100%;
-
+    /* position: absolute; */
 }
 
 .itineraries-title{
    font-size: 3.5em;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   width: 72%;
 }
 
 
@@ -92,9 +98,12 @@
 
 .reservation-button-r-con-container,
 .reservation-button-r-con-right-container{
-    display: flex;
+    /* display: flex; */
     flex-direction: row;
     justify-content: center;
-    height: 10%;
-    width: 30%;
+    align-items: center;
+    height: 100%;
+    width: 5rem;
+    margin-right: 2rem;
+    margin-left: -6rem;
 }

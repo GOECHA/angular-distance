@@ -26,10 +26,12 @@
     justify-content:flex-end;
     height: 10%;
     width: 100%;
-    padding:3em;
+    padding:3rem;
     padding-bottom: 0%;
 }
-
+.land-1-header{
+margin: 2rem;
+}
 .quote-one-container{
     display: flex;
     flex-direction: column;

@@ -3,6 +3,7 @@ import React from 'react'
 import './LandingPageOne.css'
 import ReservationButton from '../controls/ReservationButton/ReservationButton'
 import Header from '../Header/Header'
+import '../Header/Header.css'
 import { Link } from 'react-router-dom'
 
 
@@ -10,7 +11,7 @@ const LandingPageOne = ({setGoToReservation}) => {
   return (
     <div className="landing-page-one-container">
       <div className="landing-one-header">
-        <Header />
+        <Header className="land-1-header"/>
       </div>
       <section className="quote-one-container">
         <div className="quote-one-wrapper">

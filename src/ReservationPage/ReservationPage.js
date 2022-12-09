@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 import Header from "../Header/Header";
 import PlanetContainer from "../PlanetContainer/PlanetContainer";
@@ -35,7 +35,7 @@ const ReservationPage = ({
   const handleChange = (event) => {
     const { name, value } = event.target;
     setCurrentSelections({ ...currentSelections, [name]: value });
-    (currentSelections.planet || currentSelections.moon) && currentSelections.date 
+    currentSelections.planet && currentSelections.date
       ? setShowReserveButton(true)
       : setMessage(`Please, finish choosing selections`);
   };
@@ -60,7 +60,8 @@ const ReservationPage = ({
     );
 
   const handleReservation = (e) => {
-    currentSelections.planet && currentSelections.moon && currentSelections.date
+    (currentSelections.planet || currentSelections.moon) &&
+    currentSelections.date
       ? reserveFlight({ ...currentSelections, id: Date.now() })
       : setMessage(`Please, finish choosing selections`);
   };
@@ -77,34 +78,38 @@ const ReservationPage = ({
     <div className="reservation-container">
       {loading && CircularIndeterminate}
         <div className="reservation-header">
-        <div className="reservation-btn-wrapper">  
-          <Link to={"/"}>
-            <button className="back-to-home-res-pg" onClick={(e) => {
-              setGoToHome(e.target.id);
-            }}>Landing Page</button>
-          </Link>
+          <Header className="res-header" />
+         
+            <Link to={"/"} >
+              <button
+                className="back-to-home-res-pg"
+                onClick={(e) => {
+                  setGoToHome(e.target.id);
+                }}
+              >
+                Landing Page
+              </button>
+            </Link>
+         
         </div>
-        <Header />
-      </div>
       <div className="choose-dest-container">
-      <h2 className="choose-destination">{message}</h2>
+        <h2 className="choose-destination">{message}</h2>
       </div>
       <PlanetContainer handleClick={handleClick} />
-    
       <section className="lower-container">
         <div className="lower-destination-container">
           <div className="calendar-container">
             <div className="calendar-wrapper">
               <div className="calendar-input-wrapper">
-              <input
-                name="date"
-                className="calendar"
-                type="date"
-                min="2145-09-25"
-                value={currentSelections.date}
-                onChange={(e) => handleChange(e)}
-              />
-              <p className='earth-calendar'>Earth Calendar</p>
+                <input
+                  name="date"
+                  className="calendar"
+                  type="date"
+                  min="2145-09-25"
+                  value={currentSelections.date}
+                  onChange={(e) => handleChange(e)}
+                />
+                <p className="earth-calendar">Earth Calendar</p>
               </div>
               <p className="reservation-logo">AD</p>
               <p className="calendar-title">DEPARTURE</p>
@@ -126,7 +131,6 @@ const ReservationPage = ({
                   </option>
                   {moonOptions}
                 </select>
-                {reservationButton}
               </form>
             </div>
             <div className="current-selection">
@@ -139,7 +143,12 @@ const ReservationPage = ({
                 <p className="displayed-name">{currentSelections.moon}</p>
               </div>
             </div>
-            <h3 className="destination-title"> DESTINATION</h3>
+            <div className="reservation-wrapper">
+              <h3 className="destination-title"> DESTINATION </h3>
+                 <div className="moon-btn-wrapper">
+                   {reservationButton}
+                </div>
+            </div>
           </section>
         </div>
       </section>
@@ -147,15 +156,11 @@ const ReservationPage = ({
   );
 };
 
-
-
-
 export default ReservationPage;
-
 
 ReservationPage.propTypes = {
   allPlanets: PropTypes.array,
   id: PropTypes.number,
   reserveFlight: PropTypes.func,
-  setGoToHome: PropTypes.func
-}
+  setGoToHome: PropTypes.func,
+};

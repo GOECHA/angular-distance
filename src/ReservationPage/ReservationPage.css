@@ -1,260 +1,239 @@
-/* *{
+*{
     border: 1px solid purple;
+}
+
+.reservation-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: url("../assets/purple-starts.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: fixed;
+}
+
+.res-header{
+   width: 100%;
+}
+
+
+.choose-dest-container {
+  width: 100%;
+  height: 10%;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  width: 1/8%;
+}
+
+/* .reservation-header-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 } */
 
-.reservation-container{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;  
-    background: url('../assets/purple-starts.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    position: fixed;
-  
-}
-.choose-dest-container{
-    width: 100%;
-    height: 10%;
+.reservation-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 10%;
+  width: 100%;
+  padding: 1.5em;
 }
 
-.grid{
-    display: flex;
-    flex-direction: column;
-    width: 1/8%;
-}
+/* .reservation-btn-wrapper {
+  width: 50%;
+} */
 
-
-.reservation-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 10%;
-    width: 100%;
-    padding: 1.5em;
-}
-
-.reservation-btn-wrapper{
-    width: 50%;
-}
-
-.reservation-header:hover{
-    /* transform: scale(1.1); 
+.reservation-header:hover {
+  /* transform: scale(1.1); 
     cursor: pointer; */
-    color: #A2C4D7;
+  color: #a2c4d7;
 }
 
-.choose-destination{
-    display: flex;
-    justify-content: flex-start;
-    font-size: 2em;
-    margin-bottom: -2em;
-    padding: 2em;
-    padding-bottom: 0%;
-    height: 10%;
-    width: 100%;
+.choose-destination {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 2em;
+  margin-bottom: -2em;
+  padding: 2em;
+  padding-bottom: 0%;
+  height: 10%;
+  width: 100%;
 }
 
-
-.lower-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    height: 80%;
-    width: 100%;
-    padding: 1.5em;
-    margin-top: -40%;
+.lower-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 80%;
+  width: 100%;
+  padding: 1.5em;
+  margin-top: -40%;
 }
 
-
-
-.lower-destination-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: .5em;
-    width: 90%;
-    height: 45%;
-    background: rgba(1, 38, 54, 0.73);
-    box-shadow: -3px 4px 13px -3px rgba(250, 248, 248, 0.25);
-    border-radius: 22px;
-    /* margin-left: 2em; */
-    margin-bottom: -.5em;
-    position: relative;
-    z-index: 1;
+.lower-destination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  width: 90%;
+  height: 45%;
+  background: rgba(1, 38, 54, 0.73);
+  box-shadow: -3px 4px 13px -3px rgba(250, 248, 248, 0.25);
+  border-radius: 22px;
+  /* margin-left: 2em; */
+  margin-bottom: -0.5em;
+  position: relative;
+  z-index: 1;
 }
 
-.calendar-container{
-    display: flex;
-    width: 70%;
-    height: 100%;
+.calendar-container {
+  display: flex;
+  width: 70%;
+  height: 100%;
 }
 
-.reservation-logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5em;
-    height: 50%;
+.reservation-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5em;
+  height: 50%;
 }
 
-.react-datepicker-wrapper{
-display: flex;
-justify-content: flex-end;
-align-items: flex-end;
-width: 80%;
+.react-datepicker-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 80%;
 }
 
-
- .react-datepicker__input-container,
- .react-datepicker__input-container input {
-   width: 80%;
-   color:rgba(1, 38, 54)
- }
-
- .calendar-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width:40%;
-    height: 100%;
+.react-datepicker__input-container,
+.react-datepicker__input-container input {
+  width: 80%;
+  color: rgba(1, 38, 54);
 }
 
-
- .reservation-image-container,
- .destination-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    height: 100%;
-    width: 60%;
+.calendar-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 100%;
 }
 
-.destination-container{
-    width: 40%;
+.reservation-image-container,
+.destination-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 60%;
 }
 
-
-.reservation-image-container{
-    background-image: url("../assets/planets-row.png");
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+.destination-container {
+  width: 40%;
 }
 
+.reservation-image-container {
+  background-image: url("../assets/planets-row.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
- .destination-title,
- .calendar-title{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    font-weight: bold;
-    width: 100%;
-    height: 30%;
-    color: white;
- }
+.destination-title,
+.calendar-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 100%;
+  height: 30%;
+  color: white;
+}
 
- .calendar-title{
-    height: 20%;
- }
+.calendar-title {
+  height: 20%;
+}
 
-.current-selection{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
-    color: white;
-    height: 80%;
-    width: 90%;
+.current-selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: white;
+  height: 80%;
+  width: 90%;
 }
 
 .current-planet-selection,
-.current-moon-selection{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 1em;
-    color: white;
-    height: 100%;
-    width: 50%;
+.current-moon-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1em;
+  color: white;
+  height: 100%;
+  width: 50%;
 }
 
-.moon-selection-wrapper{
+.moon-selection-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  font-size:  1.5em;
+  font-size: 1.5em;
   height: 20%;
   width: 100%;
-  padding-top: .5em;
+  padding-top: 0.5em;
 }
 
-.moon-selections{
-    height: 10%;
-    width: 100%;
+.moon-selections {
+  height: 10%;
+  width: 100%;
 }
 
-
-.select-moon-btn{
-    position: absolute;
-    width: 5em;
-    height: 2em;
-    background: #020038;
-    font-size: .6em;
-    box-shadow: 0px 4px 4px rgba(145, 213, 229, 0.25);
-    border-radius: 13px;
-    color: rgb(145, 213, 229);
-    margin-left: 1.5em;
+.calendar {
+  z-index: 1;
+  height: 70%;
 }
 
-
-.select-moon-btn:hover{
-    background: rgb(145, 213, 229, 0.55);
-    box-shadow: 0px 4px 4px rgba(2, 0, 56, 0.25);
-    cursor: pointer;
-    color:rgba(2, 0, 56);
+.back-to-home-res-pg {
+  /* position: absolute; */
+  width: 8em;
+  height: 2em;
+  background: #020038;
+  box-shadow: 0px 4px 4px rgba(145, 213, 229, 0.25);
+  border-radius: 13px;
+  color: rgb(145, 213, 229);
+  margin-top: -2.5em;
+  margin-left: -11em;
 }
 
- .select-moon-btn:active{
-    transform: translateY(2px);
+.back-to-home-res-pg:hover {
+  background: rgb(145, 213, 229, 0.55);
+  box-shadow: 0px 4px 4px rgba(2, 0, 56, 0.25);
+  cursor: pointer;
+  color: rgba(2, 0, 56);
 }
 
-.calendar{
-    z-index: 1;
-    height: 70%;
-}
-
-.back-to-home-res-pg{
-    position: absolute;
-    width: 8em;
-    height: 2em;
-    background: #020038;
-    box-shadow: 0px 4px 4px rgba(145, 213, 229, 0.25);
-    border-radius: 13px;
-    color: rgb(145, 213, 229);
-    margin-top: -2.5em;
-    margin-left: -11em;
-}
-
-.back-to-home-res-pg:hover{
-    background: rgb(145, 213, 229, 0.55);
-    box-shadow: 0px 4px 4px rgba(2, 0, 56, 0.25);
-    cursor: pointer;
-    color:rgba(2, 0, 56);
-}
-
-.back-to-home-res-pg:active{
-    transform: translateY(2px);
+.back-to-home-res-pg:active {
+  transform: translateY(2px);
 }
 
 /* .reservation-button-r-con-container,
@@ -266,22 +245,62 @@ width: 80%;
     width: 30%;
 } */
 
-.calendar-input-wrapper{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-top: .7em;
+.calendar-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 0.7em;
 }
 
-.earth-calendar{
-    font-size: .7em;
+.earth-calendar {
+  font-size: 0.7em;
 }
 
 .p-res-title,
 .m-res-title {
-   font-size: .5em;
-   height: 10%;
-   margin-bottom: 1em;
+  font-size: 0.5em;
+  height: 10%;
+  margin-bottom: 1em;
+}
+
+.reservation-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    width: 100%;
+    height: 50px;
+}
+
+.moon-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 50px;
+}
+
+.select-moon-btn {
+  position: absolute;
+  width: 4rem;
+  height: 2rem;
+  background: #020038;
+  font-size: 0.6em;
+  box-shadow: 0px 4px 4px rgba(145, 213, 229, 0.25);
+  border-radius: 13px;
+  color: rgb(145, 213, 229);
+  margin-left: 1.5em;
+}
+
+.select-moon-btn:hover {
+  background: rgb(145, 213, 229, 0.55);
+  box-shadow: 0px 4px 4px rgba(2, 0, 56, 0.25);
+  cursor: pointer;
+  color: rgba(2, 0, 56);
+}
+
+.select-moon-btn:active {
+  transform: translateY(2px);
 }
