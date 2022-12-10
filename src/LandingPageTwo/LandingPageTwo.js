@@ -11,7 +11,7 @@ const LandingPageTwo = ({setGoToReservation}) => {
     <div className="landing-page-two-container">
         <div className="reservation-button-container">
           <Link to={"/reservations"}>
-           <ReservationButton input='Reserve' onClick={(() => {setGoToReservation(1)})}/>
+           <ReservationButton input='Reserve' text='Reserve' onClick={(() => {setGoToReservation(1)})}/>
            </Link>
          </div>
       <section className="quote-container">

@@ -25,18 +25,17 @@ const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}
     <div className="reservation-details-container">
        <div className="itineraries-title-wrapper">
            <h2 className="itineraries-title">Itineraries</h2>
-      
-        {/* <div className="reservation-button-r-con-container"> */}
+        <div className="reservation-button-r-con-container">
           <Link to={'/'}>
-          <button className="back-to-home-r-p">Landing Page</button>
+          <ReservationButton text='Landing Page'/>
           </Link>
-           {/* </div> */}
-          {/* <div className="reservation-button-r-con-right-container"> */}
+           </div>
+          <div className="reservation-button-r-con-right-container">
           <Link to={"/reservations"}>
-              <ReservationButton input='Reserve' onClick={(() => {setGoToReservation(1)})}/>
+              <ReservationButton text='Reserve' onClick={(() => {setGoToReservation(1)})}/>
            </Link>
           
-           {/* </div> */}
+           </div>
          </div>
          {handleError}
     </div>
