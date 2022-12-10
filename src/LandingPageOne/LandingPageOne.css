@@ -1,3 +1,9 @@
+.landing1-a{
+    padding:1em;
+    margin-right: 2rem;
+}
+
+
 .landing-page-one-container{
     display: flex;
     flex-direction: column;
@@ -52,15 +58,15 @@ margin: 2rem;
    height: auto;
    width: 50%;
 }
-.reservation-button-container{
+/* .reservation-button-container{
     display: flex;
     /* justify-content: center; */
-    align-items: center;
+    /* align-items: center; */
     /* height: 10%; */
     /* width: 100%; */
     /* padding: 1.5em; */
 
-}
+/* }  */
 .reservation-p1-button-container{
     display: flex;
     align-items: center;
@@ -68,4 +74,8 @@ margin: 2rem;
     height: 10%;
     width: 100%;
     padding: 1.5em;
+}
+
+.reservation-button-landing1{
+    margin-right: 2em;
 }
