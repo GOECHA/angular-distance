@@ -5,6 +5,8 @@ import PlanetContainer from "../PlanetContainer/PlanetContainer";
 import "./ReservationPage.css";
 import { Link } from "react-router-dom";
 import CircularIndeterminate from "../CircularIndeterminate/CircularIndeterminate";
+// import {useHover} from "../../utilities/hooks/useHover"
+
 
 const ReservationPage = ({
   reserveFlight,
@@ -22,6 +24,20 @@ const ReservationPage = ({
     moon: "",
     planet: "",
   });
+
+  // const [hoverRef, setIsHovering] = useHover();
+
+ 
+  // const hovering = (event) => {
+  //   const { name, value } = event.target;
+  //   setIsHovering9({ ...hoverRef, planet: event.target.id});
+  //   const somePlanetInfo = allPlanets.find((planet) => {
+  //     return planet.englishName === event.target.id ? 
+  //     (<div ref={hoverRef}>{isHovering ? 'Hovering' : 'Not hovering'}</div>) : null
+  // })}
+  
+  // }
+  
 
   const handleClick = (event) => {
     setCurrentSelections({ ...currentSelections, planet: event.target.id });
@@ -117,7 +133,7 @@ const ReservationPage = ({
             <div className="reservation-image-container"></div>
           </div>
           <section className="destination-container">
-            <div className="moon-selection-wrapper">
+            <div className="moon-selection-wrapper" >
               <form>
                 <select
                   className="moon-selections"
