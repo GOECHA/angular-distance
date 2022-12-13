@@ -1,6 +1,7 @@
 .reservation-details-container{
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 100vh;
     width: 100vw;
     background: url('../assets/horizon.jpg') no-repeat center center fixed; 
@@ -62,7 +63,8 @@
     justify-content: flex-start;
     align-items: center;
     padding: 2rem; 
-    /* width: 100%; */
+    padding-right: .5rem;
+    width: 95%;
     /* position: absolute; */
 }
 
@@ -98,8 +100,7 @@
     transform: translateY(2px);
 }
 
-.reservation-button-r-con-container,
-.reservation-button-r-con-right-container{
+.reservation-button-r-con-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -109,8 +110,19 @@
     /* margin-right: 2rem; */
 }
 
-/*  
+.details-wrapper{
+    width: 90%;
+    height: 70%;
+    border-radius: 22px;
+    background-color:  rgba(1, 38, 54, 0.73);
+    padding: 1rem;
+  }
 
+
+
+  
+
+/*  
 .reservation-button-r-con-container{
     width: 15%;
 } */

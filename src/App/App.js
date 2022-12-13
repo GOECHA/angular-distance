@@ -22,12 +22,14 @@ import { Navigation, Parallax, Mousewheel, Keyboard } from "swiper";
 
 const App = () => {
   const [allPlanets, setAllPlanets] = useState()
+  // eslint-disable-next-line
   const [goToReservation, setGoToReservation] = useState(0)
+  // eslint-disable-next-line
   const [gotToHome, setGoToHome] = useState(0)
   const [reservation, setReservation] = useState([])
   const [loading, setLoading] = useState(false)
 
-  
+
   const nav = useRef(null);
   const onButtonClick = () => {
     nav.current.focus();

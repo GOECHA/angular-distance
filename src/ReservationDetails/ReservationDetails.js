@@ -6,6 +6,7 @@ import "./ReservationDetails.css"
 import { Link } from 'react-router-dom'
 
 const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}) => {
+
     const handleError = reservationDetails.length ? 
     reservationDetails.map((reservation) =>{
     return <ReservationCard 
@@ -29,15 +30,14 @@ const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}
           <Link to={'/'}>
           <ReservationButton text='Landing Page'/>
           </Link>
-           </div>
-          <div className="reservation-button-r-con-right-container">
           <Link to={"/reservations"}>
               <ReservationButton text='Reserve' onClick={(() => {setGoToReservation(1)})}/>
            </Link>
-          
            </div>
          </div>
+         <div className="details-wrapper">
          {handleError}
+         </div>
     </div>
   )
 }
