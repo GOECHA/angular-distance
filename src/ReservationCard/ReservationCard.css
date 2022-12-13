@@ -41,10 +41,11 @@
   justify-content: space-evenly;
   width: 100%;
   height: 10%;
-  margin-bottom: 0.5rem;
+  margin-top: -.5rem;
+  margin-bottom: 0.1rem;
 }
 
-.destination-wrapper {
+.destination-wrapper{
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
@@ -61,15 +62,38 @@
   margin-right: 0.7em;
 }
 
-.reservation-destination {
+
+
+.reservation-destination,
+.gravity-title-wrapper  {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5em;
+  font-size: 1rem;
   margin: 0%;
+  margin-top: .3rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 0.5rem;
-  width: 95%;
+  width: 90%;
+}
+
+.gravity-title-wrapper {
+  
+  width: 100%;
+}
+
+.planet-gravity-title{
+  display: flex;
+  align-items: center;
+}
+
+.earth-title,
+.destination-gravity-title{
+  font-size: 1em;
+}
+
+.destination-data{
+  font-size: 1rem;
 }
 
 .p-m-title-container {
@@ -78,7 +102,7 @@
   align-items: center;
   justify-content: space-evenly;
   /* height: 50%; */
-  width: 100%;
+  width: 90%;
 }
 
 .p-m-title-wrapper {
@@ -113,13 +137,61 @@ margin-left: 5px;
   font-weight: bold;
 }
 
-#my-chart.bar {
-    height: 200px;
+/* #my-chart.bar {
+    height: 20%;
     max-width: 300px;
     margin: 0 auto;
+    --labels-size: 50px;
   }
 
   #my-chart.show-heading{
     color: white;
+    width: 95%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
     font: .5rem;
   }
+  
+  #custom-effect tbody td {
+    margin-inline-start: 20%;
+    margin-inline-end: 20%;
+    border-radius: 50% / 12px;
+    background:
+      radial-gradient(ellipse 60% 15px at bottom, grey 50px, transparent 50px) bottom,
+      radial-gradient(ellipse 60% 15px at top, lightgrey 50px, transparent 50px) top,
+      linear-gradient(grey, darkgrey, lightgrey);
+  }
+
+  #animations-example-6 td {
+    background-image: linear-gradient(
+      45deg,
+      #0a49f6,
+      #22c0fa,
+      #44fef5,
+      #82ffc5,
+      #8ff70f,
+      #faf982
+    );
+
+    background-size: 600%;
+    animation: gradient-animation 3s linear infinite alternate;
+  }
+
+  @keyframes gradient-animation {
+    0%   { background-position:   0%; }
+    100% { background-position: 100%; }
+  }
+
+  /* @media (min-width: 600px) {
+    #my-chart .bar {
+      height: 400px;
+      max-width: 800px;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    #my-chart .bar {
+      height: 500px;
+      max-width: 1000px;
+    }
+  } */ 

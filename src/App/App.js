@@ -10,6 +10,7 @@ import CircularIndeterminate from '../CircularIndeterminate/CircularIndeterminat
 import axios from 'axios'
 import InternalServerError from '../errorHandling/InternalServerError'
 import Status404 from '../errorHandling/Status404'
+import AppContext from '../AppContext';
 
 import {
   Route,
@@ -28,7 +29,14 @@ const App = () => {
   const [gotToHome, setGoToHome] = useState(0)
   const [reservation, setReservation] = useState([])
   const [loading, setLoading] = useState(false)
+ 
 
+
+  const globals = {
+    allPlanets: allPlanets,
+    setAllPlanets: setAllPlanets,
+
+  }
 
   const nav = useRef(null);
   const onButtonClick = () => {
@@ -71,6 +79,7 @@ const App = () => {
   }
  
  return(
+  <AppContext.Provider value={globals}>
     <main className='app-container'>
    <Switch>
    {loading && <CircularIndeterminate authenticate={authenticate} isLoading={true} />}
@@ -102,8 +111,8 @@ const App = () => {
         <Route component={Status404} />
         <Route component={InternalServerError} />
     </Switch>
-  
     </main>
+    </AppContext.Provider>
   )
 }
 

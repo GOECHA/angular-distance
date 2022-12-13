@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Header from "../Header/Header";
 import PlanetContainer from "../PlanetContainer/PlanetContainer";
 import "./ReservationPage.css";
 import { Link } from "react-router-dom";
 import CircularIndeterminate from "../CircularIndeterminate/CircularIndeterminate";
 // import {useHover} from "../../utilities/hooks/useHover"
-
+import AppContext from "../AppContext";
 
 const ReservationPage = ({
   reserveFlight,
@@ -15,6 +15,7 @@ const ReservationPage = ({
   allPlanets,
   loading,
 }) => {
+  const[currentGravity, setCurrentGravity] = useState("")
   const [currentMoons, setCurrentMoons] = useState([]);
   const [message, setMessage] = useState("Choose your Destination");
   const [showReserveButton, setShowReserveButton] = useState(false);
@@ -25,6 +26,10 @@ const ReservationPage = ({
     planet: "",
   });
 
+  const globals = useContext(AppContext)
+  // console.log('respg 31', globals.allPlanets[243].gravity)
+
+ 
   // const [hoverRef, setIsHovering] = useHover();
 
  
@@ -37,7 +42,7 @@ const ReservationPage = ({
   // })}
   
   // }
-  
+ 
 
   const handleClick = (event) => {
     setCurrentSelections({ ...currentSelections, planet: event.target.id });
@@ -46,12 +51,15 @@ const ReservationPage = ({
     });
     setCurrentMoons(somePlanetInfo.moons);
     console.log(`######`, somePlanetInfo);
+    setCurrentGravity(somePlanetInfo.gravity)
+    console.log('respage 55', somePlanetInfo.gravity)
+    console.log('respage 56', currentGravity)
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setCurrentSelections({ ...currentSelections, [name]: value });
-    currentSelections.planet && currentSelections.date
+    currentSelections.planet && currentSelections.date 
       ? setShowReserveButton(true)
       : setMessage(`Please, finish choosing selections`);
   };
@@ -76,10 +84,11 @@ const ReservationPage = ({
     );
 
   const handleReservation = (e) => {
-    (currentSelections.planet || currentSelections.moon) &&
+    currentSelections.planet &&
     currentSelections.date
-      ? reserveFlight({ ...currentSelections, id: Date.now() })
-      : setMessage(`Please, finish choosing selections`);
+      ? reserveFlight({ ...currentSelections, id: Date.now() }) 
+      : currentSelections.moon ? reserveFlight({ ...currentSelections, id: Date.now() }) 
+      : setMessage(`Please, finish choosing selections`)
   };
 
   const reservationButton = showReserveButton && (
@@ -89,6 +98,7 @@ const ReservationPage = ({
       </button>
     </Link>
   );
+console.log(93, currentSelections)
 
   return (
     <div className="reservation-container">
@@ -160,9 +170,9 @@ const ReservationPage = ({
               </div>
             </div>
             <div className="reservation-wrapper">
-              <h3 className="destination-title"> DESTINATION </h3>
                  <div className="moon-btn-wrapper">
                    {reservationButton}
+                 <h3 className="destination-title"> DESTINATION </h3>
                 </div>
             </div>
           </section>

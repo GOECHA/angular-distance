@@ -14,6 +14,7 @@ const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}
             date= {reservation.date}
             planet={reservation.planet}
             moon= {reservation.moon}
+            gravity={reservation.gravity}
             deletePost= {deletePost}
             key={reservation.id}
             />
