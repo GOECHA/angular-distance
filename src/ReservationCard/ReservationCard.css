@@ -112,3 +112,14 @@ margin-left: 5px;
   font-size: 1rem;
   font-weight: bold;
 }
+
+#my-chart.bar {
+    height: 200px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  #my-chart.show-heading{
+    color: white;
+    font: .5rem;
+  }

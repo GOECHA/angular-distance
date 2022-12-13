@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React from "react";
 import "./ReservationCard.css";
+import 'charts.css';
 
 const ReservationCard = ({ id, date, planet, moon, deletePost }) => {
   return (
@@ -43,6 +44,9 @@ const ReservationCard = ({ id, date, planet, moon, deletePost }) => {
             <p className="reserve-planet">{planet}</p>
             <p className="reserve-moon">{moon}</p>
           </div> */}
+        <table class="charts-css bar show-heading" id="my-chart">
+         <caption> Gravity Data </caption>
+        </table>
         </div>
       </div>
     </div>
