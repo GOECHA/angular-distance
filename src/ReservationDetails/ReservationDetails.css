@@ -44,8 +44,8 @@
 .error-res-mes{
     text-align: center;
     width: 80%;
-    margin-top: 2em;
-    margin-left: 10%;
+    /* margin-top: 2em;
+    margin-left: 10%; */
     font-size: 3em;
 }
 
@@ -111,8 +111,12 @@
 }
 
 .details-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     width: 90%;
-    height: 70%;
+    height: 78%;
     border-radius: 22px;
     background-color:  rgba(1, 38, 54, 0.73);
     padding: 1rem;
