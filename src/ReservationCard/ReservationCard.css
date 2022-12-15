@@ -83,13 +83,23 @@
 }
 
 .planet-gravity-title{
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: auto auto ;
+  grid-gap: 3px;
+  margin-top: 4px;
 }
 
 .earth-title,
-.destination-gravity-title{
-  font-size: 1em;
+.destination-gravity-title,
+.earth-gravity-data,
+.planet-gravity-data,
+.moon-gravity-data
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .8em;
 }
 
 .destination-data{

@@ -6,7 +6,7 @@ import AppContext from "../AppContext";
 
 
 
-const ReservationCard = ({ id, date, planet, moon, gravity, deletePost }) => {
+const ReservationCard = ({ id, date, planet, moon, planetGravity, moonGravity, deletePost }) => {
 
   const globals = useContext(AppContext)
    console.log(10, globals.allPlanets[243].gravity)
@@ -58,14 +58,18 @@ const ReservationCard = ({ id, date, planet, moon, gravity, deletePost }) => {
           <p className="gravity">Gravity Data</p>
           </div>
           <div className="planet-gravity-title">
-            <p className="earth-title">Earth |</p>
-            <p className="destination-gravity-title">{moon}</p>
+            <p className="earth-title">Earth</p>
+            <p className="destination-gravity-title 1">{planet}</p>
+            <p className="destination-gravity-title 2">{moon}</p>
+            <p className="earth-gravity-data">{earthGravity}</p> 
+            <p className="planet-gravity-data">{planetGravity}</p>            
+            <p className="moon-gravity-data">{moonGravity}</p>  
           </div>
-          <div className="planet-gravity-title">
-            <p className="destination-data">{earthGravity}</p> 
-            <p className="destination-data">{gravity}</p>            
-
-          </div>
+          {/* <div className="planet-gravity-title">
+            <p className="earth-gravity-data">{earthGravity}</p> 
+            <p className="planet-gravity-data">{planetGravity}</p>            
+            <p className="moon-gravity-data">{moonGravity}</p>            
+          </div> */}
         </div>
         </div>
       </div>
