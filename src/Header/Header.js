@@ -5,11 +5,11 @@ import "./Header.css"
 
 const Header = () => {
   return (
-    <div className="header-container">
+    // <div className="header-container">
       <Link to="/">
         <h1 className="angular-distance-header">Angular Distance</h1>
       </Link>
-    </div>
+    // </div>
   )
 }
 

@@ -8,8 +8,8 @@ const AboutPage = ({ setGoToReservation }) => {
   return (
     <div className="about-container">
      <div className="reservation-button-container">
-      <Link to={"/reservations"}>
-           <ReservationButton input='Reserve' onClick={(() => {setGoToReservation(1)})}/>
+      <Link to={"/reservations"} className="about-a">
+           <ReservationButton input='Reserve' text='Reserve' onClick={(() => {setGoToReservation(1)})}/>
       </Link>
        <h2 className="about-title">ABOUT</h2>
       </div>
@@ -26,7 +26,6 @@ const AboutPage = ({ setGoToReservation }) => {
       <div className="landing-footer">
         <Footer />
       </div>
-    
     </div>
   )
 }

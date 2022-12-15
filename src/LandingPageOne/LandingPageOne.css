@@ -1,3 +1,9 @@
+.landing1-a{
+    padding:1em;
+    margin-right: 2rem;
+}
+
+
 .landing-page-one-container{
     display: flex;
     flex-direction: column;
@@ -9,6 +15,8 @@
     background-size: cover;
     overflow: hidden;
 }
+
+
 
 .galactic-quote{
     font-family: 'Italiana';
@@ -26,10 +34,12 @@
     justify-content:flex-end;
     height: 10%;
     width: 100%;
-    padding:3em;
+    padding:3rem;
     padding-bottom: 0%;
 }
-
+.land-1-header{
+margin: 2rem;
+}
 .quote-one-container{
     display: flex;
     flex-direction: column;
@@ -50,15 +60,15 @@
    height: auto;
    width: 50%;
 }
-.reservation-button-container{
+/* .reservation-button-container{
     display: flex;
     /* justify-content: center; */
-    align-items: center;
+    /* align-items: center; */
     /* height: 10%; */
     /* width: 100%; */
     /* padding: 1.5em; */
 
-}
+/* }  */
 .reservation-p1-button-container{
     display: flex;
     align-items: center;
@@ -66,4 +76,8 @@
     height: 10%;
     width: 100%;
     padding: 1.5em;
+}
+
+.reservation-button-landing1{
+    margin-right: 2em;
 }

@@ -6,15 +6,22 @@ import "./ReservationDetails.css"
 import { Link } from 'react-router-dom'
 
 const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}) => {
+console.log(9, reservationDetails)
     const handleError = reservationDetails.length ? 
     reservationDetails.map((reservation) =>{
-    return <ReservationCard 
+      console.log(12, reservation.planet.englishName);
+      console.log(13, reservation.moon.englishName);
+    
+      return <ReservationCard 
             id={reservation.id}
             date= {reservation.date}
-            planet={reservation.planet}
-            moon= {reservation.moon}
+            planet={reservation.planet.englishName}
+            moon= {reservation.moon.englishName}
+            planetGravity={reservation.planet.gravity}
+            moonGravity={reservation.moon.gravity}
             deletePost= {deletePost}
             key={reservation.id}
+           
             />
 })
 :
@@ -25,20 +32,18 @@ const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}
     <div className="reservation-details-container">
        <div className="itineraries-title-wrapper">
            <h2 className="itineraries-title">Itineraries</h2>
-      
         <div className="reservation-button-r-con-container">
           <Link to={'/'}>
-          <button className="back-to-home-r-p">Landing Page</button>
+          <ReservationButton text='Landing Page'/>
           </Link>
-           </div>
-          <div className="reservation-button-r-con-right-container">
           <Link to={"/reservations"}>
-              <ReservationButton input='Reserve' onClick={(() => {setGoToReservation(1)})}/>
+              <ReservationButton text='Reserve' onClick={(() => {setGoToReservation(1)})}/>
            </Link>
-          
            </div>
          </div>
+         <div className="details-wrapper">
          {handleError}
+         </div>
     </div>
   )
 }

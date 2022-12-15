@@ -1,11 +1,14 @@
 .reservation-button{
-    position: absolute;
-    width: 6em;
+    /* position: absolute; */
+    width: 8em;
     height: 2em;
     background: #020038;
     box-shadow: 0px 4px 4px rgba(145, 213, 229, 0.25);
     border-radius: 13px;
     color: rgb(145, 213, 229);
+    margin-right: 1rem;
+    font-size: 1rem;
+
 }
 
 
@@ -15,6 +18,7 @@
     cursor: pointer;
     color:rgba(2, 0, 56);
 }
+
 
 .reservation-button:active{
     transform: translateY(2px);

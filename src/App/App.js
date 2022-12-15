@@ -10,6 +10,7 @@ import CircularIndeterminate from '../CircularIndeterminate/CircularIndeterminat
 import axios from 'axios'
 import InternalServerError from '../errorHandling/InternalServerError'
 import Status404 from '../errorHandling/Status404'
+import AppContext from '../AppContext';
 
 import {
   Route,
@@ -22,10 +23,21 @@ import { Navigation, Parallax, Mousewheel, Keyboard } from "swiper";
 
 const App = () => {
   const [allPlanets, setAllPlanets] = useState()
+  // eslint-disable-next-line
   const [goToReservation, setGoToReservation] = useState(0)
+  // eslint-disable-next-line
   const [gotToHome, setGoToHome] = useState(0)
-  const [reservation, setReservation] = useState([])
+  const [reservation, setReservation] = useState(JSON.parse(localStorage.getItem('reservationDetails')) ?? []) 
+  // const [holdReservation, setHoldReservation] = useLocalStorage('reservationDetails', reservation)  
   const [loading, setLoading] = useState(false)
+ 
+
+
+  const globals = {
+    allPlanets: allPlanets,
+    setAllPlanets: setAllPlanets,
+
+  }
 
   const nav = useRef(null);
   const onButtonClick = () => {
@@ -36,6 +48,12 @@ const App = () => {
     return new Promise(resolve => setTimeout(resolve, 2000)) // 2 seconds
   }
   
+
+
+
+  useEffect(()=>{
+window.localStorage.setItem('reservationDetails', JSON.stringify(reservation))
+  }, [reservation])
   
   useEffect(() => {
     setLoading(true)
@@ -68,11 +86,12 @@ const App = () => {
   }
  
  return(
+  <AppContext.Provider value={globals}>
     <main className='app-container'>
    <Switch>
    {loading && <CircularIndeterminate authenticate={authenticate} isLoading={true} />}
       <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome} allPlanets={allPlanets} reserveFlight={reserveFlight} loading={loading}/>} />
-      <Route exact path='/reservation-details' render={ () =><ReservationDetails  reservationDetails={reservation} deletePost={deletePost}  /> } />
+      <Route exact path='/reservation-details' render={ () =><ReservationDetails  reservationDetails={reservation} deletePost={deletePost} /> } />
       <Route exact path='/' render={ () =>
           <Swiper 
           navigation={{
@@ -99,8 +118,8 @@ const App = () => {
         <Route component={Status404} />
         <Route component={InternalServerError} />
     </Switch>
-  
     </main>
+    </AppContext.Provider>
   )
 }
 
