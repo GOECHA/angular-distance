@@ -6,10 +6,13 @@ import "./ReservationDetails.css"
 import { Link } from 'react-router-dom'
 
 const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}) => {
-console.log(reservationDetails)
+console.log(9, reservationDetails)
     const handleError = reservationDetails.length ? 
     reservationDetails.map((reservation) =>{
-    return <ReservationCard 
+      console.log(12, reservation.planet.englishName);
+      console.log(13, reservation.moon.englishName);
+    
+      return <ReservationCard 
             id={reservation.id}
             date= {reservation.date}
             planet={reservation.planet.englishName}
@@ -18,6 +21,7 @@ console.log(reservationDetails)
             moonGravity={reservation.moon.gravity}
             deletePost= {deletePost}
             key={reservation.id}
+           
             />
 })
 :

@@ -15,6 +15,7 @@ const ReservationPage = ({
   setGoToHome,
   allPlanets,
   loading,
+  holdReservation
 }) => {
   // const[currentGravity, setCurrentGravity] = useState("")
   const [currentMoons, setCurrentMoons] = useState([]);
@@ -85,7 +86,7 @@ const ReservationPage = ({
     );
 
   const handleReservation = (e) => {
-    console.log(globals.allPlanets)
+    console.log(88, globals.allPlanets)
     const someMoonInfo = allPlanets.find((moon) => {
      console.log(90, currentSelections.moon)
       return moon.name === currentSelections?.moon
@@ -93,8 +94,10 @@ const ReservationPage = ({
     console.log(92, someMoonInfo)
     currentSelections.planet &&
     currentSelections.date
-      ? reserveFlight({ ...currentSelections, id: Date.now(), moon: someMoonInfo}) 
+      ? reserveFlight({ ...currentSelections, id: Date.now(), moon: someMoonInfo, holdReservation}) 
       : setMessage(`Please, finish choosing selections`)
+      console.log(99, holdReservation)
+      
   };
 
   const reservationButton = currentSelections.date && currentSelections.planet && (

@@ -27,7 +27,8 @@ const App = () => {
   const [goToReservation, setGoToReservation] = useState(0)
   // eslint-disable-next-line
   const [gotToHome, setGoToHome] = useState(0)
-  const [reservation, setReservation] = useState([])
+  const [reservation, setReservation] = useState(JSON.parse(localStorage.getItem('reservationDetails')) ?? []) 
+  // const [holdReservation, setHoldReservation] = useLocalStorage('reservationDetails', reservation)  
   const [loading, setLoading] = useState(false)
  
 
@@ -47,6 +48,12 @@ const App = () => {
     return new Promise(resolve => setTimeout(resolve, 2000)) // 2 seconds
   }
   
+
+
+
+  useEffect(()=>{
+window.localStorage.setItem('reservationDetails', JSON.stringify(reservation))
+  }, [reservation])
   
   useEffect(() => {
     setLoading(true)
@@ -84,7 +91,7 @@ const App = () => {
    <Switch>
    {loading && <CircularIndeterminate authenticate={authenticate} isLoading={true} />}
       <Route exact path='/reservations' render={ () =><ReservationPage setGoToHome={setGoToHome} allPlanets={allPlanets} reserveFlight={reserveFlight} loading={loading}/>} />
-      <Route exact path='/reservation-details' render={ () =><ReservationDetails  reservationDetails={reservation} deletePost={deletePost}  /> } />
+      <Route exact path='/reservation-details' render={ () =><ReservationDetails  reservationDetails={reservation} deletePost={deletePost} /> } />
       <Route exact path='/' render={ () =>
           <Swiper 
           navigation={{
