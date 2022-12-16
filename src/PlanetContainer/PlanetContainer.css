@@ -48,7 +48,7 @@
     /* -webkit-transition-duration: 0.4s; /* Safari */
     /* transition-duration: 0.4s; */ 
   }
-  @keyframes spin {
+  /* @keyframes spin {
     /* from {
       transform: rotate(0deg);
     }
@@ -56,19 +56,19 @@
       transform: rotate(360deg);
     } */
   
-    100% { 
+    /* 100% { 
       -webkit-transform: rotate(500deg); 
-      transform:rotate(500deg); }
-  }
+      transform:rotate(500deg); } */
+  /* } */ 
  
-  @media (prefers-reduced-motion: no-preference) {
+  /* @media (prefers-reduced-motion: no-preference) { */
     .planet-button:hover{ 
-      /* transform: scale(1.1);  */
+      transform: scale(1.1); 
       cursor: pointer;
-      animation: spin infinite 20s linear;
+      /* animation: spin infinite 20s linear; */
       animation-direction: normal;
     }
-  }
+  /* } */
   
   .planet-button:active {
     background-color: none;
