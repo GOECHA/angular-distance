@@ -9,8 +9,8 @@ const ReservationDetails = ({setGoToReservation, reservationDetails, deletePost}
 console.log(9, reservationDetails)
     const handleError = reservationDetails.length ? 
     reservationDetails.map((reservation) =>{
-      console.log(12, reservation.planet.englishName);
-      console.log(13, reservation.moon.englishName);
+      console.log(12, reservation.planet);
+      console.log(13, reservation.moon);
     
       return <ReservationCard 
             id={reservation.id}

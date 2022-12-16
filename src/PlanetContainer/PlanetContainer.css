@@ -45,13 +45,32 @@
     transition: all .2s ease-in-out;
     position: relative;
     z-index: 1;
+    /* -webkit-transition-duration: 0.4s; /* Safari */
+    /* transition-duration: 0.4s; */ 
   }
-
- 
-  /* @media (prefers-reduced-motion: no-preference) { */
-    .planet-button:hover{ 
-      transform: scale(1.1); 
-      cursor: pointer;
-      animation: App-logo-spin infinite 20s linear;
+  @keyframes spin {
+    /* from {
+      transform: rotate(0deg);
     }
-  /* } */
+    to {
+      transform: rotate(360deg);
+    } */
+  
+    100% { 
+      -webkit-transform: rotate(500deg); 
+      transform:rotate(500deg); }
+  }
+ 
+  @media (prefers-reduced-motion: no-preference) {
+    .planet-button:hover{ 
+      /* transform: scale(1.1);  */
+      cursor: pointer;
+      animation: spin infinite 20s linear;
+      animation-direction: normal;
+    }
+  }
+  
+  .planet-button:active {
+    background-color: none;
+    transform: translateY(20px);
+  }

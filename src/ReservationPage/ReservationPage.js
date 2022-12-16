@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Header from "../Header/Header";
 import PlanetContainer from "../PlanetContainer/PlanetContainer";
 import "./ReservationPage.css";
@@ -14,8 +14,9 @@ const ReservationPage = ({
   id,
   setGoToHome,
   allPlanets,
+  authenticate,
   loading,
-  holdReservation
+  isLoading
 }) => {
   // const[currentGravity, setCurrentGravity] = useState("")
   const [currentMoons, setCurrentMoons] = useState([]);
@@ -48,9 +49,26 @@ const ReservationPage = ({
   // }
  
 
+  // const findInfo = (entity) => {
+  //   const findEntity = allPlanets.find((item) => {
+  //     console.log(52, item);
+  //     console.log(entity)
+  //    return item.englishName === entity.englishName 
+  //   })
+  //   console.log(54, findEntity)
+  //   return findEntity
+  // }
+
+  // console.log(58, findInfo());
+
+
+
+
   const handleClick = (event) => {
   
     const somePlanetInfo = allPlanets.find((planet) => {
+      console.log('respg54', planet.englishName)
+      console.log('respg55', event.target.id);
       return planet.englishName === event.target.id;
     });
     setCurrentMoons(somePlanetInfo.moons);
@@ -85,6 +103,8 @@ const ReservationPage = ({
       </option>
     );
 
+
+
   const handleReservation = (e) => {
     console.log(88, globals.allPlanets)
     const someMoonInfo = allPlanets.find((moon) => {
@@ -94,10 +114,8 @@ const ReservationPage = ({
     console.log(92, someMoonInfo)
     currentSelections.planet &&
     currentSelections.date
-      ? reserveFlight({ ...currentSelections, id: Date.now(), moon: someMoonInfo, holdReservation}) 
+      ? reserveFlight({ ...currentSelections, id: Date.now(), currentSelection: currentSelections.planet, moon: someMoonInfo}) 
       : setMessage(`Please, finish choosing selections`)
-      console.log(99, holdReservation)
-      
   };
 
   const reservationButton = currentSelections.date && currentSelections.planet && (
@@ -111,7 +129,12 @@ console.log(93, currentSelections)
 
   return (
     <div className="reservation-container">
-      {loading && CircularIndeterminate}
+      {loading && (
+            <CircularIndeterminate
+              authenticate={authenticate}
+              isLoading={isLoading}
+            />
+          )}
         <div className="reservation-header">
           <Header className="res-header" />
          
