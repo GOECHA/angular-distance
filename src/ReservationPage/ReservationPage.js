@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import Header from "../Header/Header";
 import PlanetContainer from "../PlanetContainer/PlanetContainer";
 import "./ReservationPage.css";
@@ -107,7 +107,7 @@ const ReservationPage = ({
 
   const handleReservation = (e) => {
     console.log(88, globals.allPlanets)
-    let noMoonMessage = 'No moon selected'
+   
     const someMoonInfo = allPlanets.find((moon) => {
      console.log(90, currentSelections.moon)
       return moon.name === currentSelections?.moon

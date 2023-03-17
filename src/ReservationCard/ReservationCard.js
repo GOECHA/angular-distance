@@ -13,7 +13,7 @@ const ReservationCard = ({ id, date, planet, moon, planetGravity, moonGravity, d
    
    const earthGravity = globals.allPlanets[243].gravity
 
-
+console.log({earthGravity})
   
 
   return (
