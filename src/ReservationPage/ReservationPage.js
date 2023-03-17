@@ -107,6 +107,7 @@ const ReservationPage = ({
 
   const handleReservation = (e) => {
     console.log(88, globals.allPlanets)
+    let noMoonMessage = 'No moon selected'
     const someMoonInfo = allPlanets.find((moon) => {
      console.log(90, currentSelections.moon)
       return moon.name === currentSelections?.moon

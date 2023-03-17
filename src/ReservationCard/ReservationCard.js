@@ -14,6 +14,8 @@ const ReservationCard = ({ id, date, planet, moon, planetGravity, moonGravity, d
    const earthGravity = globals.allPlanets[243].gravity
 
 
+  
+
   return (
     <div className="reservation-card">
       <div className="res-card-border">
@@ -46,7 +48,8 @@ const ReservationCard = ({ id, date, planet, moon, planetGravity, moonGravity, d
               <p className="reservation-m-destination">Moon:</p>
             </div>
             <div className="p-m-name-wrapper">
-              <p className="reserve-moon">{moon}</p>
+            <p className="reserve-moon">{moon}</p>
+              
             </div>
           </div>
           {/* <div className="p-m-name-wrapper">
