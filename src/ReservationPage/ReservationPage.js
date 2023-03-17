@@ -25,8 +25,8 @@ const ReservationPage = ({
   const [currentSelections, setCurrentSelections] = useState({
     id: "",
     date: "",
-    moon: "",
     planet: "",
+    moon: "",
     gravity: "",
   });
 
@@ -113,8 +113,12 @@ const ReservationPage = ({
     })
     console.log(92, someMoonInfo)
     currentSelections.planet &&
-    currentSelections.date
-      ? reserveFlight({ ...currentSelections, id: Date.now(), currentSelection: currentSelections.planet, moon: someMoonInfo}) 
+    currentSelections.date &&
+    !currentSelections.moon
+      ? reserveFlight({ ...currentSelections, id: Date.now(), currentSelection: currentSelections.planet}) 
+     : currentSelections.planet &&
+      currentSelections.date &&
+      currentSelections.moon ? reserveFlight({ ...currentSelections, id: Date.now(), currentSelection: currentSelections.planet, moon: someMoonInfo}) 
       : setMessage(`Please, finish choosing selections`)
   };
 
