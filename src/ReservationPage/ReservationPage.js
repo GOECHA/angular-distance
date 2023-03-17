@@ -153,6 +153,12 @@ console.log(93, currentSelections)
                 Landing Page
               </button>
             </Link>
+
+            <Link to={"/reservation-details"}>
+      <button className="back-to-home-res-pg" >
+        Reservations
+      </button>
+    </Link>
          
         </div>
       <div className="choose-dest-container">
