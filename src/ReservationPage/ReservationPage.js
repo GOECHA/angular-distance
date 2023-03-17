@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import Header from "../Header/Header";
 import PlanetContainer from "../PlanetContainer/PlanetContainer";
 import "./ReservationPage.css";
@@ -107,6 +107,7 @@ const ReservationPage = ({
 
   const handleReservation = (e) => {
     console.log(88, globals.allPlanets)
+   
     const someMoonInfo = allPlanets.find((moon) => {
      console.log(90, currentSelections.moon)
       return moon.name === currentSelections?.moon
@@ -117,8 +118,7 @@ const ReservationPage = ({
     !currentSelections.moon
       ? reserveFlight({ ...currentSelections, id: Date.now(), currentSelection: currentSelections.planet}) 
      : currentSelections.planet &&
-      currentSelections.date &&
-      currentSelections.moon ? reserveFlight({ ...currentSelections, id: Date.now(), currentSelection: currentSelections.planet, moon: someMoonInfo}) 
+      currentSelections.date ? reserveFlight({ ...currentSelections, id: Date.now(), currentSelection: currentSelections.planet, moon: someMoonInfo}) 
       : setMessage(`Please, finish choosing selections`)
   };
 
@@ -152,6 +152,12 @@ console.log(93, currentSelections)
                 Landing Page
               </button>
             </Link>
+
+            <Link to={"/reservation-details"}>
+      <button className="back-to-home-res-pg" >
+        Reservations
+      </button>
+    </Link>
          
         </div>
       <div className="choose-dest-container">

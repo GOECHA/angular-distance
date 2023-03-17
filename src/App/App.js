@@ -1,4 +1,4 @@
-// import React from 'react';
+
 import React, { useRef, useState, useEffect } from "react";
 import "./App.css";
 import ReservationPage from "../ReservationPage/ReservationPage";
@@ -15,6 +15,8 @@ import AppContext from "../AppContext";
 import { Route, Switch } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Parallax, Mousewheel, Keyboard } from "swiper";
+
+
 
 const App = () => {
   const [allPlanets, setAllPlanets] = useState([]);
