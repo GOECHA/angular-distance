@@ -11,9 +11,9 @@ const ReservationCard = ({ id, date, planet, moon, planetGravity, moonGravity, d
   const globals = useContext(AppContext)
    console.log(10, globals.allPlanets[243])
    
-   const earthGravity = globals.allPlanets[243].gravity
+  //  const earthGravity = globals.allPlanets[243].gravity
 
-console.log({earthGravity})
+// console.log({earthGravity})
   
 
   return (
@@ -64,7 +64,7 @@ console.log({earthGravity})
             <p className="earth-title">Earth</p>
             <p className="destination-gravity-title 1">{planet}</p>
             <p className="destination-gravity-title 2">{moon}</p>
-            <p className="earth-gravity-data">{earthGravity}</p> 
+            <p className="earth-gravity-data">9.8</p> 
             <p className="planet-gravity-data">{planetGravity}</p>            
             <p className="moon-gravity-data">{moonGravity}</p>  
           </div>
