@@ -72,6 +72,8 @@
   font-size: 1rem;
   margin: 0%;
   margin-top: .5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 0.5rem;
   width: 9em;
