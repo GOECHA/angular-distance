@@ -141,7 +141,7 @@ console.log(93, currentSelections)
           )}
         <div className="reservation-header">
           <Header className="res-header" />
-         
+         <div className="navigation-container">
             <Link to={"/"} >
               <button
                 className="back-to-home-res-pg"
@@ -158,7 +158,7 @@ console.log(93, currentSelections)
         Reservations
       </button>
     </Link>
-         
+    </div>
         </div>
       <div className="choose-dest-container">
         <h2 className="choose-destination">{message}</h2>
