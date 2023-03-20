@@ -11,6 +11,7 @@
 }
 .reservation-button-container{
     display: flex;
+    justify-content: flex-end;
     padding: 2em;
     padding-bottom: 0%;
     height: 5%;
