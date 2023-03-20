@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import React, { useContext } from "react";
 import "./ReservationCard.css";
 import AppContext from "../AppContext";
+import SelectedReservationModal from "../SelectedReservationModal/SelectedReservationModal";
 
 
 
@@ -57,6 +58,7 @@ const ReservationCard = ({ id, date, planet, moon, planetGravity, moonGravity, d
             <p className="reserve-moon">{moon}</p>
           </div> */}
       <div className="gravity-container">
+        <SelectedReservationModal/>
         <div className="gravity-title-wrapper">
           <p className="gravity">Gravity Data</p>
           </div>
@@ -67,6 +69,7 @@ const ReservationCard = ({ id, date, planet, moon, planetGravity, moonGravity, d
             <p className="earth-gravity-data">9.8</p> 
             <p className="planet-gravity-data">{planetGravity}</p>            
             <p className="moon-gravity-data">{moonGravity}</p>  
+            
           </div>
           {/* <div className="planet-gravity-title">
             <p className="earth-gravity-data">{earthGravity}</p> 
