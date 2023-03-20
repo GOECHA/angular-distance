@@ -12,7 +12,7 @@ const LandingPageTwo = ({ setGoToReservation }) => {
         <Link to={"/reservation-details"}>
           <button className="back-to-home-res-pg">Reservations</button>
         </Link>
-        <Link to={"/reservations"}>
+        <Link className="l-2-res-nav" to={"/reservations"}>
           <ReservationButton
             input="Reserve"
             text="Reserve"
