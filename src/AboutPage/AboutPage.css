@@ -22,6 +22,12 @@
   padding-left: 1.4em
 }
 
+
+.back-to-home-abt-pg{
+  z-index: 3;
+  cursor: pointer;
+}
+
 h2 {
   display: flex;
   align-items: center;
