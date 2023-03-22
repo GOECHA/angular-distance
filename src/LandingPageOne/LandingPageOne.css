@@ -82,3 +82,32 @@ margin: 2rem;
 .reservation-button-landing1{
     margin-right: 2em;
 }
+
+@media screen and (max-width:640px) {
+    .landing-one-header{
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        padding: 0% 0% 0% 35px;
+    } 
+    .landing-one-header.angular-distance-header{
+        font-size: 16px;
+        padding: 0;
+    }   
+    .reservation-p1-button-container{
+        padding: 0%;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 90%;
+    }
+    .landing1-a{
+        padding: 0;
+        margin: 0;
+
+    }
+
+    .galactic-quote{
+        font-size: 23px;
+        line-height: 35px;
+    }
+}
