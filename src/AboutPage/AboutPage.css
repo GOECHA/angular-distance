@@ -74,3 +74,21 @@ h2 {
   width: 100%;
   z-index: 0;
 }
+
+
+
+
+/* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width:912px) {
+  
+}
+
+
+
+/* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
+
+
+@media screen and (max-width:640px) {
+
+}

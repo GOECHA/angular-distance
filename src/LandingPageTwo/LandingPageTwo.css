@@ -104,6 +104,16 @@
 
 
 @media screen and (max-width:640px) {
+
+.reservation-button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 81%;
+  padding: 2em;
+}
+
   .quote-container {
     display: flex;
     flex-direction: column;
