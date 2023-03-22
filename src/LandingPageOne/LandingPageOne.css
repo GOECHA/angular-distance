@@ -83,6 +83,33 @@ margin: 2rem;
     margin-right: 2em;
 }
 
+
+/* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width:912px) {
+
+    .landing-one-header{
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        padding: 0% 0% 0% 35px;
+    } 
+    .landing-one-header.angular-distance-header{
+        font-size: 16px;
+        padding: 0;
+    }   
+
+    .galactic-quote{
+        font-size: 35px;
+        line-height: 35px;
+        margin-left: 95px;
+        width: 135%
+    }
+}
+
+/* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
+
+
 @media screen and (max-width:640px) {
     .landing-one-header{
         align-items: center;
