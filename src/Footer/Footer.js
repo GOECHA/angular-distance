@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <Link to="/">
-      <h1>Angular Distance</h1>
+      <h1 className="footer">Angular Distance</h1>
       </Link>
     </div>
   )

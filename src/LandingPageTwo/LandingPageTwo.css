@@ -81,3 +81,63 @@
   height: auto;
   width: 50%;
 }
+
+
+/* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width:912px) {
+
+  .quote-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+    height: 50%;
+    width: auto;
+    
+  }
+
+}
+
+/* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
+
+
+@media screen and (max-width:640px) {
+  .quote-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+    height: 50%;
+    width: auto;
+    
+  }
+
+  .somewhere{
+    font-size: 1.8em;
+  }
+
+  .something{
+    font-size: 1.8em;
+
+  }
+ 
+  .incredible{
+    font-size: 3em;
+    
+
+  }
+  .waiting{
+    font-size: 1em;
+    line-height: 10px;
+  }
+  
+  .landing-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}

@@ -4,9 +4,22 @@
     width: 20%;
 }
 
-h1{
+.footer{
     font-size: 2.5em;
     color: white;
     cursor: pointer;
     text-decoration: none;
+}
+/* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width:912px) {
+}
+
+/* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
+
+
+@media screen and (max-width:640px) {
+  .footer {
+    font-size: 2em;
+  }
 }
