@@ -1,8 +1,4 @@
-.about-a {
-  justify-content: flex-start;
-  width: auto;
-  z-index: 1;
-}
+
 
 .about-container {
   display: flex;
@@ -18,7 +14,8 @@
   padding: 0%;
 }
 
-.reservation-button-container{
+.reservation-about-button-container{
+  display: flex;
   padding-left: 1.4em
 }
 
@@ -26,6 +23,11 @@
 .back-to-home-abt-pg{
   z-index: 3;
   cursor: pointer;
+}
+
+.abt-res-detail-btn,
+.abt-to-res-btn{
+  margin-top: 1rem;
 }
 
 h2 {
@@ -53,7 +55,9 @@ h2 {
   align-items: center;
   height: 100%;
   width: 100%;
+  margin-top: 150px;
 }
+
 
 .about-quote-p1,
 .about-quote-p2 {
@@ -61,6 +65,7 @@ h2 {
   font-size: 2vw;
   width: 55%;
   margin-top: 2.7em;
+  position: inherit;
 }
 
 .starting-letter {
@@ -72,8 +77,20 @@ h2 {
 .about-title {
   position: absolute;
   width: 100%;
+  padding-top: 1em;
   z-index: 0;
 }
+
+
+  .about-footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 50%;
+    width: auto;
+    padding: 1.5em;
+    margin-bottom: 2em;
+  }
 
 
 
@@ -81,7 +98,22 @@ h2 {
 /* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
 
 @media screen and (max-width:912px) {
+  .about-quote-p1, 
+  .about-quote-p2 {
+  position: inherit;
+  font-size: 1.5em;
+  height: 200px;
+}
+  .reservation-about-button-container {
+    width: 350px;
+    align-items: center;
+    justify-content: center;
+  }
+  .quote-about-wrapper {
+    height: 600px;
+    margin-top: 105px;
   
+  }
 }
 
 
@@ -90,5 +122,35 @@ h2 {
 
 
 @media screen and (max-width:640px) {
+.about-quote-p1, 
+.about-quote-p2 {
+  position: inherit;
+  font-size: 0.7em;
+  height: 120px
+}
+
+.quote-about-wrapper {
+  height: 600px;
+  margin-top: 105px;
+
+}
+
+.reservation-about-button-container  {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.back-to-home-abt-pg,
+.back-to-home-res-pg{
+  margin-top: .5em;
+
+}
+
+
+.about-footer {
+  margin-bottom: 2em;
+}
 
 }
