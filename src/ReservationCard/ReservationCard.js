@@ -58,7 +58,7 @@ const ReservationCard = ({ id, date, planet, moon, planetGravity, moonGravity, d
             <p className="reserve-moon">{moon}</p>
           </div> */}
       <div className="gravity-container">
-        <SelectedReservationModal/>
+        {/* <SelectedReservationModal/> */}
         <div className="gravity-title-wrapper">
           <p className="gravity">Gravity Data</p>
           </div>

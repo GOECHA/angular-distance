@@ -7,7 +7,7 @@ export default function SelectedReservationModal() {
   const [showModal, setShowModal] = useState(false);
   return (
     <>
-      <button onClick={() => setShowModal(true)}>
+      <button className="modal-btn" onClick={() => setShowModal(true)}>
         Show modal using a portal
       </button>
       {showModal && createPortal(
