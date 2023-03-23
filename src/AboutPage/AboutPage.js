@@ -7,15 +7,8 @@ import { Link } from 'react-router-dom'
 const AboutPage = ({ setGoToReservation }) => {
   return (
     <div className="about-container">
-     <div className="reservation-button-container">
-     <Link to={"/reservation-details"}>
-          <button className="back-to-home-res-pg back-to-home-abt-pg">Reservations</button>
-        </Link>
-      <Link to={"/reservations"} className="about-a">
-           <ReservationButton input='Reserve' text='Reserve' onClick={(() => {setGoToReservation(1)})}/>
-      </Link>
        <h2 className="about-title">ABOUT</h2>
-      </div>
+     
       <section className="quote-about-container">
         <div className="quote-about-wrapper">
           <p className="about-quote-p1">
@@ -26,8 +19,17 @@ const AboutPage = ({ setGoToReservation }) => {
           </p>
         </div>
       </section> 
-      <div className="landing-footer">
-        <Footer />
+      <div className="about-footer">
+        <Footer/> 
+        <div className="reservation-about-button-container">
+         <Link to={"/reservation-details"}>
+          {/* <button className="back-to-home-res-pg back-to-home-abt-pg">Reservations</button> */}
+          <ReservationButton className="abt-res-detail-btn" input='Reservations' text='Reservations' />
+         </Link>
+         <Link to={"/reservations"} >
+           <ReservationButton className="abt-to-res-btn" input='Reserve' text='Reserve' onClick={(() => {setGoToReservation(1)})}/>
+         </Link>
+      </div>
       </div>
     </div>
   )

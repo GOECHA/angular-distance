@@ -119,7 +119,7 @@
     height: 78%;
     border-radius: 22px;
     background-color:  rgba(1, 38, 54, 0.73);
-    padding: 1rem;
+    padding: 5rem;
     overflow: scroll;
     scrollbar-color:  rgb(1, 38, 54);
   }
