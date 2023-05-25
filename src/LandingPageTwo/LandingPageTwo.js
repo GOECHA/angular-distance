@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
 import "./LandingPageTwo.css";
-import ReservationButton from "../controls/ReservationButton/ReservationButton";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 
