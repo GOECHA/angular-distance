@@ -82,11 +82,32 @@ margin: 2rem;
 .reservation-button-landing1{
     margin-right: 2em;
 }
-
+.back-to-home-btn-res-pg-l1 {
+    width: 8em;
+    height: 2em;
+    background: #020038;
+    box-shadow: 0px 4px 4px rgb(145 213 229 / 25%);
+    border-radius: 13px;
+    color: rgb(145, 213, 229);
+    margin-right: 1rem;
+    margin-bottom: .7rem;
+    font-size: 1rem;
+  }
+  
+  .back-to-home-btn-res-pg-l1:hover {
+    background: rgb(145, 213, 229, 0.55);
+    box-shadow: 0px 4px 4px rgba(2, 0, 56, 0.25);
+    cursor: pointer;
+    color: rgba(2, 0, 56);
+  }
+  
+  .back-to-home-btn-res-pg-l1:active {
+    transform: translateY(2px);
+  }
 
 /* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
 
-@media screen and (max-width:912px) {
+@media screen and (max-width:768px) {
 
     .landing-one-header{
         align-items: center;
@@ -110,7 +131,7 @@ margin: 2rem;
 /* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
 
 
-@media screen and (max-width:640px) {
+@media screen and (max-width:480px) {
     .landing-one-header{
         align-items: center;
         justify-content: center;
@@ -125,7 +146,6 @@ margin: 2rem;
         padding: 0%;
         align-items: center;
         justify-content: space-evenly;
-        width: 90%;
     }
     .landing1-a{
         padding: 0;
@@ -136,5 +156,9 @@ margin: 2rem;
     .galactic-quote{
         font-size: 23px;
         line-height: 35px;
+    }
+
+    .reservation-p1-button-container{
+        flex-direction: column;
     }
 }
