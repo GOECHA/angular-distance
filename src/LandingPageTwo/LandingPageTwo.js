@@ -8,18 +8,12 @@ import { Link } from "react-router-dom";
 const LandingPageTwo = ({ setGoToReservation }) => {
   return (
     <div className="landing-page-two-container">
-      <div className="reservation-button-container">
-        <Link to={"/reservation-details"}>
-          <button className="back-to-home-res-pg">Reservations</button>
+      <div className="reservation-button-container-landing-pg2">
+        <Link className="l-2-res-nav" to={"/reservation-details"}>
+          <button className="back-to-home-btn-res-pg-l2">Reservations</button>
         </Link>
         <Link className="l-2-res-nav" to={"/reservations"}>
-          <ReservationButton
-            input="Reserve"
-            text="Reserve"
-            onClick={() => {
-              setGoToReservation(1);
-            }}
-          />
+        <button className="back-to-home-btn-res-pg-l2">Reserve</button>
         </Link>
       </div>
       <section className="quote-container">

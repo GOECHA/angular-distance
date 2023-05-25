@@ -19,7 +19,7 @@ const LandingPageOne = ({setGoToReservation}) => {
         </div>
       </section> 
       <div className="reservation-p1-button-container">
-      <Link to={"/reservation-details"}>
+      <Link  to={"/reservation-details"}>
       <button className="back-to-home-res-pg" >
         Reservations
       </button>
