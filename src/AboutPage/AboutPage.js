@@ -22,11 +22,11 @@ const AboutPage = ({ setGoToReservation }) => {
       <div className="about-footer">
         <Footer/> 
         <div className="reservation-about-button-container">
-         <Link to={"/reservation-details"}>
+         <Link className="about-link" to={"/reservation-details"}>
           {/* <button className="back-to-home-res-pg back-to-home-abt-pg">Reservations</button> */}
           <ReservationButton className="abt-res-detail-btn" input='Reservations' text='Reservations' />
          </Link>
-         <Link to={"/reservations"} >
+         <Link className="about-link" to={"/reservations"} >
            <ReservationButton className="abt-to-res-btn" input='Reserve' text='Reserve' onClick={(() => {setGoToReservation(1)})}/>
          </Link>
       </div>

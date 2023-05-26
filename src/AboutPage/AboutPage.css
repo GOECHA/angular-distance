@@ -24,6 +24,9 @@
   z-index: 3;
   cursor: pointer;
 }
+.about-link{
+margin-bottom: .7rem;
+}
 
 .abt-res-detail-btn,
 .abt-to-res-btn{
