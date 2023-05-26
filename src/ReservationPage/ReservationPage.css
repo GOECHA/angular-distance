@@ -378,7 +378,13 @@
     margin-top: 0.5rem;
   }
   .choose-dest-container{
-  height: 7rem;
+  height: 13rem;
+  }
+  .choose-destination{
+    padding: .7rem;
+    height: 10rem;
+    justify-content: center;
+    filter: drop-shadow(3px 6px 5px purple);
   }
   .res-planet-container {
     height: 15rem;
