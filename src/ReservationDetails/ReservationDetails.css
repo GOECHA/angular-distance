@@ -132,3 +132,21 @@
 .reservation-button-r-con-container{
     width: 15%;
 } */
+
+
+  /* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
+
+  @media screen and (max-width: 768px) {
+}
+
+/* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width: 480px) {
+  .planet-wrapper{
+    
+    /* gap: 10px; */
+    z-index: 2;
+    position: absolute;
+    overflow-x: scroll;
+  }
+}
