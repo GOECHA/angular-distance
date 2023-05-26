@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React, { useContext } from "react";
 import "./ReservationCard.css";
 import AppContext from "../AppContext";
-import SelectedReservationModal from "../SelectedReservationModal/SelectedReservationModal";
+// import SelectedReservationModal from "../SelectedReservationModal/SelectedReservationModal";
 
 
 
