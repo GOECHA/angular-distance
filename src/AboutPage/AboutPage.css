@@ -24,6 +24,9 @@
   z-index: 3;
   cursor: pointer;
 }
+.about-link{
+margin-bottom: .7rem;
+}
 
 .abt-res-detail-btn,
 .abt-to-res-btn{
@@ -97,7 +100,7 @@ h2 {
 
 /* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
 
-@media screen and (max-width:912px) {
+@media screen and (max-width:768px) {
   .about-quote-p1, 
   .about-quote-p2 {
   position: inherit;
@@ -121,7 +124,7 @@ h2 {
 /* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
 
 
-@media screen and (max-width:640px) {
+@media screen and (max-width:480px) {
 .about-quote-p1, 
 .about-quote-p2 {
   position: inherit;

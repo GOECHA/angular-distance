@@ -1,140 +1,171 @@
-.landing1-a{
-    padding:1em;
-    margin-right: 2rem;
-    width: 9rem;
+.landing1-a {
+  /* padding: 1em; */
+  /* margin-right: 2rem; */
+  width: 9rem;
+  /* height: 100%; */
 }
 
-
-.landing-page-one-container{
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background: url('../assets/water-planet.png') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    overflow: hidden;
+.landing-page-one-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: url("../assets/water-planet.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
 }
 
-
-
-.galactic-quote{
-    font-family: 'Italiana';
-    font-style: normal;
-    font-weight: 400;
-    font-size:  4vw;
-    line-height: 19px;
-    width: 119%;
-    
+.galactic-quote {
+  font-family: "Italiana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4vw;
+  line-height: 19px;
+  width: 119%;
 }
 
-.landing-one-header{
-    display: flex;
-    align-items: flex-end;
-    justify-content:flex-end;
-    height: 10%;
-    width: 100%;
-    padding:3rem;
-    padding-bottom: 0%;
+.landing-one-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 10%;
+  width: 100%;
+  padding: 3rem;
+  padding-bottom: 0%;
 }
-.land-1-header{
-margin: 2rem;
+.land-1-header {
+  margin: 2rem;
 }
-.quote-one-container{
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
-    padding: 3em;
-    padding-bottom: 0%;
-    height: 55%;
-    width: auto;
-    font-family: 'Italiana';
-    margin-bottom: 3em;
-}
-
-.quote-one-wrapper{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;   
-   height: auto;
-   width: 50%;
-}
-/* .reservation-button-container{
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* height: 10%; */
-    /* width: 100%; */
-    /* padding: 1.5em; */
-
-/* }  */
-.reservation-p1-button-container{
-    display: flex;
-    align-items: center;
-    padding-right: 3em;
-    height: 10%;
-    width: 100%;
-    padding: 1.5em;
+.quote-one-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 3em;
+  padding-bottom: 0%;
+  height: 55%;
+  width: auto;
+  font-family: "Italiana";
+  margin-bottom: 3em;
 }
 
-.reservation-button-landing1{
-    margin-right: 2em;
+.quote-one-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 50%;
 }
 
+.reservation-p1-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 3em;
+  height: 10%;
+  /* width: 100%; */
+  padding: 1.5em;
+}
+
+.reservation-button-landing1 {
+  margin-right: 2em;
+}
+.back-to-home-btn-res-pg-l1 {
+  width: 8em;
+  height: 2em;
+  background: #020038;
+  box-shadow: 0px 4px 4px rgb(145 213 229 / 25%);
+  border-radius: 13px;
+  color: rgb(145, 213, 229);
+  margin-right: 1rem;
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
+
+.back-to-home-btn-res-pg-l1:hover {
+  background: rgb(145, 213, 229, 0.55);
+  box-shadow: 0px 4px 4px rgba(2, 0, 56, 0.25);
+  cursor: pointer;
+  color: rgba(2, 0, 56);
+}
+
+.back-to-home-btn-res-pg-l1:active {
+  transform: translateY(2px);
+}
 
 /* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
 
-@media screen and (max-width:912px) {
+@media screen and (max-width: 768px) {
+  .landing-one-header {
+    align-items: center !important;
+    justify-content: center;
+    font-size: 25px;
+    padding: 0% 0% 0% 35px;
+  }
+  .landing-one-header.angular-distance-header {
+    font-size: 16px;
+    padding: 0;
+  }
 
-    .landing-one-header{
-        align-items: center;
-        justify-content: center;
-        font-size: 25px;
-        padding: 0% 0% 0% 35px;
-    } 
-    .landing-one-header.angular-distance-header{
-        font-size: 16px;
-        padding: 0;
-    }   
+  .galactic-quote {
+    font-size: 35px;
+    line-height: 35px;
+    margin-left: 95px;
+    width: 135%;
+  }
 
-    .galactic-quote{
-        font-size: 35px;
-        line-height: 35px;
-        margin-left: 95px;
-        width: 135%
-    }
+  .landing1-a {
+    padding: 1em;
+    margin-right: 2rem;
+    width: 9rem;
+    height: 100%;
+  }
+
+  .back-to-home-btn-res-pg-l1 {
+    width: 9em;
+    height: 2.5em;
+    background: #020038;
+    box-shadow: 0px 4px 4px rgb(145 213 229 / 25%);
+    border-radius: 13px;
+    color: rgb(145, 213, 229);
+    margin-right: 1rem;
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
 }
+
 
 /* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
 
+@media screen and (max-width: 480px) {
+  .landing-one-header {
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0% 0% 0% 35px;
+  }
+  .landing-one-header.angular-distance-header {
+    font-size: 16px;
+    padding: 0;
+  }
+  .reservation-p1-button-container {
+    padding: 0%;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .landing1-a {
+    padding: 0;
+    margin: 0;
+  }
 
-@media screen and (max-width:640px) {
-    .landing-one-header{
-        align-items: center;
-        justify-content: center;
-        font-size: 16px;
-        padding: 0% 0% 0% 35px;
-    } 
-    .landing-one-header.angular-distance-header{
-        font-size: 16px;
-        padding: 0;
-    }   
-    .reservation-p1-button-container{
-        padding: 0%;
-        align-items: center;
-        justify-content: space-evenly;
-        width: 90%;
-    }
-    .landing1-a{
-        padding: 0;
-        margin: 0;
+  .galactic-quote {
+    font-size: 23px;
+    line-height: 35px;
+  }
 
-    }
-
-    .galactic-quote{
-        font-size: 23px;
-        line-height: 35px;
-    }
+  .reservation-p1-button-container {
+    flex-direction: column;
+  }
 }
