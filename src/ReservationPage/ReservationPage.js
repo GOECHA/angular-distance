@@ -142,18 +142,15 @@ console.log(93, currentSelections)
         <div className="reservation-header">
           <Header className="res-header" />
          <div className="navigation-container">
-            <Link to={"/"} >
+            <Link className="reserve-to-home" to={"/"} >
               <button
                 className="back-to-home-res-pg"
-                onClick={(e) => {
-                  setGoToHome(e.target.id);
-                }}
               >
                 Landing Page
               </button>
             </Link>
 
-            <Link to={"/reservation-details"}>
+            <Link className="reserve-to-home" to={"/reservation-details"}>
       <button className="back-to-home-res-pg" >
         Reservations
       </button>
@@ -163,7 +160,9 @@ console.log(93, currentSelections)
       <div className="choose-dest-container">
         <h2 className="choose-destination">{message}</h2>
       </div>
-      <PlanetContainer handleClick={handleClick} />
+      <section className="res-planet-container" >
+      <PlanetContainer className="res-planet-container" handleClick={handleClick} />
+      </section>
       <section className="lower-container">
         <div className="lower-destination-container">
           <div className="calendar-container">

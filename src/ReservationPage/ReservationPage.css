@@ -6,27 +6,26 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: url("../assets/purple-starts.jpg") no-repeat center center fixed;
+  background: url("../assets/purple-stars.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   position: fixed;
-  
 }
 
-.res-header{
-   width: 100%;
+.res-header {
+  width: 100%;
 }
 
-.navigation-container{
-display: flex;
-height: 100%;
-width: 30%;
+.navigation-container {
+  display: flex;
+  height: 100%;
+  width: 30%;
 }
-
 
 .choose-dest-container {
+  display: flex;
   width: 100%;
   height: 10%;
 }
@@ -102,10 +101,6 @@ width: 30%;
   z-index: 1;
 }
 
-
-
-
-
 .calendar-container {
   display: flex;
   width: 70%;
@@ -151,9 +146,9 @@ width: 30%;
   height: 100%;
   width: 60%;
 }
-.reservation-image-container{
+.reservation-image-container {
   background-size: cover;
-  flex-shrink:inherit
+  flex-shrink: inherit;
 }
 
 .destination-container {
@@ -187,7 +182,7 @@ width: 30%;
 .current-selection {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, .5fr);
+  grid-template-rows: repeat(2, 0.5fr);
   grid-column-gap: 12px;
   grid-row-gap: 6px;
   font-size: 2em;
@@ -206,13 +201,18 @@ width: 30%;
   width: 50%;
 }
 
-
-.p-res-title{grid-area: 1 / 1 / 2 / 2;}
-.m-res-title{grid-area: 1 / 2 / 2 / 3;}
-.displayed-name-1{grid-area: 2 / 1 / 3 / 2;}
-.displayed-name-2{grid-area: 2 / 2 / 3 / 3;}
-
-
+.p-res-title {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.m-res-title {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.displayed-name-1 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.displayed-name-2 {
+  grid-area: 2 / 2 / 3 / 3;
+}
 
 .p-res-title,
 .m-res-title,
@@ -223,8 +223,6 @@ width: 30%;
   margin: 0px;
   margin-top: 1em;
 }
-
-
 
 .moon-selection-wrapper {
   display: flex;
@@ -273,7 +271,7 @@ width: 30%;
   transform: translateY(2px);
 }
 
-.displayed-name{
+.displayed-name {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,9 +283,6 @@ width: 30%;
   padding: 5px;
   /* font-variant-caps: all-small-caps; */
 }
-
-
-
 
 /* .reservation-button-r-con-container,
 .reservation-button-r-con-right-container{
@@ -320,13 +315,13 @@ width: 30%;
 } */
 
 .reservation-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* padding: 0.5rem; */
-    width: 100%;
-    height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0.5rem; */
+  width: 100%;
+  height: 50px;
 }
 
 .moon-btn-wrapper {
@@ -345,10 +340,9 @@ width: 30%;
   background: #020038;
   box-shadow: 0px 4px 4px rgba(145, 213, 229, 0.25);
   border-radius: 13px;
-  color: rgb(145, 213, 229); 
-   margin-left: .5em;
-   margin-right: .5em;
-
+  color: rgb(145, 213, 229);
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .select-moon-btn:hover {
@@ -362,9 +356,42 @@ width: 30%;
   transform: translateY(2px);
 }
 
-a{
+.reserve-to-home {
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
 
+/* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width: 768px) {
+}
+
+/* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width: 480px) {
+  .navigation-container {
+    flex-direction: column;
+    width: 9rem;
+  }
+  .reserve-to-home {
+    margin-top: 0.5rem;
+  }
+  .choose-dest-container{
+  height: 13rem;
+  }
+  .choose-destination{
+    padding: .7rem;
+    height: 10rem;
+    justify-content: center;
+    filter: drop-shadow(3px 6px 5px purple);
+  }
+  .res-planet-container {
+    height: 15rem;
+    width: 100%;
+  }
+  .lower-container {
+    height: 15rem;
+    position: bottom sticky;
+  }
+}
