@@ -381,5 +381,7 @@ width: 30%;
     flex-direction: column;
     width: 9rem;
     }
-    
+    .reserve-to-home{
+      margin-top: .7rem;
+    }
  }
