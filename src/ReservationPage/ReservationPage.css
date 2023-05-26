@@ -362,9 +362,24 @@ width: 30%;
   transform: translateY(2px);
 }
 
-a{
+.reserve-to-home{
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
 
+/* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width: 768px) {
+
+}
+
+/* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
+
+@media screen and (max-width: 480px) {
+  .navigation-container{
+    flex-direction: column;
+    width: 9rem;
+    }
+    
+ }
