@@ -37,7 +37,7 @@
     justify-content:flex-end;
     padding: 3em;
     padding-bottom: 0%;
-    height: 55%;
+    height: 10rem;
     width: auto;
     font-family: 'Italiana';
 }
@@ -62,8 +62,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 2rem; 
-    padding-right: .5rem;
+    padding-top: 2rem; 
+    padding-left: .5rem;
     width: 95%;
     /* position: absolute; */
 }
@@ -103,11 +103,13 @@
 .reservation-button-r-con-container{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    height: 100%;
-    width: 30%;
+    height: 5rem;
+    width: 100%;
+    padding-top: 1rem; 
     /* margin-right: 2rem; */
+    position: absolute;
 }
 
 .details-wrapper{
@@ -142,11 +144,22 @@
 /* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
 
 @media screen and (max-width: 480px) {
-  .planet-wrapper{
-    
-    /* gap: 10px; */
-    z-index: 2;
-    position: absolute;
-    overflow-x: scroll;
-  }
+    .reservation-details-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .itineraries-title-wrapper{
+        justify-content: flex-start;
+        align-items: center;
+        width: 150px;
+    }
+    .reservation-button-r-con-container{
+        height: 7rem;
+        align-items: flex-end;
+    }
 }

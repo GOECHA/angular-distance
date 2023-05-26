@@ -32,6 +32,7 @@ console.log(9, reservationDetails)
     <div className="reservation-details-container">
        <div className="itineraries-title-wrapper">
            <h2 className="itineraries-title">Itineraries</h2>
+         </div>
         <div className="reservation-button-r-con-container">
           <Link to={'/'}>
           <ReservationButton text='Landing Page'/>
@@ -40,7 +41,6 @@ console.log(9, reservationDetails)
               <ReservationButton text='Reserve' onClick={(() => {setGoToReservation(1)})}/>
            </Link>
            </div>
-         </div>
          <div className="details-wrapper">
          {handleError}
          </div>
