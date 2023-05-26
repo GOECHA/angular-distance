@@ -16,9 +16,8 @@
   padding: 2em;
   padding-bottom: 0%;
   height: 5%;
-  justify-content: flex-end
+  justify-content: flex-end;
 }
-
 
 .back-to-home-btn-res-pg-l2 {
   width: 8em;
@@ -28,7 +27,7 @@
   border-radius: 13px;
   color: rgb(145, 213, 229);
   margin-right: 1rem;
-  margin-bottom: .7rem;
+  margin-bottom: 0.7rem;
   font-size: 1rem;
 }
 
@@ -110,8 +109,7 @@
 
 /* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
 
-@media screen and (max-width:768px) {
-
+@media screen and (max-width: 768px) {
   .quote-container {
     display: flex;
     flex-direction: row !important;
@@ -128,32 +126,25 @@
     padding: 2em;
     padding-bottom: 0%;
     height: 5%;
-    justify-content: flex-end
+    justify-content: flex-end;
   }
-
-}  
-
-
+}
 
 /* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
 
+@media screen and (max-width: 480px) {
+  .reservation-button-container-landing-pg2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    padding: 2em;
+  }
 
-@media screen and (max-width:480px) {
-
-.reservation-button-container-landing-pg2{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 20%;
-  padding: 2em;
-}
-
-
-
-.back-to-home-btn-res-pg-l2{
-  margin-right: 0;
-}
+  .back-to-home-btn-res-pg-l2 {
+    margin-right: 0;
+  }
 
   .quote-container {
     display: flex;
@@ -163,34 +154,27 @@
     padding: 4em;
     height: 50%;
     width: auto;
-    
   }
 
-  .somewhere{
+  .somewhere {
     font-size: 1.8em;
   }
 
-  .something{
+  .something {
     font-size: 1.8em;
-
   }
- 
-  .incredible{
+
+  .incredible {
     font-size: 3em;
-    
-
   }
-  .waiting{
+  .waiting {
     font-size: 1em;
     line-height: 10px;
   }
-  
-  .landing-footer{
+
+  .landing-footer {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-
 }
-
-

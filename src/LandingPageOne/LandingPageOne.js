@@ -1,12 +1,11 @@
 // import PropTypes from "prop-types"
 import React from "react";
 import "./LandingPageOne.css";
-import ReservationButton from "../controls/ReservationButton/ReservationButton";
 import Header from "../Header/Header";
 import "../Header/Header.css";
 import { Link } from "react-router-dom";
 
-const LandingPageOne = ({ setGoToReservation }) => {
+const LandingPageOne = () => {
   return (
     <div className="landing-page-one-container">
       <div className="landing-one-header">
