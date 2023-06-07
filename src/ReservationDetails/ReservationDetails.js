@@ -32,15 +32,15 @@ console.log(9, reservationDetails)
     <div className="reservation-details-container">
        <div className="itineraries-title-wrapper">
            <h2 className="itineraries-title">Itineraries</h2>
+         </div>
         <div className="reservation-button-r-con-container">
-          <Link to={'/'}>
-          <ReservationButton text='Landing Page'/>
+          <Link className="det-res-btn" to={'/'}>
+          <ReservationButton  text='Landing Page'/>
           </Link>
-          <Link to={"/reservations"}>
-              <ReservationButton text='Reserve' onClick={(() => {setGoToReservation(1)})}/>
+          <Link className="det-res-btn" to={"/reservations"}>
+              <ReservationButton className="det-res-btn" text='Reserve' onClick={(() => {setGoToReservation(1)})}/>
            </Link>
            </div>
-         </div>
          <div className="details-wrapper">
          {handleError}
          </div>

@@ -377,19 +377,28 @@
   .reserve-to-home {
     margin-top: 0.5rem;
   }
-  .choose-dest-container{
-  height: 13rem;
+  .res-planet-container {
+    height: 15rem;
+    width: 25rem;
+    overflow-x: scroll;
+    /* scrollbar-color: none; */
+    z-index: 1;
   }
-  .choose-destination{
-    padding: .7rem;
+  .res-planet-container::-webkit-scrollbar {
+    display: none;
+  }
+  .choose-dest-container {
+    height: 7rem;
+    z-index: -1;
+  }
+  .choose-destination {
+    padding: 0.7rem;
     height: 10rem;
     justify-content: center;
     filter: drop-shadow(3px 6px 5px purple);
+    z-index: -1;
   }
-  .res-planet-container {
-    height: 15rem;
-    width: 100%;
-  }
+
   .lower-container {
     height: 15rem;
     position: bottom sticky;

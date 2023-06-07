@@ -85,5 +85,9 @@
 @media screen and (max-width: 480px) {
   .planet-wrapper{
     
+    /* gap: 10px; */
+    z-index: 2;
+    position: absolute;
+    overflow-x: scroll;
   }
 }
