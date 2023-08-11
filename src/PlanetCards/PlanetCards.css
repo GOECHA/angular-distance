@@ -1,0 +1,9 @@
+.planetCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5em;
+    width: 10em;
+    height: 15em;
+}
+

@@ -35,32 +35,7 @@ const ReservationPage = ({
 
 //  console.log(34, globals.allPlanets)
 
-  // const [hoverRef, setIsHovering] = useHover();
-
- 
-  // const hovering = (event) => {
-  //   const { name, value } = event.target;
-  //   setIsHovering9({ ...hoverRef, planet: event.target.id});
-  //   const somePlanetInfo = allPlanets.find((planet) => {
-  //     return planet.englishName === event.target.id ? 
-  //     (<div ref={hoverRef}>{isHovering ? 'Hovering' : 'Not hovering'}</div>) : null
-  // })}
   
-  // }
- 
-
-  // const findInfo = (entity) => {
-  //   const findEntity = allPlanets.find((item) => {
-  //     console.log(52, item);
-  //     console.log(entity)
-  //    return item.englishName === entity.englishName 
-  //   })
-  //   console.log(54, findEntity)
-  //   return findEntity
-  // }
-
-  // console.log(58, findInfo());
-
 
 
 
