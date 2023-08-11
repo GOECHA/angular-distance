@@ -1,6 +1,6 @@
 import React from 'react'
 
-const PlanetCards = ({planet}) => {
+const PlanetCards = ({planet, handleClick}) => {
 
   
 
@@ -18,6 +18,7 @@ const PlanetCards = ({planet}) => {
   <span class="focus"></span>
 </div>
     </div>
+    <button className="select-planet-btn" onClick={(e) =>{handleClick(e)}}>Select</button>
     </div>
     </>
   )

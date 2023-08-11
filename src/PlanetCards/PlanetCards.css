@@ -7,3 +7,16 @@
     height: 15em;
 }
 
+
+.select-planet-btn {
+    width: 8em;
+    height: 2em;
+    background: #020038;
+    box-shadow: 0px 4px 4px rgb(145 213 229 / 25%);
+    border-radius: 13px;
+    color: rgb(145, 213, 229);
+    margin-right: 1rem;
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+  }
+

@@ -136,7 +136,7 @@ console.log(93, currentSelections)
         <h2 className="choose-destination">{message}</h2>
       </div>
       <section className="res-planet-container" >
-      <PlanetContainer className="res-planet-container" handleClick={handleClick} />
+      <PlanetContainer className="res-planet-container" handleClick={handleClick} allPlanets={allPlanets} />
       </section>
       <section className="lower-container">
         <div className="lower-destination-container">
