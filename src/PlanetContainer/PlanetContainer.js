@@ -14,13 +14,13 @@ import PlanetCards from "../PlanetCards/PlanetCards";
 
 
 const PlanetContainer = ({allPlanets, handleClick} ) => {
-console.log(17, allPlanets)
 
 const planetCards = allPlanets.map((planet, index) =>{
  
   return planet.isPlanet && (
     <PlanetCards
-      title={planet.englishName}
+    planetName={planet.englishName}
+    // moonQty={planet.moons}
       id={planet.id}
       key={planet.id}
     />
@@ -29,7 +29,9 @@ const planetCards = allPlanets.map((planet, index) =>{
 
 
   return (
-    planetCards
+    <div className="planet-container" handleClick={handleClick}>
+    {planetCards}
+    </div>
   )
 }
 

@@ -5,8 +5,13 @@
     padding: 0.5em;
     width: 10em;
     height: 15em;
+    background-color: #020038;
 }
 
+.planetName,
+.moonQtyContainer{
+color: white !important;
+}
 
 .select-planet-btn {
     width: 8em;
@@ -20,3 +25,13 @@
     font-size: 1rem;
   }
 
+  .select-planet-btn :hover {
+    background: rgb(145, 213, 229, 0.55);
+    box-shadow: 0px 4px 4px rgba(2, 0, 56, 0.25);
+    cursor: pointer;
+    color: rgba(2, 0, 56);
+  }
+  
+  .select-planet-btn:active {
+    transform: translateY(2px);
+  }
