@@ -14,15 +14,18 @@ import PlanetCards from "../PlanetCards/PlanetCards";
 
 const planetImgs = [earth, jupiter, mars, mercury, neptune, saturn, uranus, venus]
 
+
+
+
 const PlanetContainer = ({allPlanets, handleClick} ) => {
-// console.log(allPlanets)
+
 const truePlanet = allPlanets.filter((tPlanet) => tPlanet.isPlanet);
-console.log('isPlanet', truePlanet)
 
 const planetCards = truePlanet.map((planet, index) =>{
- console.log('planet', planet.id)
-const planetImage = planetImgs.find((image) => {
-  // console.log('image', image);
+console.log('planet:' , planet)
+// const planetMoons = planet.map((pMoons) => pMoons.moon)
+// console.log('planetMoons', planetMoons)
+  const planetImage = planetImgs.find((image) => {
  let imagePath = image
  const regex = /-(.*?)\./;
  const match = imagePath.match(regex);
@@ -30,13 +33,10 @@ const planetImage = planetImgs.find((image) => {
 if (match) {
   var extractedWord = match[1];
   var capitalizedWord = extractedWord.charAt(0).toUpperCase() + extractedWord.slice(1).toLowerCase();
-  // console.log('extractedWord', extractedWord); // Output: jupiter
 } else {
-  // console.log("No match found.");
+  console.log("No match found.");
 }
-// console.log('imagePath', imagePath)
-// console.log('extractedWord', extractedWord)
-// console.log('planet.englishName', planet.englishName)
+
 
 
   return capitalizedWord === planet.englishName ? imagePath : console.log('noPlanet')
