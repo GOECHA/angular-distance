@@ -5,7 +5,14 @@
     padding: 0.5em;
     width: 10em;
     height: 15em;
+    margin: 10px;
     background-color: #020038;
+}
+
+.cardBackground{
+height: auto;
+width: auto;
+
 }
 
 .planetName,

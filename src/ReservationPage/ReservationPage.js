@@ -136,9 +136,8 @@ console.log(93, currentSelections)
         <h2 className="choose-destination">{message}</h2>
       </div>
       <section className="lower-container">
-      <section className="res-planet-container" >
-      <PlanetContainer className="res-planet-container" handleClick={handleClick} allPlanets={allPlanets} />
-      </section>
+     
+     
         <div className="lower-destination-container">
           <div className="calendar-container">
             <div className="calendar-wrapper">
@@ -195,6 +194,8 @@ console.log(93, currentSelections)
             
           </section>
         </div>
+      <PlanetContainer className="planet-container" handleClick={handleClick} allPlanets={allPlanets} />
+
       </section>
     </div>
   );
