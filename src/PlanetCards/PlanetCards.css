@@ -3,8 +3,8 @@
     flex-direction: column;
     align-items: center;
     padding: 0.5em;
-    width: 500px;
-    height: 100%;
+    width: fill;
+    height: 500px;
     margin: 10px;
     background-color: #020038;
     border-radius: 22px;
@@ -14,8 +14,9 @@
 .cardBackground{
 height: auto;
 width: auto;
-
+object-position: 0ch;
 }
+
 
 .planetName,
 .moonQtyContainer{

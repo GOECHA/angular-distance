@@ -69,7 +69,7 @@ const PlanetContainer = ({ allPlanets, handleClick }) => {
       <Swiper
         slidesPerView={1}
         speed={800}
-        spaceBetween={30}
+        spaceBetween={10}
         loop={true}
         navigation={true}
         modules={[Navigation, Mousewheel, Keyboard]}

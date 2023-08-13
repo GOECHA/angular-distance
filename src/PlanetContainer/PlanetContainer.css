@@ -2,9 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width:100vw;
+  width: auto;
   height: 500px;
   margin: 5px; 
+  overflow: scroll;
+
 }
 
 .cardSwiper{
@@ -12,7 +14,9 @@
   flex-direction: row;
   width: auto;
   height: 500px;
-  position: relative;
+  /* position: relative; */
+  overflow: scroll;
+  /* margin: -50px; */
 }
 
 .cardSwiperSlide{
@@ -21,7 +25,10 @@
   justify-content: space-evenly;
   align-items: center;
   height: 500px;
-  width: 80vw; 
+  width: auto; 
+  /* overflow: scroll; */
+  /* margin: -50px; */
+
 }
 
   /* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
