@@ -78,8 +78,8 @@
 .lower-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: space-around;
+  align-items: space-between;
   height: 90%;
   width: 100%;
   padding: 1.5em;
@@ -92,8 +92,8 @@
   justify-content: center;
   flex-direction: column;
   padding: 0.5em;
-  width: 50%;
-  height: 90%;
+  width: 500px;
+  height: 500px;
   background: rgba(1, 38, 54, 0.73);
   box-shadow: -3px 4px 13px -3px rgba(250, 248, 248, 0.25);
   border-radius: 22px;

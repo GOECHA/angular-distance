@@ -121,18 +121,18 @@ const App = () => {
                   onClick: { onButtonClick },
                 }}
                 modules={[Parallax, Navigation, Mousewheel, Keyboard]}
-                className="mySwiper"
+                className="appSwiper"
                 // loop={true}
                 speed={800}
                 parallax={true}
               >
-                <SwiperSlide>
+                <SwiperSlide className="landingSwiper-1">
                   <LandingPageOne setGoToReservation={setGoToReservation} />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="landingSwiper-2">
                   <LandingPageTwo setGoToReservation={setGoToReservation} />
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide className="landingSwiper-3">
                   <AboutPage setGoToReservation={setGoToReservation} />
                 </SwiperSlide>
               </Swiper>

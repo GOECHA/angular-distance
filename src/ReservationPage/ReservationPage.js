@@ -159,8 +159,8 @@ console.log(93, currentSelections)
           </div>
           <section className="destination-container">
             <div className="moon-selection-wrapper" >
-              <form>
-                <select
+              {/* <form> */}
+                {/* <select
                   className="moon-selections"
                   id={id}
                   value={currentSelections.moon}
@@ -171,8 +171,8 @@ console.log(93, currentSelections)
                     MOON
                   </option>
                   {moonOptions}
-                </select>
-              </form>
+                </select> */}
+              {/* </form> */}
             </div>
             <div className="current-selection">
               {/* <div className="current-planet-selection"> */}

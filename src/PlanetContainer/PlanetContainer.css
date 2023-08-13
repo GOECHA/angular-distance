@@ -1,17 +1,28 @@
 .planet-container{
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 500px;
+  width:100vw;
   height: 500px;
-  /* padding-left: 2em; */
   margin: 5px; 
-  overflow-x: scroll;
-  /* position: absolute;  */
 }
 
+.cardSwiper{
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: 500px;
+  position: relative;
+}
 
+.cardSwiperSlide{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 500px;
+  width: 80vw; 
+}
 
   /* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
 
