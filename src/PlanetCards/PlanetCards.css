@@ -9,15 +9,13 @@
   background-color: #020038;
   border-radius: 22px;
   /* position: fixed; */
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  
 }
 
 .cardBackground {
   height: auto;
-  width: auto;
+  width: 200px;
+  background-position: center center;
   /* position: absolute; */
   /* z-index: -1; */
   /* object-position: 0; */

@@ -67,7 +67,7 @@ const PlanetContainer = ({ allPlanets, handleClick }) => {
   });
 
   return (
-    // <div className="planet-container" handleClick={handleClick}>
+    <div className="planet-container" handleClick={handleClick}>
       <Swiper
         spaceBetween={5}
         slidesPerView={1}
@@ -81,7 +81,7 @@ const PlanetContainer = ({ allPlanets, handleClick }) => {
         {planetCards}
 
       </Swiper> 
-        // </div>
+         </div>
       
   );
 };
