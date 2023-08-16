@@ -8,6 +8,8 @@ import CircularIndeterminate from "../CircularIndeterminate/CircularIndeterminat
 // import {useHover} from "../../utilities/hooks/useHover"
 import AppContext from "../AppContext";
 // import { CircularProgress } from "@mui/material";
+import ADLogo from "../assets/AD-img.png"
+
 
 const ReservationPage = ({
   reserveFlight,
@@ -152,7 +154,9 @@ console.log(93, currentSelections)
                 />
                 <p className="earth-calendar">Earth Calendar</p>
               </div>
-              <p className="reservation-logo">AD</p>
+              {/* <p className="reservation-logo"> */}
+                <img src={ADLogo} alt="ADLogo" ></img>
+                {/* </p> */}
               <p className="calendar-title">DEPARTURE</p>
             </div>
             <div className="reservation-image-container"></div>
@@ -194,7 +198,7 @@ console.log(93, currentSelections)
             
           </section>
         </div>
-      <PlanetContainer className="planet-container" handleClick={handleClick} allPlanets={allPlanets} />
+      <PlanetContainer className="planet-container" handleClick={handleClick} allPlanets={allPlanets} moonOptions={moonOptions} />
 
       </section>
     </div>

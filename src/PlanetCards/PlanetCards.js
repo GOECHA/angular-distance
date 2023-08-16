@@ -1,19 +1,21 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import './PlanetCards.css'
 
 
-const PlanetCards = ({backGroundImage, planetName, handleClick}) => {
+const PlanetCards = ({backGroundImage, planetName, handleClick, moonOptions}) => {
 
   
-// console.log(6, {planetName})
+console.log(6, {moonOptions})
   return (
   <>
   <div className="planetCard" key={planetName}>
-  <img className="cardBackground" src={backGroundImage} alt="planetCard PlanetImg" />
+    <div className="planet-img-wrapper">
+     <img className="cardBackground" src={backGroundImage} alt={planetName} />
+    </div>
     <div className="planetName">{planetName}</div>
     <div className="moonDataContainer">
-    <div className="moonQtyContainer">QTY</div>
+    <div className="moonQtyContainer">Moon QTY {moonOptions}</div>
     </div>
     <button className="select-planet-btn" onClick={(e) =>{handleClick(e)}}>Select</button>
     </div>

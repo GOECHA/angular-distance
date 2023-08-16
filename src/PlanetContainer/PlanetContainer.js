@@ -27,7 +27,7 @@ const planetImgs = [
   venus,
 ];
 
-const PlanetContainer = ({ allPlanets, handleClick }) => {
+const PlanetContainer = ({ allPlanets, handleClick, moonOptions }) => {
   const truePlanet = allPlanets.filter((tPlanet) => tPlanet.isPlanet);
 
   const planetCards = truePlanet.map((planet, index) => {
@@ -58,16 +58,18 @@ const PlanetContainer = ({ allPlanets, handleClick }) => {
       <PlanetCards
         backGroundImage={planetImage}
         planetName={planet.englishName}
-        // moonQty={planet.moons}
+        moonQty={planet.moons}
         id={planet.id}
         key={planet.id}
+        handleClick={handleClick}
+        moonOptions={moonOptions}
       />
       </SwiperSlide>
     );
   });
 
   return (
-    <div className="planet-container" handleClick={handleClick}>
+    <div className="planet-container" >
       <Swiper
         spaceBetween={5}
         slidesPerView={1}
@@ -77,6 +79,7 @@ const PlanetContainer = ({ allPlanets, handleClick }) => {
         navigation={true}
         modules={[Navigation, Mousewheel, Keyboard]}
         className="cardSwiper"
+        
         >
         {planetCards}
 
