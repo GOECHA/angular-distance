@@ -17,8 +17,8 @@ console.log(6, {moonOptions})
     <div className="moonQtyContainer">Moon QTY {moonOptions}</div>
     </div>
   
-    <button className="select-planet-btn" onClick={(e) =>{handleClick(e)}}>Select Destination</button>
-        <SelectedReservationModal planetName={planetName} backGroundImage={backGroundImage} moonOptions={moonOptions} />
+    {/* <button className="select-planet-btn" onClick={(e) =>{handleClick(e)}}>Select Destination</button> */}
+        <SelectedReservationModal planetName={planetName} backGroundImage={backGroundImage} moonOptions={moonOptions} handleClick={handleClick}/>
     </div>
     </>
   )
