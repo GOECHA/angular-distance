@@ -6,7 +6,7 @@
   width: 500px;
   height: 450px;
   margin: 10px;
-  background-color: #020038;
+  background-color: rgba(2, 1, 28, 0.776);
   border-radius: 22px;
   /* position: fixed; */
   overflow: hidden;
@@ -16,19 +16,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90%;
-  width: 95%;
+  height: 80%;
+  width: 75%;
   position: absolute;
-  /* background-position: center center; */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
-.cardBackground {
+/* .cardBackground {
   height: 50%;
-  width: auto;
+  width: 50%;
   
   /* position: absolute; */
   /* z-index: -1; */
   /* object-position: 0; */
-}
+/* } */ 
 .planetName{
   font-size: 30pt;
 }
@@ -45,15 +47,16 @@
 }
 
 .select-planet-btn {
-  width: 8em;
+  width: 10em;
   height: 2em;
   background: #020038;
   box-shadow: 0px 4px 4px rgb(145 213 229 / 25%);
-  border-radius: 13px;
+  border-radius: 7px;
   color: rgb(145, 213, 229);
   /* margin-right: 1rem; */
   margin-bottom: 0.7rem;
   font-size: 1rem;
+  z-index: 5;
 }
 
 .select-planet-btn :hover {

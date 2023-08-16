@@ -1,7 +1,5 @@
-
-.modal-btn{
-    width: 9em;
-    background-color: blue;
-    
-    
+.planet-modal{
+background-image: url(../assets/3-stars.jpg) !important;
+background-repeat: no-repeat !important;
+background-size: cover !important;
 }

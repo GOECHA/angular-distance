@@ -16,7 +16,7 @@ import { Route, Switch } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Parallax, Mousewheel, Keyboard } from "swiper";
 
-
+import { ChakraProvider } from '@chakra-ui/react'
 
 const App = () => {
   const [allPlanets, setAllPlanets] = useState([]);
@@ -81,6 +81,7 @@ const App = () => {
 
   return (
     <AppContext.Provider value={globals}>
+      <ChakraProvider>
       <main className="app-container">
         <Switch>
           {loading && (
@@ -142,6 +143,7 @@ const App = () => {
           <Route component={InternalServerError} />
         </Switch>
       </main>
+      </ChakraProvider>
     </AppContext.Provider>
   );
 };
