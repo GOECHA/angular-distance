@@ -1,47 +1,52 @@
-.planetCard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5em;
-    width: fill;
-    height: 500px;
-    margin: 10px;
-    background-color: #020038;
-    border-radius: 22px;
-    /* position: fixed; */
+.planetCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  width: 500px;
+  height: 500px;
+  margin: 10px;
+  background-color: #020038;
+  border-radius: 22px;
+  /* position: fixed; */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.cardBackground{
-height: auto;
-width: auto;
-object-position: 0ch;
+.cardBackground {
+  height: auto;
+  width: auto;
+  /* position: absolute; */
+  /* z-index: -1; */
+  /* object-position: 0; */
 }
-
 
 .planetName,
-.moonQtyContainer{
-color: white !important;
+.moonQtyContainer {
+  color: white !important;
 }
 
 .select-planet-btn {
-    width: 8em;
-    height: 2em;
-    background: #020038;
-    box-shadow: 0px 4px 4px rgb(145 213 229 / 25%);
-    border-radius: 13px;
-    color: rgb(145, 213, 229);
-    margin-right: 1rem;
-    margin-bottom: 0.7rem;
-    font-size: 1rem;
-  }
+  width: 8em;
+  height: 2em;
+  background: #020038;
+  box-shadow: 0px 4px 4px rgb(145 213 229 / 25%);
+  border-radius: 13px;
+  color: rgb(145, 213, 229);
+  /* margin-right: 1rem; */
+  margin-bottom: 0.7rem;
+  font-size: 1rem;
+}
 
-  .select-planet-btn :hover {
-    background: rgb(145, 213, 229, 0.55);
-    box-shadow: 0px 4px 4px rgba(2, 0, 56, 0.25);
-    cursor: pointer;
-    color: rgba(2, 0, 56);
-  }
-  
-  .select-planet-btn:active {
-    transform: translateY(2px);
-  }
+.select-planet-btn :hover {
+  background: rgb(145, 213, 229, 0.55);
+  box-shadow: 0px 4px 4px rgba(2, 0, 56, 0.25);
+  cursor: pointer;
+  color: rgba(2, 0, 56);
+}
+
+.select-planet-btn:active {
+  transform: translateY(2px);
+}

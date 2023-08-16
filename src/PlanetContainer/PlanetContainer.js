@@ -54,6 +54,7 @@ const PlanetContainer = ({ allPlanets, handleClick }) => {
     });
 
     return (
+      <SwiperSlide className="cardSwiperSlide">
       <PlanetCards
         backGroundImage={planetImage}
         planetName={planet.englishName}
@@ -61,24 +62,27 @@ const PlanetContainer = ({ allPlanets, handleClick }) => {
         id={planet.id}
         key={planet.id}
       />
+      </SwiperSlide>
     );
   });
 
   return (
-    <div className="planet-container" handleClick={handleClick}>
+    // <div className="planet-container" handleClick={handleClick}>
       <Swiper
+        spaceBetween={5}
         slidesPerView={1}
         speed={800}
-        spaceBetween={10}
         loop={true}
+        onSlideChange={() => {console.log('slideChange')}}        
         navigation={true}
         modules={[Navigation, Mousewheel, Keyboard]}
         className="cardSwiper"
-      >
-        <SwiperSlide className="cardSwiperSlide">{planetCards}</SwiperSlide>
+        >
+        {planetCards}
 
       </Swiper> 
-    </div>
+        // </div>
+      
   );
 };
 
