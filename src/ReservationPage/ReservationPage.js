@@ -8,8 +8,7 @@ import CircularIndeterminate from "../CircularIndeterminate/CircularIndeterminat
 // import {useHover} from "../../utilities/hooks/useHover"
 import AppContext from "../AppContext";
 // import { CircularProgress } from "@mui/material";
-import ADLogo from "../assets/AD-img.png"
-
+import ADLogo from "../assets/AD-img.png";
 
 const ReservationPage = ({
   reserveFlight,
@@ -18,7 +17,7 @@ const ReservationPage = ({
   allPlanets,
   authenticate,
   loading,
-  isLoading
+  isLoading,
 }) => {
   // const[currentGravity, setCurrentGravity] = useState("")
   const [currentMoons, setCurrentMoons] = useState([]);
@@ -32,32 +31,33 @@ const ReservationPage = ({
     gravity: "",
   });
 
-  const globals = useContext(AppContext)
+  const globals = useContext(AppContext);
   // console.log('respg 31', globals.allPlanets[243].gravity)
 
-//  console.log(34, globals.allPlanets)
-
-  
-
-
+  //  console.log(34, globals.allPlanets)
 
   const handleClick = (event) => {
-  
     const somePlanetInfo = allPlanets.find((planet) => {
-      console.log('respg54', planet.englishName)
-      console.log('respg55', event.target.id);
+      // console.log("respg54", planet.englishName);
+      // console.log("respg55", event.target.id);
       return planet.englishName === event.target.id;
     });
     setCurrentMoons(somePlanetInfo.moons);
-    setCurrentSelections({ ...currentSelections, planet: somePlanetInfo});
-    console.log('respage 55', somePlanetInfo.gravity)
+    setCurrentSelections({ ...currentSelections, planet: somePlanetInfo });
+ console.log({somePlanetInfo})
+ console.log('somePlanetInfo.moons', somePlanetInfo.moons)
+ console.log('currentSelections.planet', currentSelections.planet)
+ console.log('currentSelections.date', currentSelections.date)
+
+
 
   };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
     setCurrentSelections({ ...currentSelections, [name]: value });
-    !currentSelections.planet && currentSelections.date &&
+    !currentSelections.planet &&
+      currentSelections.date &&
       setMessage(`Please, finish choosing selections`);
   };
 
@@ -79,67 +79,70 @@ const ReservationPage = ({
         No Moons
       </option>
     );
-
-
-
+console.log(76, {moonOptions})
   const handleReservation = (e) => {
-    console.log(88, globals.allPlanets)
-   
+    console.log(88, globals.allPlanets);
+
     const someMoonInfo = allPlanets.find((moon) => {
-     console.log(90, currentSelections.moon)
-      return moon.name === currentSelections?.moon
-    })
-    console.log(92, someMoonInfo)
+      console.log(90, currentSelections.moon);
+      return moon.name === currentSelections?.moon;
+    });
+    console.log(92, someMoonInfo);
     currentSelections.planet &&
     currentSelections.date &&
     !currentSelections.moon
-      ? reserveFlight({ ...currentSelections, id: Date.now(), currentSelection: currentSelections.planet}) 
-     : currentSelections.planet &&
-      currentSelections.date ? reserveFlight({ ...currentSelections, id: Date.now(), currentSelection: currentSelections.planet, moon: someMoonInfo}) 
-      : setMessage(`Please, finish choosing selections`)
+      ? reserveFlight({
+          ...currentSelections,
+          id: Date.now(),
+          currentSelection: currentSelections.planet,
+        })
+      : currentSelections.planet && currentSelections.date
+      ? reserveFlight({
+          ...currentSelections,
+          id: Date.now(),
+          currentSelection: currentSelections.planet,
+          moon: someMoonInfo,
+        })
+      : setMessage(`Please, finish choosing selections`);
   };
 
-  const reservationButton = currentSelections.date && currentSelections.planet && (
-    <Link to={"/reservation-details"}>
-      <button className="select-moon-btn" onClick={(e) => handleReservation(e)}>
-        Reserve!
-      </button>
-    </Link>
-  );
-console.log(93, currentSelections)
+  const reservationButton = currentSelections.date &&
+    currentSelections.planet && (
+      <Link to={"/reservation-details"}>
+        <button
+          className="select-moon-btn"
+          onClick={(e) => handleReservation(e)}
+        >
+          Reserve!
+        </button>
+      </Link>
+    );
+  console.log(93, currentSelections);
 
   return (
     <div className="reservation-container">
       {loading && (
-            <CircularIndeterminate
-              authenticate={authenticate}
-              isLoading={isLoading}
-            />
-          )}
-        <div className="reservation-header">
-          <Header className="res-header" />
-         <div className="navigation-container">
-            <Link className="reserve-to-home" to={"/"} >
-              <button
-                className="back-to-home-res-pg"
-              >
-                Landing Page
-              </button>
-            </Link>
+        <CircularIndeterminate
+          authenticate={authenticate}
+          isLoading={isLoading}
+        />
+      )}
+      <div className="reservation-header">
+        <Header className="res-header" />
+        <div className="navigation-container">
+          <Link className="reserve-to-home" to={"/"}>
+            <button className="back-to-home-res-pg">Landing Page</button>
+          </Link>
 
-            <Link className="reserve-to-home" to={"/reservation-details"}>
-      <button className="back-to-home-res-pg" >
-        Reservations
-      </button>
-    </Link>
-    </div>
+          <Link className="reserve-to-home" to={"/reservation-details"}>
+            <button className="back-to-home-res-pg">Reservations</button>
+          </Link>
         </div>
+      </div>
       <div className="choose-dest-container">
         <h2 className="choose-destination">{message}</h2>
       </div>
       <section className="lower-container">
-     
-     
         <div className="lower-destination-container">
           <div className="calendar-container">
             <div className="calendar-wrapper">
@@ -155,16 +158,16 @@ console.log(93, currentSelections)
                 <p className="earth-calendar">Earth Calendar</p>
               </div>
               {/* <p className="reservation-logo"> */}
-                <img src={ADLogo} alt="ADLogo" ></img>
-                {/* </p> */}
+              <img src={ADLogo} alt="ADLogo"></img>
+              {/* </p> */}
               <p className="calendar-title">DEPARTURE</p>
             </div>
             <div className="reservation-image-container"></div>
           </div>
           <section className="destination-container">
-            <div className="moon-selection-wrapper" >
+            <div className="moon-selection-wrapper">
               {/* <form> */}
-                {/* <select
+              {/* <select
                   className="moon-selections"
                   id={id}
                   value={currentSelections.moon}
@@ -180,26 +183,33 @@ console.log(93, currentSelections)
             </div>
             <div className="current-selection">
               {/* <div className="current-planet-selection"> */}
-                <p className="p-res-title">Planet</p>
-                <p className="m-res-title">Moon</p>
-                <p className="displayed-name-1">{currentSelections.planet.englishName}</p>
+              <p className="p-res-title">Planet</p>
+              <p className="m-res-title">Moon</p>
+              <p className="displayed-name-1">
+                {currentSelections.planet.englishName}
+              </p>
               {/* </div> */}
               {/* <div className="current-moon-selection"> */}
-                <p className="displayed-name-2">{currentSelections.moon}</p> 
+              <p className="displayed-name-2">{currentSelections.moon}</p>
               {/* </div> */}
             </div>
             <div className="reservation-wrapper">
-                 <div className="moon-btn-wrapper">
-                   {reservationButton}
-                 <h3 className="destination-title"> DESTINATION </h3>
-                </div>
-                </div>
-
-            
+              <div className="moon-btn-wrapper">
+                {reservationButton}
+                <h3 className="destination-title"> DESTINATION </h3>
+              </div>
+            </div>
           </section>
         </div>
-      <PlanetContainer className="planet-container" handleClick={handleClick} allPlanets={allPlanets} moonOptions={moonOptions} />
-
+        <PlanetContainer
+          className="planet-container"
+          handleClick={handleClick}
+          allPlanets={allPlanets}
+          moonOptions={moonOptions}
+          handleChange={handleChange}
+          currentSelections={currentSelections}
+          id={id}
+        />
       </section>
     </div>
   );

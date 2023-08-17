@@ -19,12 +19,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80%;
+  height: 74%;
   width: 75%;
-  position: absolute;
+  /* position: absolute; */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  padding-bottom: 2rem;
 }
 /* .cardBackground {
   height: 50%;

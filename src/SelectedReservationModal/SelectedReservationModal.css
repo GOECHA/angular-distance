@@ -6,6 +6,20 @@ background-size: cover !important;
 .modal-planet-name{
     z-index: 5;
 }
+.modal-close-btn{
+    z-index:6;
+}
+
+.moon-info-text{
+    z-index: 1;
+    /* margin-top: -100px; */
+}
+
+.modal-background{
+    z-index: -1;
+   
+}
+
 
 
 .modal-reserve-btn,
