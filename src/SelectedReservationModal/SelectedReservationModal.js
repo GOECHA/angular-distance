@@ -36,15 +36,16 @@ const SelectedReservationModal = ({
   );
 
   const [overlay, setOverlay] = React.useState(<OverlayOne />);
-console.log('modal-moon', {moonOptions})
+    console.log('modal-moon', {moonOptions})
   return (
     <>
       <Button
+      id={id}
         className="modal-select-planet-btn"
         onClick={(e) => {
+          handleClick(e);
           setOverlay(<OverlayOne />);
           onOpen();
-          handleClick(e);
           
         }}
       >

@@ -37,17 +37,18 @@ const ReservationPage = ({
   //  console.log(34, globals.allPlanets)
 
   const handleClick = (event) => {
+    console.log({allPlanets})
     const somePlanetInfo = allPlanets.find((planet) => {
       // console.log("respg54", planet.englishName);
       // console.log("respg55", event.target.id);
       return planet.englishName === event.target.id;
     });
+    console.log({somePlanetInfo})
+    console.log('somePlanetInfo.moons', somePlanetInfo.moons)
+    console.log('currentSelections.planet', currentSelections.planet)
+    console.log('currentSelections.date', currentSelections.date)
     setCurrentMoons(somePlanetInfo.moons);
     setCurrentSelections({ ...currentSelections, planet: somePlanetInfo });
- console.log({somePlanetInfo})
- console.log('somePlanetInfo.moons', somePlanetInfo.moons)
- console.log('currentSelections.planet', currentSelections.planet)
- console.log('currentSelections.date', currentSelections.date)
 
 
 
@@ -209,6 +210,7 @@ console.log(76, {moonOptions})
           handleChange={handleChange}
           currentSelections={currentSelections}
           id={id}
+       
         />
       </section>
     </div>
