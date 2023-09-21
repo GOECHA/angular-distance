@@ -19,6 +19,8 @@ const ReservationPage = ({
   loading,
   isLoading,
 }) => {
+  
+
   // const[currentGravity, setCurrentGravity] = useState("")
   const [currentMoons, setCurrentMoons] = useState([]);
   const [message, setMessage] = useState("Choose your Destination");
@@ -29,6 +31,7 @@ const ReservationPage = ({
     planet: "",
     moon: "",
     gravity: "",
+    
   });
 
   const globals = useContext(AppContext);
@@ -60,6 +63,13 @@ const ReservationPage = ({
     !currentSelections.planet &&
       currentSelections.date &&
       setMessage(`Please, finish choosing selections`);
+  };
+
+
+  const handleReset = () => {
+    setCurrentSelections({
+      date: ""
+    });
   };
 
   const moonOptions =
@@ -166,22 +176,7 @@ console.log(76, {moonOptions})
             <div className="reservation-image-container"></div>
           </div>
           <section className="destination-container">
-            <div className="moon-selection-wrapper">
-              {/* <form> */}
-              {/* <select
-                  className="moon-selections"
-                  id={id}
-                  value={currentSelections.moon}
-                  name="moon"
-                  onChange={(e) => handleChange(e)}
-                >
-                  <option value="" disabled>
-                    MOON
-                  </option>
-                  {moonOptions}
-                </select> */}
-              {/* </form> */}
-            </div>
+           
             <div className="current-selection">
               {/* <div className="current-planet-selection"> */}
               <p className="p-res-title">Planet</p>
@@ -210,7 +205,7 @@ console.log(76, {moonOptions})
           handleChange={handleChange}
           currentSelections={currentSelections}
           id={id}
-       
+          handleReset={handleReset} 
         />
       </section>
     </div>

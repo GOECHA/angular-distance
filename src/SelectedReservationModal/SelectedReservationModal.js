@@ -3,6 +3,7 @@ import "./SelectedReservationModal.css";
 
 import {
   Button,
+  Flex,
   Grid,
   GridItem,
   Modal,
@@ -23,7 +24,8 @@ const SelectedReservationModal = ({
   moonOptions,
   handleClick,
   handleChange,
-  id
+  id,
+  handleReset
 }) => {
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -40,13 +42,13 @@ const SelectedReservationModal = ({
   return (
     <>
       <Button
-      id={id}
+        id={id}
         className="modal-select-planet-btn"
         onClick={(e) => {
+          handleReset();
           handleClick(e);
           setOverlay(<OverlayOne />);
           onOpen();
-          
         }}
       >
         More Info
@@ -55,6 +57,7 @@ const SelectedReservationModal = ({
       <Modal isCentered isOpen={isOpen} onClose={onClose}>
         {overlay}
         <ModalContent className="planet-modal">
+          <Flex justifyContent="center">
           <ModalHeader
           className="modal-planet-name"
             fontSize="3xl"
@@ -63,16 +66,21 @@ const SelectedReservationModal = ({
           >
             {planetName}
           </ModalHeader>
+           </Flex>
           <ModalCloseButton className="modal-close-btn" color="white" textShadow="2px 2px #020038" onClick={onClose} />
           <ModalBody>
-           <Text className="modal-calendar-text">Calendar</Text>
-            <img
-              className="modal-background"
-              src={backGroundImage}
-              alt={planetName}
-            />
-           
-            <Text className="moon-info-text" color="white">Moon Information</Text>
+            <Grid 
+             h='150px'
+             templateRows='repeat(2, 1fr)'
+             templateColumns='5, fr'>
+         
+            <GridItem colSpan={2} h='10'>
+           <Text className="modal-calendar-text">Select Date </Text>
+            
+           </GridItem>
+          
+
+           <GridItem colStart={4} colEnd={6} h='10'>
             <div className="calendar-input-wrapper">
                 <input
                   name="date"
@@ -84,7 +92,18 @@ const SelectedReservationModal = ({
                 />
                 <p className="earth-calendar">Earth Calendar</p>
               </div>
-              <div className="moon-selection-wrapper">
+              </GridItem>
+            
+
+           <GridItem colSpan={2} h='10'>
+             
+            <Text className="moon-info-text" color="white">Moon Information</Text>
+            </GridItem>
+           
+
+            <GridItem colStart={4} colEnd={6} h='10'>
+            
+              {/* <div className="moon-selection-wrapper"> */}
               <form>
               <select
                   className="moon-selections"
@@ -99,28 +118,33 @@ const SelectedReservationModal = ({
                   {moonOptions}
                 </select> 
             </form>
-            </div>
+            {/* </div> */}
+            </GridItem>
+          
+            </Grid>
+            <img
+              className="modal-background"
+              src={backGroundImage}
+              alt={planetName}
+            />
           </ModalBody>
-          <ModalFooter>
-            <Grid templateColumns="repeat(2,1fr)" gap={3}>
-              <GridItem colSpan={1} h="10" bg="none">
+          <Flex justifyContent="center">
+
+          <ModalFooter >
                 <Button
                   className="modal-reserve-btn"
                   onClick={(e) => {
-                    handleClick(e);
+                    handleChange(e)
+                    onClose();
+
                   }}
                   
                 >
                   Reserve Flight
                 </Button>
-              </GridItem>
-              <GridItem colStart={4} colEnd={6} h="10" bg="none">
-                <Button className="close-modal-btn" onClick={onClose}>
-                  Close
-                </Button>
-              </GridItem>
-            </Grid>
+              
           </ModalFooter>
+          </Flex>
         </ModalContent>
       </Modal>
     </>

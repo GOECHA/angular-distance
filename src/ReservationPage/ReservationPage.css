@@ -139,7 +139,7 @@
   height: 100%;
 }
 
-.reservation-image-container,
+/* .reservation-image-container, */
 .destination-container {
   display: flex;
   flex-direction: column;
@@ -148,22 +148,22 @@
   height: 100%;
   width: 60%;
 }
-.reservation-image-container {
+/* .reservation-image-container {
   background-size: cover;
   flex-shrink: inherit;
-}
+} */
 
 .destination-container {
   width: 40%;
 }
 
-.reservation-image-container {
+/* .reservation-image-container {
   background-image: url("../assets/planets-row.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
+} */
 
 .destination-title,
 .calendar-title {
@@ -226,7 +226,7 @@
   margin-top: 1em;
 }
 
-.moon-selection-wrapper {
+/* .moon-selection-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -237,7 +237,7 @@
   padding-top: 0.5em;
   margin-top: -10px;
   position: sticky;
-}
+} */
 
 .moon-selections {
   height: 10%;

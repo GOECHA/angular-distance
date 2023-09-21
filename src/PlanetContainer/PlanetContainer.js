@@ -27,7 +27,7 @@ const planetImgs = [
   venus,
 ];
 
-const PlanetContainer = ({ allPlanets, handleClick, moonOptions, handleChange, currentSelections }) => {
+const PlanetContainer = ({ allPlanets, handleClick, moonOptions, handleChange, currentSelections, handleReset }) => {
   const truePlanet = allPlanets.filter((tPlanet) => tPlanet.isPlanet);
 
   const planetCards = truePlanet.map((planet, index) => {
@@ -65,7 +65,7 @@ const PlanetContainer = ({ allPlanets, handleClick, moonOptions, handleChange, c
         handleClick={handleClick}
         moonOptions={moonOptions}
         currentSelections={currentSelections}
-        
+        handleReset={handleReset}
       />
       </SwiperSlide>
     );

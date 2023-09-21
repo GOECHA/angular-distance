@@ -48,3 +48,9 @@ background-size: cover !important;
   .close-modal-btn:active {
     transform: translateY(2px);
   }
+
+  .moon-selections{
+    height: 100px;
+    overflow:hidden; 
+    overflow-y:scroll;
+  }
