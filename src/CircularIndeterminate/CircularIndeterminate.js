@@ -1,13 +1,9 @@
 import * as React from 'react';
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+import { CircularProgress, CircularProgressLabel } from '@chakra-ui/react'
 
 const CircularIndeterminate = () => {
   return (
-    <Box className="loading-box" sx={{ display: 'flex' }}>
-      <CircularProgress />
-    </Box>
-  );
+<CircularProgress isIndeterminate color='green.300' />  );
 };
 
 

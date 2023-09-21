@@ -1,81 +1,51 @@
-.planter-container{
+.planet-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 30%;
-  padding-left: 2em;
-  margin-right: -20%;
+  width: auto;
+  height: 500px;
+  margin: 5px;
+  overflow: scroll;
 }
 
-.planet-wrapper{
-    display:  grid;
-    grid-template-columns: 1.4fr 1.3fr 1.5fr 1.6fr 3.1fr 2.2fr 1.5fr 1.4fr;
-    grid-template-rows: none;
-    height: 40%;
-    width: 90%;
-    justify-content: center;
-    align-items: center; 
-    padding: 2em;
-    margin-top: -100px;
-    z-index: -1;
-  } 
+.cardSwiper {
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+  height: 500px;
+  /* position: relative; */
+  overflow: scroll;
+  /* margin: -50px; */
+  /* z-index: 5; */
+}
 
-  .grid-1{
-    margin-left: 2em;
-  }
+.cardSwiperSlide {
+  /* text-align: center; */
+  /* font-size: 18px; */
+  /* background: #fff; */
 
-  .planet-image{
-    width: 90%;
-    margin-left: 2em;
-  }
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  /* display: flex; */
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  /* justify-content: center; */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  /* align-items: center; */
+  /* display: block; */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* object-fit: cover; */
+  overflow: scroll;
 
-  .mars,
-  .earth,
-  .venus,
-  .mercury{
-    margin-left: -1em;
-  }
+}
 
-  .planet-button{
-    background: transparent;
-    border: transparent;
-    width: auto;
-    margin: -40%;
-    transition: all .2s ease-in-out;
-    position: relative;
-    z-index: 1;
-    /* -webkit-transition-duration: 0.4s; /* Safari */
-    /* transition-duration: 0.4s; */ 
-  }
-  /* @keyframes spin {
-    /* from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    } */
-  
-    /* 100% { 
-      -webkit-transform: rotate(500deg); 
-      transform:rotate(500deg); } */
-  /* } */ 
- 
-  /* @media (prefers-reduced-motion: no-preference) { */
-    .planet-button:hover{ 
-      transform: scale(1.1); 
-      cursor: pointer;
-      /* animation: spin infinite 20s linear; */
-      animation-direction: normal;
-    }
-  /* } */
-  
-  .planet-button:active {
-    background-color: none;
-    transform: translateY(20px);
-  }
-
-  /* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
 
 @media screen and (max-width: 768px) {
 }
@@ -83,11 +53,4 @@
 /* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
 
 @media screen and (max-width: 480px) {
-  .planet-wrapper{
-    
-    /* gap: 10px; */
-    z-index: 2;
-    position: absolute;
-    overflow-x: scroll;
-  }
 }

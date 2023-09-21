@@ -1,7 +1,56 @@
-
-.modal-btn{
-    width: 9em;
-    background-color: blue;
-    
-    
+.planet-modal{
+background-image: url(../assets/3-stars.jpg) !important;
+background-repeat: no-repeat !important;
+background-size: cover !important;
 }
+.modal-planet-name{
+    z-index: 5;
+}
+.modal-close-btn{
+    z-index:6;
+}
+
+.moon-info-text{
+    z-index: 1;
+    /* margin-top: -100px; */
+}
+
+.modal-background{
+    z-index: -1;
+   
+}
+
+
+
+.modal-reserve-btn,
+.close-modal-btn {
+    width: 10em;
+    height: 2em;
+    background: #020038 important!;
+    box-shadow: 0px 4px 4px rgb(145 213 229 / 25%);
+    border-radius: 7px;
+    color: rgb(145, 213, 229);
+    /* margin-right: 1rem; */
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+    z-index: 5;
+  }
+  
+  .modal-reserve-btn:hover,
+  .close-modal-btn:hover {
+    background: rgb(145, 213, 229, 0.55);
+    box-shadow: 0px 4px 4px rgba(2, 0, 56, 0.25);
+    cursor: pointer;
+    color: rgba(2, 0, 56);
+  }
+  
+  .modal-reserve-btn:active,
+  .close-modal-btn:active {
+    transform: translateY(2px);
+  }
+
+  .moon-selections{
+    height: 100px;
+    overflow:hidden; 
+    overflow-y:scroll;
+  }

@@ -1,72 +1,99 @@
-import PropTypes from "prop-types"
-import React from 'react';
-import './PlanetContainer.css';
-import earth  from "../assets/hd2--earth.png"
-import jupiter from "../assets/hd2-jupiter.png"
-import mars  from "../assets/hd2-mars.png"
-import mercury  from "../assets/hd2-mercury.png"
-import neptune from "../assets/hd2-neptune.png"
-import saturn from "../assets/hd2-saturn.png"
-import uranus from "../assets/hd2-uranus.png"
-import venus from "../assets/hd2-venus.png"
+import PropTypes from "prop-types";
+import React from "react";
+import "./PlanetContainer.css";
+import earth from "../assets/hd2-earth.png";
+import jupiter from "../assets/hd2-jupiter.png";
+import mars from "../assets/hd2-mars.png";
+import mercury from "../assets/hd2-mercury.png";
+import neptune from "../assets/hd2-neptune.png";
+import saturn from "../assets/hd2-saturn.png";
+import uranus from "../assets/hd2-uranus.png";
+import venus from "../assets/hd2-venus.png";
 
+import PlanetCards from "../PlanetCards/PlanetCards";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Mousewheel, Keyboard } from "swiper";
 
+const planetImgs = [
+  earth,
+  jupiter,
+  mars,
+  mercury,
+  neptune,
+  saturn,
+  uranus,
+  venus,
+];
 
-const PlanetContainer = ({handleClick} ) => {
+const PlanetContainer = ({ allPlanets, handleClick, moonOptions, handleChange, currentSelections, handleReset }) => {
+  const truePlanet = allPlanets.filter((tPlanet) => tPlanet.isPlanet);
 
+  const planetCards = truePlanet.map((planet, index) => {
+    console.log("planet:", planet);
+    // const planetMoons = planet.map((pMoons) => pMoons.moon)
+    // console.log('planetMoons', planetMoons)
+    const planetImage = planetImgs.find((image) => {
+      let imagePath = image;
+      const regex = /-(.*?)\./;
+      const match = imagePath.match(regex);
+
+      if (match) {
+        var extractedWord = match[1];
+        var capitalizedWord =
+          extractedWord.charAt(0).toUpperCase() +
+          extractedWord.slice(1).toLowerCase();
+      } else {
+        console.log("No match found.");
+      }
+
+      return capitalizedWord === planet.englishName
+        ? imagePath
+        : console.log("noPlanet");
+    });
+
+    return (
+      <SwiperSlide className="cardSwiperSlide">
+      <PlanetCards
+        backGroundImage={planetImage}
+        planetName={planet.englishName}
+        moonQty={planet.moons}
+        id={planet.englishName}
+        key={planet.englishName}
+        handleChange={handleChange}
+        handleClick={handleClick}
+        moonOptions={moonOptions}
+        currentSelections={currentSelections}
+        handleReset={handleReset}
+      />
+      </SwiperSlide>
+    );
+  });
 
   return (
-    
-    <div className="planet-container">
-      <div className="planet-wrapper">
-     <section className ="grid grid-1">
-      <button  className='planet-button mercury-btn'>
-        <img className='planet-image mercury' id='Mercury' src={mercury} alt="mercury" onClick={(e) =>{handleClick(e)}}/>
-      </button>
-     </section>
-     <section className ="grid grid-2">
-      <button  className='planet-button venus-btn'>
-        <img className='planet-image venus' id='Venus' src={venus} alt="venus" onClick={(e) =>{handleClick(e)}}/>
-      </button>
-     </section>
-     <section className ="grid grid-3">
-      <button className='planet-button earth-btn'>
-        <img className='planet-image earth' id='Earth' src={earth} alt="earth" onClick={(e) =>{handleClick(e)}}/>    
-         </button>
-     </section>
-     <section className ="grid grid-4">
-       <button className='planet-button mars-btn'>
-        <img className='planet-image mars' id='Mars' src={mars} alt="mars" onClick={(e) =>{handleClick(e)}}/>    
-         </button>
-     </section>
-     <section className ="grid grid-5"> 
-       <button className='planet-button jupiter-bt'>
-        <img className='planet-image jupiter' id='Jupiter' src={jupiter} alt="jupiter" onClick={(e) =>{handleClick(e)}}/>
-      </button>
-     </section>
-     <section className ="grid grid-6">
-      <button className='planet-button saturn-btn'>
-       <img className='planet-image saturn' id='Saturn' src={saturn} alt="saturn" onClick={(e) =>{handleClick(e)}}/>   
-          </button>
-     </section>
-     <section className ="grid grid-7">
-      <button className='planet-button neptune-btn'>
-        <img className='planet-image neptune' id='Neptune' src={neptune} alt="neptune" onClick={(e) =>{handleClick(e)}}/>
-      </button>
-     </section>
-     <section className ="grid grid-8">
-      <button className='planet-button uranus-btn'>
-        <img className='planet-image uranus' id='Uranus' src={uranus} alt="uranus" onClick={(e) =>{handleClick(e)}}/>    
-          </button>
-     </section>  
-     </div> 
-    </div>
-  )
-}
+    <div className="planet-container" >
+      <Swiper
+        spaceBetween={5}
+        slidesPerView={1}
+        speed={800}
+        loop={true}
+        onSlideChange={() => {console.log('slideChange')}}        
+        navigation={true}
+        modules={[Navigation, Mousewheel, Keyboard]}
+        className="cardSwiper"
+        
+        >
+        {planetCards}
 
+      </Swiper> 
+         </div>
+      
+  );
+};
 
-export default PlanetContainer
+export default PlanetContainer;
 
 PlanetContainer.propTypes = {
-  handleClick: PropTypes.func
-}
+  handleClick: PropTypes.func,
+};

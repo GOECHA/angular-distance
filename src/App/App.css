@@ -1,52 +1,10 @@
 .app-container{
   display: flex;
   flex-direction: column;
-  /* height: 100vw;  */
-  /* width: 100vh;
-  /* background: url('../assets/planet-alignment.png') no-repeat center center fixed; ;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
   background-color:  rgb(2, 0, 56);
 }
-/* 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
 
-/* 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-.swiper {
+.appSwiper {
   width: 100%;
   height: 100%;
   --swiper-theme-color: #A2C4D7;
@@ -55,7 +13,9 @@
 }
 
 
-.swiper-slide {
+.landingSwiper-1,
+.landingSwiper-2,
+.landingSwiper-3 {
   text-align: center;
   font-size: 18px;
   background: #fff;
