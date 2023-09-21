@@ -66,7 +66,7 @@ const ReservationPage = ({
   };
 
 
-  const handleReset = () => {
+  const handleReset = (e) => {
     setCurrentSelections({
       date: ""
     });
@@ -154,6 +154,7 @@ console.log(76, {moonOptions})
         <h2 className="choose-destination">{message}</h2>
       </div>
       <section className="lower-container">
+                <img className="AD-logo" src={ADLogo} alt="ADLogo"></img>
         <div className="lower-destination-container">
           <div className="calendar-container">
             <div className="calendar-wrapper">
@@ -169,21 +170,22 @@ console.log(76, {moonOptions})
                 <p className="earth-calendar">Earth Calendar</p>
               </div>
               {/* <p className="reservation-logo"> */}
-              <img src={ADLogo} alt="ADLogo"></img>
               {/* </p> */}
-              <p className="calendar-title">DEPARTURE</p>
             </div>
-            <div className="reservation-image-container"></div>
           </div>
+
+            {/* <div className="reservation-image-container"></div> */}
           <section className="destination-container">
+              <p className="calendar-title">DEPARTURE</p>
            
             <div className="current-selection">
               {/* <div className="current-planet-selection"> */}
-              <p className="p-res-title">Planet</p>
-              <p className="m-res-title">Moon</p>
+              <p className="p-res-title">Planet:</p>
               <p className="displayed-name-1">
                 {currentSelections.planet.englishName}
               </p>
+              <p className="m-res-title">Moon:</p>
+                {/* <h3 className="destination-title"> DESTINATION </h3> */}
               {/* </div> */}
               {/* <div className="current-moon-selection"> */}
               <p className="displayed-name-2">{currentSelections.moon}</p>
@@ -192,7 +194,6 @@ console.log(76, {moonOptions})
             <div className="reservation-wrapper">
               <div className="moon-btn-wrapper">
                 {reservationButton}
-                <h3 className="destination-title"> DESTINATION </h3>
               </div>
             </div>
           </section>

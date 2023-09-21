@@ -45,7 +45,7 @@ const SelectedReservationModal = ({
         id={id}
         className="modal-select-planet-btn"
         onClick={(e) => {
-          handleReset();
+          handleReset(e);
           handleClick(e);
           setOverlay(<OverlayOne />);
           onOpen();
