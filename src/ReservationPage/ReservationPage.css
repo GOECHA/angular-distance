@@ -86,7 +86,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* align-items: space-between; */
+  align-items: center;
   height: 90%;
   width: 100%;
   padding: 1.5em;
@@ -100,7 +100,7 @@
   flex-direction: column;
   padding: 0.5em;
   width: 500px;
-  height: 500px;
+  height: 450px;
   background: rgba(1, 38, 54, 0.73);
   box-shadow: -3px 4px 13px -3px rgba(250, 248, 248, 0.25);
   border-radius: 22px;
@@ -126,7 +126,7 @@
   height: 50%;
 }
 
-.react-datepicker-wrapper {
+/* .react-datepicker-wrapper {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -137,12 +137,12 @@
 .react-datepicker__input-container input {
   width: 80%;
   color: rgba(1, 38, 54);
-}
+} */
 
 .calendar-wrapper {
   display: flex;
   /* flex-direction: column; */
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   /* width: 40%; */
   height: 100%;
@@ -191,10 +191,14 @@
 }
 
 .current-selection {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 0.5fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 6px;
   font-size: 2em;
   color: white;
+
 }
 
 .current-planet-selection,

@@ -131,12 +131,24 @@ console.log(76, {moonOptions})
   console.log(93, currentSelections);
 
 
-  const displayedPlanetTitle = (planet) => {
-return !currentSelections.planet.englishName ? '' : `Planet: ${planet}`  
+  const displayedPlanetTitle = () => {
+return !currentSelections.planet.englishName ? '' : (
+  <>
+    <p className="p-res-title">Planet:</p>
+    <p className="displayed-name-1">
+      {currentSelections.planet.englishName}
+    </p>
+  </>
+);
   }
   
-  const displayedMoonTitle = (moon) => {
-    return !currentSelections.moon ? '' : `Moon: ${moon}`
+  const displayedMoonTitle = () => {
+    return !currentSelections.moon ? '' : (
+  <>
+    <p className="m-res-title">Moon:</p>
+    <p className="displayed-name-2">{currentSelections.moon}</p>
+  </>
+  )
       }
 
   return (
@@ -178,18 +190,8 @@ return !currentSelections.planet.englishName ? '' : `Planet: ${planet}`
               <p className="departure-date-title">DEPARTURE DESTINATION</p>
            
             <div className="current-selection">
-              {/* <p className="p-res-title">Planet:</p> */}
-              <p className="p-res-title">
-              {displayedPlanetTitle(currentSelections.planet.englishName)}
-              {/* Planet: {currentSelections.planet.englishName} */}
-
-              </p>
-              {/* <p className="m-res-title">Moon:</p> */}
-              <p className="m-res-title">
-                {displayedMoonTitle(currentSelections.moon)}
-                {/* Moon: {currentSelections.moon} */}
-                </p>
-            
+                {displayedPlanetTitle()}
+                {displayedMoonTitle()} 
             </div>
             <div className="reservation-wrapper">
               <div className="moon-btn-wrapper">
