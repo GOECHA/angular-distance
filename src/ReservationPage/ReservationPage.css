@@ -114,7 +114,7 @@
   display: flex;
   justify-content:center ;
   align-items: center;
-  width: 70%;
+  /* width: 70%; */
   height: 100%;
 }
 
@@ -144,7 +144,7 @@
   /* flex-direction: column; */
   align-items: center;
   justify-content: center;
-  width: 40%;
+  /* width: 40%; */
   height: 100%;
 }
 
@@ -155,16 +155,16 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 60%;
+  width: 95%;
 }
 /* .reservation-image-container {
   background-size: cover;
   flex-shrink: inherit;
 } */
 
-.destination-container {
+/* .destination-container {
   width: 40%;
-}
+} */
 
 /* .reservation-image-container {
   background-image: url("../assets/planets-row.png");
@@ -191,11 +191,8 @@
 }
 
 .current-selection {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 0.5fr);
-  grid-column-gap: 12px;
-  grid-row-gap: 6px;
+  display: flex;
+  flex-direction: column;
   font-size: 2em;
   color: white;
 }
@@ -316,8 +313,12 @@
   padding-top: 0.7em;
 }
 
-.earth-calendar {
-  font-size: 0.7em;
+.departure-date-title {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.departure-date{
+  font-size: 2em;
 }
 
 /* .p-res-title,

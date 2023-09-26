@@ -130,6 +130,15 @@ console.log(76, {moonOptions})
     );
   console.log(93, currentSelections);
 
+
+  const displayedPlanetTitle = (planet) => {
+return !currentSelections.planet.englishName ? '' : `Planet: ${planet}`  
+  }
+  
+  const displayedMoonTitle = (moon) => {
+    return !currentSelections.moon ? '' : `Moon: ${moon}`
+      }
+
   return (
     <div className="reservation-container">
       {loading && (
@@ -159,37 +168,28 @@ console.log(76, {moonOptions})
           <div className="calendar-container">
             <div className="calendar-wrapper">
               <div className="calendar-input-wrapper">
-                <input
-                  name="date"
-                  className="calendar"
-                  type="date"
-                  min="2145-09-25"
-                  value={currentSelections.date}
-                  onChange={(e) => handleChange(e)}
-                />
-                <p className="earth-calendar">Earth Calendar</p>
+                <p className="departure-date-title">DEPARTURE DATE</p>
+                <h3 className="departure-date">{currentSelections.date}</h3>
               </div>
-              {/* <p className="reservation-logo"> */}
-              {/* </p> */}
             </div>
           </div>
 
-            {/* <div className="reservation-image-container"></div> */}
           <section className="destination-container">
-              <p className="calendar-title">DEPARTURE</p>
+              <p className="departure-date-title">DEPARTURE DESTINATION</p>
            
             <div className="current-selection">
-              {/* <div className="current-planet-selection"> */}
-              <p className="p-res-title">Planet:</p>
-              <p className="displayed-name-1">
-                {currentSelections.planet.englishName}
+              {/* <p className="p-res-title">Planet:</p> */}
+              <p className="p-res-title">
+              {displayedPlanetTitle(currentSelections.planet.englishName)}
+              {/* Planet: {currentSelections.planet.englishName} */}
+
               </p>
-              <p className="m-res-title">Moon:</p>
-                {/* <h3 className="destination-title"> DESTINATION </h3> */}
-              {/* </div> */}
-              {/* <div className="current-moon-selection"> */}
-              <p className="displayed-name-2">{currentSelections.moon}</p>
-              {/* </div> */}
+              {/* <p className="m-res-title">Moon:</p> */}
+              <p className="m-res-title">
+                {displayedMoonTitle(currentSelections.moon)}
+                {/* Moon: {currentSelections.moon} */}
+                </p>
+            
             </div>
             <div className="reservation-wrapper">
               <div className="moon-btn-wrapper">
