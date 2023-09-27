@@ -9,6 +9,8 @@ import CircularIndeterminate from "../CircularIndeterminate/CircularIndeterminat
 import AppContext from "../AppContext";
 // import { CircularProgress } from "@mui/material";
 import ADLogo from "../assets/AD-img.png";
+import sunHorizon from "../assets/realistic-luxury-space-travel-with-horizon.jpg";
+
 
 const ReservationPage = ({
   reserveFlight,
@@ -130,6 +132,64 @@ console.log(76, {moonOptions})
     );
   console.log(93, currentSelections);
 
+
+  const displayedPlanetTitle = () => {
+return !currentSelections.planet.englishName ? '' : (
+  <>
+    <p className="p-res-title">Planet:</p>
+    <p className="displayed-name-1">
+      {currentSelections.planet.englishName}
+    </p>
+  </>
+);
+  }
+
+ 
+  
+  const displayedMoonTitle = () => {
+    return !currentSelections.moon ? '' : (
+  <>
+    <p className="m-res-title">Moon:</p>
+    <p className="displayed-name-2">{currentSelections.moon}</p>
+  </>
+  )
+      }
+
+      const displayedDate = () => {
+        return !currentSelections.date ? '' : (
+      <>
+        <p className="departure-date-title">DEPARTURE DATE</p>
+        <h3 className="departure-date">{currentSelections.date}</h3>
+      </>
+      )
+          }
+
+
+      const reservationTitle = () => {
+        return !currentSelections.planet.englishName ? (
+          <>
+          <img className="sun-horizon" src={sunHorizon} alt="sun horizon"></img>
+          
+          <p className="departure-date-title"> Choose Your Destination </p>
+          </>
+          )
+           : (
+      <>
+        <h3 className="confirm-res-title">Confirm Reservation</h3>
+      </>
+      )
+          }
+
+
+          const displayDestinationTitle = () => {
+            return !currentSelections.planet.englishName ? "" : (
+          <>
+           <p className="departure-date-title">DEPARTURE DESTINATION</p>
+          </>
+          )
+              }
+
+
   return (
     <div className="reservation-container">
       {loading && (
@@ -154,42 +214,24 @@ console.log(76, {moonOptions})
         <h2 className="choose-destination">{message}</h2>
       </div>
       <section className="lower-container">
-                <img className="AD-logo" src={ADLogo} alt="ADLogo"></img>
+
+        <img className="AD-logo" src={ADLogo} alt="ADLogo"></img>
         <div className="lower-destination-container">
+         {reservationTitle()}
+
           <div className="calendar-container">
             <div className="calendar-wrapper">
               <div className="calendar-input-wrapper">
-                <input
-                  name="date"
-                  className="calendar"
-                  type="date"
-                  min="2145-09-25"
-                  value={currentSelections.date}
-                  onChange={(e) => handleChange(e)}
-                />
-                <p className="earth-calendar">Earth Calendar</p>
+                {displayedDate()}
               </div>
-              {/* <p className="reservation-logo"> */}
-              {/* </p> */}
             </div>
           </div>
 
-            {/* <div className="reservation-image-container"></div> */}
           <section className="destination-container">
-              <p className="calendar-title">DEPARTURE</p>
-           
+          {displayDestinationTitle()}
             <div className="current-selection">
-              {/* <div className="current-planet-selection"> */}
-              <p className="p-res-title">Planet:</p>
-              <p className="displayed-name-1">
-                {currentSelections.planet.englishName}
-              </p>
-              <p className="m-res-title">Moon:</p>
-                {/* <h3 className="destination-title"> DESTINATION </h3> */}
-              {/* </div> */}
-              {/* <div className="current-moon-selection"> */}
-              <p className="displayed-name-2">{currentSelections.moon}</p>
-              {/* </div> */}
+                {displayedPlanetTitle()}
+                {displayedMoonTitle()} 
             </div>
             <div className="reservation-wrapper">
               <div className="moon-btn-wrapper">

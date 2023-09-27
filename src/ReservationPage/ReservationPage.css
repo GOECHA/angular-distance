@@ -86,7 +86,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  /* align-items: space-between; */
+  align-items: center;
   height: 90%;
   width: 100%;
   padding: 1.5em;
@@ -100,7 +100,7 @@
   flex-direction: column;
   padding: 0.5em;
   width: 500px;
-  height: 500px;
+  height: 450px;
   background: rgba(1, 38, 54, 0.73);
   box-shadow: -3px 4px 13px -3px rgba(250, 248, 248, 0.25);
   border-radius: 22px;
@@ -114,7 +114,7 @@
   display: flex;
   justify-content:center ;
   align-items: center;
-  width: 70%;
+  /* width: 70%; */
   height: 100%;
 }
 
@@ -126,7 +126,7 @@
   height: 50%;
 }
 
-.react-datepicker-wrapper {
+/* .react-datepicker-wrapper {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -137,14 +137,14 @@
 .react-datepicker__input-container input {
   width: 80%;
   color: rgba(1, 38, 54);
-}
+} */
 
 .calendar-wrapper {
   display: flex;
   /* flex-direction: column; */
-  align-items: center;
+  /* align-items: flex-end; */
   justify-content: center;
-  width: 40%;
+  /* width: 40%; */
   height: 100%;
 }
 
@@ -155,16 +155,16 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 60%;
+  width: 95%;
 }
 /* .reservation-image-container {
   background-size: cover;
   flex-shrink: inherit;
 } */
 
-.destination-container {
+/* .destination-container {
   width: 40%;
-}
+} */
 
 /* .reservation-image-container {
   background-image: url("../assets/planets-row.png");
@@ -198,6 +198,19 @@
   grid-row-gap: 6px;
   font-size: 2em;
   color: white;
+
+}
+
+.sun-horizon{
+  margin-top: 18%;
+  width: 80%;
+  border-radius: 13px;
+
+}
+
+.confirm-res-title{
+  font-size: 6vw;
+  margin-top: 2rem;
 }
 
 .current-planet-selection,
@@ -230,32 +243,19 @@
 
 .p-res-title,
 .m-res-title,
-.displayed-name {
+.displayed-name-1,
+.displayed-name-2{
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0px;
-  /* margin-top: 1em; */
+  font-size: 5vw;
 }
 
-/* .moon-selection-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 1.5em;
-  height: 20%;
-  width: 100%;
-  padding-top: 0.5em;
-  margin-top: -10px;
-  position: sticky;
-} */
 
 .moon-selections {
   height: 10%;
   width: 100%;
-  /* margin-top: -10px;
-  position: sticky top !important; */
 }
 
 .calendar {
@@ -289,23 +289,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: solid 1px rgba(255, 255, 255, .5); */
   width: auto;
-  /* border-radius: 15px; */
   font-size: 2.5vw;
   margin: 3px;
   padding: 5px;
-  /* font-variant-caps: all-small-caps; */
 }
 
-/* .reservation-button-r-con-container,
-.reservation-button-r-con-right-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 10%;
-  
-} */
+
 
 .calendar-input-wrapper {
   display: flex;
@@ -316,24 +306,20 @@
   padding-top: 0.7em;
 }
 
-.earth-calendar {
-  font-size: 0.7em;
+.departure-date-title {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+.departure-date{
+  font-size: 3.5vw;
 }
 
-/* .p-res-title,
-.m-res-title {
-  font-size: 0.7em;
-  height: 10%;
-  margin-top: 1em;
-  margin-bottom: 1em;
-} */
 
 .reservation-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 0.5rem; */
   width: 100%;
   height: 50px;
 }
@@ -347,7 +333,6 @@
 }
 
 .select-moon-btn {
-  /* position: absolute;  */
   width: 7rem;
   font-size: 1rem;
   height: 2rem;
@@ -379,11 +364,20 @@
 /* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
 
 @media screen and (max-width: 768px) {
+  /* .reserve-to-home{
+   padding-right: 2rem;
+
+  } */
 }
 
 /* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
 
 @media screen and (max-width: 480px) {
+  .reservation-header{
+margin-top: 60px;
+
+  }
+
   .navigation-container {
     flex-direction: column;
     width: 9rem;
@@ -417,4 +411,21 @@
     height: 15rem;
     position: bottom sticky;
   }
+
+
+.planetCard,
+.lower-destination-container{
+height: 300px;
+width: 375px;
+}
+.departure-date-title {
+  font-size: 0.5em;
+  font-weight: 600;
+}
+
+.confirm-res-title{
+  font-size: 3vw;
+  margin-top: 2rem;
+}
+
 }

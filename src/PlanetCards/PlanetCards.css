@@ -36,7 +36,7 @@
   /* object-position: 0; */
 /* } */ 
 .planetName{
-  font-size: 30pt;
+  font-size: 7.5vw;
   z-index:5;
 }
 .planetName,
@@ -74,3 +74,17 @@
 .modal-select-planet-btn:active {
   transform: translateY(2px);
 }
+
+.swiper-button-prev,
+.swiper-button-next{
+color: white !important;
+/* width: 2vw !important; */
+}
+
+/* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
+
+/* 
+@media screen and (max-width:480px) {
+  
+  
+  } */
