@@ -142,7 +142,7 @@
 .calendar-wrapper {
   display: flex;
   /* flex-direction: column; */
-  align-items: flex-end;
+  /* align-items: flex-end; */
   justify-content: center;
   /* width: 40%; */
   height: 100%;
@@ -201,6 +201,18 @@
 
 }
 
+.sun-horizon{
+  margin-top: 18%;
+  width: 80%;
+  border-radius: 13px;
+
+}
+
+.confirm-res-title{
+  font-size: 6vw;
+  margin-top: 2rem;
+}
+
 .current-planet-selection,
 .current-moon-selection {
   display: flex;
@@ -231,32 +243,19 @@
 
 .p-res-title,
 .m-res-title,
-.displayed-name {
+.displayed-name-1,
+.displayed-name-2{
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0px;
-  /* margin-top: 1em; */
+  font-size: 5vw;
 }
 
-/* .moon-selection-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 1.5em;
-  height: 20%;
-  width: 100%;
-  padding-top: 0.5em;
-  margin-top: -10px;
-  position: sticky;
-} */
 
 .moon-selections {
   height: 10%;
   width: 100%;
-  /* margin-top: -10px;
-  position: sticky top !important; */
 }
 
 .calendar {
@@ -290,23 +289,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: solid 1px rgba(255, 255, 255, .5); */
   width: auto;
-  /* border-radius: 15px; */
   font-size: 2.5vw;
   margin: 3px;
   padding: 5px;
-  /* font-variant-caps: all-small-caps; */
 }
 
-/* .reservation-button-r-con-container,
-.reservation-button-r-con-right-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 10%;
-  
-} */
+
 
 .calendar-input-wrapper {
   display: flex;
@@ -322,23 +311,15 @@
   font-weight: 600;
 }
 .departure-date{
-  font-size: 2em;
+  font-size: 3.5vw;
 }
 
-/* .p-res-title,
-.m-res-title {
-  font-size: 0.7em;
-  height: 10%;
-  margin-top: 1em;
-  margin-bottom: 1em;
-} */
 
 .reservation-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 0.5rem; */
   width: 100%;
   height: 50px;
 }
@@ -352,7 +333,6 @@
 }
 
 .select-moon-btn {
-  /* position: absolute;  */
   width: 7rem;
   font-size: 1rem;
   height: 2rem;
@@ -384,11 +364,20 @@
 /* ~~~~~~~~~~~medium device~~~~~~~~~~~~~~~ */
 
 @media screen and (max-width: 768px) {
+  /* .reserve-to-home{
+   padding-right: 2rem;
+
+  } */
 }
 
 /* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
 
 @media screen and (max-width: 480px) {
+  .reservation-header{
+margin-top: 60px;
+
+  }
+
   .navigation-container {
     flex-direction: column;
     width: 9rem;
@@ -422,4 +411,21 @@
     height: 15rem;
     position: bottom sticky;
   }
+
+
+.planetCard,
+.lower-destination-container{
+height: 300px;
+width: 375px;
+}
+.departure-date-title {
+  font-size: 0.5em;
+  font-weight: 600;
+}
+
+.confirm-res-title{
+  font-size: 3vw;
+  margin-top: 2rem;
+}
+
 }
