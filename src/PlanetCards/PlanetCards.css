@@ -83,8 +83,10 @@ color: white !important;
 
 /* ~~~~~~~~~~~mobile device~~~~~~~~~~~~~~~ */
 
-/* 
+
 @media screen and (max-width:480px) {
+  .earthCalendar{
+    margin-top: 4px;
+  }
   
-  
-  } */
+  }
