@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Header from "../Header/Header";
 import PlanetContainer from "../PlanetContainer/PlanetContainer";
 import "./ReservationPage.css";
@@ -27,24 +27,32 @@ const ReservationPage = ({
   const [currentMoons, setCurrentMoons] = useState([]);
   const [message, setMessage] = useState("Choose your Destination");
   // const [showReserveButton, setShowReserveButton] = useState(false);
-  const [currentSelections, setCurrentSelections] = useState({
+  const savedReservationChoices = JSON.parse(localStorage.getItem("reservationChoices"));
+  const [currentSelections, setCurrentSelections] = useState(savedReservationChoices || {
     id: "",
     date: "",
     planet: "",
     moon: "",
     gravity: "",
     
-  });
+  },JSON.parse(localStorage.getItem("reservationChoices")) ?? []);
 
   const globals = useContext(AppContext);
   // console.log('respg 31', globals.allPlanets[243].gravity)
 
   //  console.log(34, globals.allPlanets)
 
+  useEffect(() => {
+    window.localStorage.setItem(
+      "reservationChoices",
+      JSON.stringify(currentSelections)
+    );
+  }, [currentSelections]);
+
+
   const handleClick = (event) => {
     const somePlanetInfo = allPlanets.find((planet) => {
-      // console.log("respg54", planet.englishName);
-      // console.log("respg55", event.target.id);
+     
       return planet.englishName === event.target.id;
     });
   
