@@ -42,16 +42,12 @@ const ReservationPage = ({
   //  console.log(34, globals.allPlanets)
 
   const handleClick = (event) => {
-    console.log({allPlanets})
     const somePlanetInfo = allPlanets.find((planet) => {
       // console.log("respg54", planet.englishName);
       // console.log("respg55", event.target.id);
       return planet.englishName === event.target.id;
     });
-    console.log({somePlanetInfo})
-    console.log('somePlanetInfo.moons', somePlanetInfo.moons)
-    console.log('currentSelections.planet', currentSelections.planet)
-    console.log('currentSelections.date', currentSelections.date)
+  
     setCurrentMoons(somePlanetInfo.moons);
     setCurrentSelections({ ...currentSelections, planet: somePlanetInfo });
 
@@ -94,13 +90,12 @@ const ReservationPage = ({
     );
 console.log(76, {moonOptions})
   const handleReservation = (e) => {
-    console.log(88, globals.allPlanets);
+    // console.log(88, globals.allPlanets);
 
     const someMoonInfo = allPlanets.find((moon) => {
       console.log(90, currentSelections.moon);
       return moon.name === currentSelections?.moon;
     });
-    console.log(92, someMoonInfo);
     currentSelections.planet &&
     currentSelections.date &&
     !currentSelections.moon
@@ -130,7 +125,7 @@ console.log(76, {moonOptions})
         </button>
       </Link>
     );
-  console.log(93, currentSelections);
+
 
 
   const displayedPlanetTitle = () => {
@@ -155,11 +150,24 @@ return !currentSelections.planet.englishName ? '' : (
   )
       }
 
+      const formatDate = () => {
+      let monthArr = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+        // let month = currentSelections.date.slice(5, 6)
+        let month = monthArr[parseInt(currentSelections.date.slice(5, 7)) - 1];
+        let day = currentSelections.date.slice(-2)
+        let year = currentSelections.date.slice(0,4)
+        console.log({month}, month) 
+       return  `${month}  ${day}, ${year}`
+      }
+
       const displayedDate = () => {
+        console.log('currentSelections.date',currentSelections.date)
         return !currentSelections.date ? '' : (
       <>
         <p className="departure-date-title">DEPARTURE DATE</p>
-        <h3 className="departure-date">{currentSelections.date}</h3>
+        {/* <h3 className="departure-date">{currentSelections.date}</h3> */}
+        <h3 className="departure-date">{formatDate()}</h3>
+
       </>
       )
           }
