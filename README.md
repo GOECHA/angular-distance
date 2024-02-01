@@ -44,7 +44,7 @@
 - Cypress
 
 
-This project was bootstrapped with [Create ReactNative App](https://github.com/facebook/create-reactnative-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-reactnative-app).
 
 
 
