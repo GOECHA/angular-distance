@@ -65,8 +65,21 @@ https://user-images.githubusercontent.com/102189342/192313918-668404f5-5af1-4591
 
 
 <!-- If you have screenshots you'd like to share, include them here. -->
+
+## New UI Design Update 
+
+<img width="400" alt="Screen Shot 2022-09-26 at 8 48 05 AM" src="https://github.com/GOECHA/angular-distance/assets/102189342/ef100276-0f93-4972-9788-a569d66f2834">
+
+- Updated Landing Page Hero
+- Removed planet buttons from the Reservations page and integrated the Chakra UI Library with a modal to diplay planets
+- Designed Landing page #3 with Adobe Firefly ai image generator
+
+## 
+
 <img width="400" alt="Screen Shot 2022-09-26 at 8 46 24 AM" src="https://user-images.githubusercontent.com/102189342/192307763-5037e811-d3b7-40c4-9218-1fe02cf0733a.png">
 <img width="400" alt="Screen Shot 2022-09-26 at 8 47 58 AM" src="https://user-images.githubusercontent.com/102189342/192308452-dbe7fb89-62bd-4d17-bb7d-58f42308ed36.png">
+
+
 <img width="400" alt="Screen Shot 2022-09-26 at 8 48 05 AM" src="https://user-images.githubusercontent.com/102189342/192308467-e2841794-995e-4538-9fb0-7be7f54f7ba2.png">
 <img width="400" alt="Screen Shot 2022-09-26 at 8 48 13 AM" src="https://user-images.githubusercontent.com/102189342/192308483-644ee688-4a99-4e09-ad6d-82b77c9d98c8.png">
 <img width="400" alt="Screen Shot 2022-09-26 at 8 48 29 AM" src="https://user-images.githubusercontent.com/102189342/192308503-72390dc1-2c85-4ac6-9f23-471afc6657c9.png">
